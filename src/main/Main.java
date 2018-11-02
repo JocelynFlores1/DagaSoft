@@ -5,6 +5,7 @@
  */
 package main;
 
+import Controllers.ControllerClientes;
 import Models.ModelMain;
 import Views.ViewMenu;
 
@@ -21,17 +22,6 @@ public class Main {
         Models.ModelLogin modelLogin = new Models.ModelLogin();
         Views.ViewLogin viewLogin = new Views.ViewLogin();
         Controllers.ControllerLogin controllerLogin = new Controllers.ControllerLogin(modelLogin, viewLogin);
-        
-        Models.ModelProveedores modelProveedores = new Models.ModelProveedores();
-        Views.ViewProveedores viewProveedores = new Views.ViewProveedores();
-        Controllers.ControllerProveedores controllerProveedores = new Controllers.ControllerProveedores(modelProveedores, viewProveedores);
-
-        Object[] controllers = new Object[1];
-        controllers[0] = controllerProveedores;
-        
-        Models.ModelMain modelMain = new Models.ModelMain();
-        Views.ViewMenu viewMenu = new  Views.ViewMenu();
-        Controllers.ControllerMain controllerMain = new Controllers.ControllerMain(modelMain, viewMenu, controllers);
     }
 
 }

@@ -45,11 +45,23 @@ public class ControllerLogin implements ActionListener {
         String pass = new String(viewLogin.jpfPassword.getPassword());
         if (viewLogin.jtfUser.getText().equals(modelLogin.getUser()) && pass.equals(modelLogin.getPassword())) {
             viewLogin.dispose();
-            
-            Models.ModelMenu modelMenu = new Models.ModelMenu();
+
+            Models.ModelProveedores modelProveedores = new Models.ModelProveedores();
+            Views.ViewProveedores viewProveedores = new Views.ViewProveedores();
+            Controllers.ControllerProveedores controllerProveedores = new Controllers.ControllerProveedores(modelProveedores, viewProveedores);
+
+            Models.ModelClientes modelClientes = new Models.ModelClientes();
+            Views.ViewClientes viewClientes = new Views.ViewClientes();
+            Controllers.ControllerClientes controllerClientes = new Controllers.ControllerClientes(modelClientes, viewClientes);
+
+            Object[] controllers = new Object[2];
+            controllers[0] = controllerProveedores;
+            controllers[1] = controllerClientes;
+
+            Models.ModelMain modelMain = new Models.ModelMain();
             Views.ViewMenu viewMenu = new Views.ViewMenu();
-            Controllers.ControllerMenu controllerMenu = new Controllers.ControllerMenu(modelMenu, viewMenu);
-            
+            Controllers.ControllerMain controllerMain = new Controllers.ControllerMain(modelMain, viewMenu, controllers);
+
             System.out.println(modelLogin.getPassword());
             System.out.println(modelLogin.getUser());
         } else {
