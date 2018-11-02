@@ -5,10 +5,20 @@
  */
 package Controllers;
 
+import Models.ModelCompras;
+import Views.ViewCompras;
+
 /**
  *
  * @author beto
  */
 public class ControllerCompras {
+    public Models.ModelCompras modelCompras;
+    public Views.ViewCompras viewCompras;
+
+    public ControllerCompras(ModelCompras modelCompras, ViewCompras viewCompras) {
+        this.modelCompras = modelCompras;
+        this.viewCompras = viewCompras;
+    }
     
 }

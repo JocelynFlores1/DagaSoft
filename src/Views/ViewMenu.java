@@ -34,9 +34,10 @@ public class ViewMenu extends javax.swing.JFrame {
         jmAlmacen = new javax.swing.JMenuItem();
         jmClientes = new javax.swing.JMenuItem();
         jmProveedores = new javax.swing.JMenuItem();
+        jmSucursales = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jmEmpleados = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,6 +59,9 @@ public class ViewMenu extends javax.swing.JFrame {
         jmProveedores.setText("Proveedores");
         jmVentanas.add(jmProveedores);
 
+        jmSucursales.setText("Sucursales");
+        jmVentanas.add(jmSucursales);
+
         jMenuBar1.add(jmVentanas);
 
         jMenu2.setText("Acerca de");
@@ -65,8 +69,8 @@ public class ViewMenu extends javax.swing.JFrame {
 
         jMenu3.setText("Administrador");
 
-        jMenuItem2.setText("Empleados");
-        jMenu3.add(jMenuItem2);
+        jmEmpleados.setText("Empleados");
+        jMenu3.add(jmEmpleados);
 
         jMenuBar1.add(jMenu3);
 
@@ -129,11 +133,12 @@ public class ViewMenu extends javax.swing.JFrame {
     public javax.swing.JMenu jMenu2;
     public javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
     public javax.swing.JMenuItem jmAlmacen;
     public javax.swing.JMenuItem jmClientes;
     public javax.swing.JMenuItem jmCompras;
+    public javax.swing.JMenuItem jmEmpleados;
     public javax.swing.JMenuItem jmProveedores;
+    public javax.swing.JMenuItem jmSucursales;
     private javax.swing.JMenu jmVentanas;
     public javax.swing.JMenuItem jmVentas;
     // End of variables declaration//GEN-END:variables

@@ -5,10 +5,20 @@
  */
 package Controllers;
 
+import Models.ModelProductos;
+import Views.ViewProductos;
+
 /**
  *
  * @author beto
  */
 public class ControllerProductos {
+    public Models.ModelProductos modelProductos;
+    public Views.ViewProductos viewProductos;
+
+    public ControllerProductos(ModelProductos modelProductos, ViewProductos viewProductos) {
+        this.modelProductos = modelProductos;
+        this.viewProductos = viewProductos;
+    }
     
 }

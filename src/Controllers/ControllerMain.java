@@ -27,6 +27,10 @@ public class ControllerMain {
 
     private ControllerProveedores controllerProveedores;
     private ControllerClientes controllerClientes;
+    private ControllerCompras controllerCompras;
+    private ControllerEmpleados controllerEmpleados;
+    private ControllerProductos controllerProductos;
+    private ControllerSucursales controllerSucursales;
 
     /**
      * Controlador principal del proyecto que un el modelMain y viewMain, ademas
@@ -55,6 +59,10 @@ public class ControllerMain {
     private void setControllers() {
         controllerProveedores = (ControllerProveedores) controllers[0];
         controllerClientes = (ControllerClientes) controllers[1];
+        controllerCompras = (ControllerCompras) controllers[2];
+        controllerEmpleados = (ControllerEmpleados) controllers[3];
+        controllerProductos = (ControllerProductos) controllers[4];
+        controllerSucursales = (ControllerSucursales) controllers[5];
     }
 
     /**
@@ -73,6 +81,10 @@ public class ControllerMain {
     private void setActionListener() {
         viewMenu.jmProveedores.addActionListener(actionListener);
         viewMenu.jmClientes.addActionListener(actionListener);
+        viewMenu.jmCompras.addActionListener(actionListener);
+        viewMenu.jmAlmacen.addActionListener(actionListener);
+        viewMenu.jmSucursales.addActionListener(actionListener);
+        viewMenu.jmEmpleados.addActionListener(actionListener);
     }
 
     /**
@@ -86,6 +98,14 @@ public class ControllerMain {
                 jmi_proveedores_actionPerformed();
             } else if (e.getSource() == viewMenu.jmClientes) {
                 jmi_clientes_actionPerformed();
+            } else if (e.getSource() == viewMenu.jmCompras) {
+                jmi_compras_actionPerformed();
+            } else if (e.getSource() == viewMenu.jmAlmacen) {
+                jmi_almacen_actionPerformed();
+            } else if (e.getSource() == viewMenu.jmSucursales) {
+                jmi_sucursales_actionPerformed();
+            } else if (e.getSource() == viewMenu.jmEmpleados) {
+                jmi_empleados_actionPerformed();
             }
         }
     };
@@ -113,6 +133,34 @@ public class ControllerMain {
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Clientes");
+    }
+
+    private void jmi_compras_actionPerformed() {
+        viewMenu.setContentPane(controllerCompras.viewCompras);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Compras");
+    }
+
+    private void jmi_almacen_actionPerformed() {
+        viewMenu.setContentPane(controllerProductos.viewProductos);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Almacen");
+    }
+
+    private void jmi_sucursales_actionPerformed() {
+        viewMenu.setContentPane(controllerSucursales.viewSucursales);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Sucursales");
+    }
+
+    private void jmi_empleados_actionPerformed() {
+        viewMenu.setContentPane(controllerEmpleados.viewEmpleados);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Empleados");
     }
 
     /**

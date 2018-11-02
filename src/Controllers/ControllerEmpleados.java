@@ -5,10 +5,20 @@
  */
 package Controllers;
 
+import Models.ModelEmpleados;
+import Views.ViewEmpleados;
+
 /**
  *
  * @author beto
  */
 public class ControllerEmpleados {
+    public Models.ModelEmpleados modelEmpleados;
+    public Views.ViewEmpleados viewEmpleados;
+
+    public ControllerEmpleados(ModelEmpleados modelEmpleados, ViewEmpleados viewEmpleados) {
+        this.modelEmpleados = modelEmpleados;
+        this.viewEmpleados = viewEmpleados;
+    }
     
 }
