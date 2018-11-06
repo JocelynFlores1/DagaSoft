@@ -30,7 +30,7 @@ public class ViewClientes extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jl_titulo = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jlIdCliente = new javax.swing.JLabel();
+        jl_id_Cliente = new javax.swing.JLabel();
         jtf_id_cliente = new javax.swing.JTextField();
         jl_nombre_cliente = new javax.swing.JLabel();
         jtf_nombre_cliente = new javax.swing.JTextField();
@@ -39,7 +39,7 @@ public class ViewClientes extends javax.swing.JPanel {
         jl_apellido_materno = new javax.swing.JLabel();
         jtf_apellido_materno = new javax.swing.JTextField();
         jl_teléfono = new javax.swing.JLabel();
-        jtf_teléfono = new javax.swing.JTextField();
+        jtf_telefono = new javax.swing.JTextField();
         jl_rfc = new javax.swing.JLabel();
         jtf_rfc = new javax.swing.JTextField();
         jl_calle = new javax.swing.JLabel();
@@ -58,6 +58,15 @@ public class ViewClientes extends javax.swing.JPanel {
         jtf_ciudad = new javax.swing.JTextField();
         jl_estado = new javax.swing.JLabel();
         jtf_estado = new javax.swing.JTextField();
+        jb_insertar = new javax.swing.JButton();
+        jb_nuevo = new javax.swing.JButton();
+        jb_modificar = new javax.swing.JButton();
+        jb_eliminar = new javax.swing.JButton();
+        jb_buscar = new javax.swing.JButton();
+        jb_primero = new javax.swing.JButton();
+        jb_anterior = new javax.swing.JButton();
+        jb_siguiente = new javax.swing.JButton();
+        jb_ultimo = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(1200, 600));
 
@@ -91,11 +100,11 @@ public class ViewClientes extends javax.swing.JPanel {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 69, Short.MAX_VALUE)
+            .addGap(0, 78, Short.MAX_VALUE)
         );
 
-        jlIdCliente.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jlIdCliente.setText("ID Cliente");
+        jl_id_Cliente.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jl_id_Cliente.setText("ID Cliente");
 
         jl_nombre_cliente.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_nombre_cliente.setText("Nombre (s)");
@@ -119,10 +128,10 @@ public class ViewClientes extends javax.swing.JPanel {
         jl_colonia.setText("Colonia");
 
         jl_numero_interior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_numero_interior.setText("Número_interior");
+        jl_numero_interior.setText("Número interior");
 
         jl_numero_exterior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_numero_exterior.setText("Número_exterior");
+        jl_numero_exterior.setText("Número exterior");
 
         jl_codigo_postal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_codigo_postal.setText("Codigo_postal");
@@ -136,6 +145,38 @@ public class ViewClientes extends javax.swing.JPanel {
         jl_estado.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_estado.setText("Estado");
 
+        jb_insertar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jb_insertar.setText("Insertar");
+
+        jb_nuevo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jb_nuevo.setText("Nuevo");
+
+        jb_modificar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jb_modificar.setText("Modificar");
+
+        jb_eliminar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jb_eliminar.setText("Eliminar");
+
+        jb_buscar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jb_buscar.setText("Buscar");
+
+        jb_primero.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jb_primero.setText("l<");
+        jb_primero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_primeroActionPerformed(evt);
+            }
+        });
+
+        jb_anterior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jb_anterior.setText("<<");
+
+        jb_siguiente.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jb_siguiente.setText(">>");
+
+        jb_ultimo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jb_ultimo.setText(">l");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -145,7 +186,7 @@ public class ViewClientes extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(122, 122, 122)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlIdCliente)
+                    .addComponent(jl_id_Cliente)
                     .addComponent(jl_nombre_cliente)
                     .addComponent(jl_apellido_paterno)
                     .addComponent(jl_apellido_materno)
@@ -157,7 +198,7 @@ public class ViewClientes extends javax.swing.JPanel {
                     .addComponent(jtf_nombre_cliente)
                     .addComponent(jtf_apellido_paterno)
                     .addComponent(jtf_apellido_materno)
-                    .addComponent(jtf_teléfono)
+                    .addComponent(jtf_telefono)
                     .addComponent(jtf_rfc)
                     .addComponent(jtf_calle, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
                     .addComponent(jtf_id_cliente))
@@ -180,14 +221,34 @@ public class ViewClientes extends javax.swing.JPanel {
                     .addComponent(jtf_ciudad)
                     .addComponent(jtf_estado, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE))
                 .addGap(59, 59, 59))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(183, 183, 183)
+                .addComponent(jb_insertar)
+                .addGap(30, 30, 30)
+                .addComponent(jb_nuevo)
+                .addGap(30, 30, 30)
+                .addComponent(jb_modificar)
+                .addGap(30, 30, 30)
+                .addComponent(jb_eliminar)
+                .addGap(30, 30, 30)
+                .addComponent(jb_buscar)
+                .addGap(60, 60, 60)
+                .addComponent(jb_primero)
+                .addGap(18, 18, 18)
+                .addComponent(jb_anterior)
+                .addGap(18, 18, 18)
+                .addComponent(jb_siguiente)
+                .addGap(18, 18, 18)
+                .addComponent(jb_ultimo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlIdCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jl_id_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtf_id_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtf_colonia, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jl_colonia, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -218,7 +279,7 @@ public class ViewClientes extends javax.swing.JPanel {
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jtf_teléfono, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                        .addComponent(jtf_telefono, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
                         .addComponent(jl_email))
                     .addComponent(jl_teléfono)
                     .addComponent(jtf_email, javax.swing.GroupLayout.Alignment.LEADING))
@@ -234,43 +295,81 @@ public class ViewClientes extends javax.swing.JPanel {
                     .addComponent(jl_calle, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jl_estado)
                     .addComponent(jtf_estado))
-                .addGap(30, 30, 30)
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jb_insertar)
+                        .addComponent(jb_nuevo)
+                        .addComponent(jb_modificar)
+                        .addComponent(jb_eliminar)
+                        .addComponent(jb_buscar))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jb_primero)
+                        .addComponent(jb_anterior)
+                        .addComponent(jb_siguiente)
+                        .addComponent(jb_ultimo)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jb_primeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_primeroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_primeroActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel jlIdCliente;
-    private javax.swing.JLabel jl_apellido_materno;
-    private javax.swing.JLabel jl_apellido_paterno;
-    private javax.swing.JLabel jl_calle;
-    private javax.swing.JLabel jl_ciudad;
-    private javax.swing.JLabel jl_codigo_postal;
-    private javax.swing.JLabel jl_colonia;
-    private javax.swing.JLabel jl_email;
-    private javax.swing.JLabel jl_estado;
-    private javax.swing.JLabel jl_nombre_cliente;
-    private javax.swing.JLabel jl_numero_exterior;
-    private javax.swing.JLabel jl_numero_interior;
-    private javax.swing.JLabel jl_rfc;
-    private javax.swing.JLabel jl_teléfono;
+    public javax.swing.JButton jb_anterior;
+    public javax.swing.JButton jb_buscar;
+    public javax.swing.JButton jb_eliminar;
+    public javax.swing.JButton jb_insertar;
+    public javax.swing.JButton jb_modificar;
+    public javax.swing.JButton jb_nuevo;
+    public javax.swing.JButton jb_primero;
+    public javax.swing.JButton jb_siguiente;
+    public javax.swing.JButton jb_ultimo;
+    public javax.swing.JLabel jl_apellido_materno;
+    public javax.swing.JLabel jl_apellido_paterno;
+    public javax.swing.JLabel jl_calle;
+    public javax.swing.JLabel jl_ciudad;
+    public javax.swing.JLabel jl_codigo_postal;
+    public javax.swing.JLabel jl_colonia;
+    public javax.swing.JLabel jl_email;
+    public javax.swing.JLabel jl_estado;
+    public javax.swing.JLabel jl_id_Cliente;
+    public javax.swing.JLabel jl_nombre_cliente;
+    public javax.swing.JLabel jl_numero_exterior;
+    public javax.swing.JLabel jl_numero_interior;
+    public javax.swing.JLabel jl_rfc;
+    public javax.swing.JLabel jl_teléfono;
     private javax.swing.JLabel jl_titulo;
-    private javax.swing.JTextField jtf_apellido_materno;
-    private javax.swing.JTextField jtf_apellido_paterno;
-    private javax.swing.JTextField jtf_calle;
-    private javax.swing.JTextField jtf_ciudad;
-    private javax.swing.JTextField jtf_codigo_postal;
-    private javax.swing.JTextField jtf_colonia;
-    private javax.swing.JTextField jtf_email;
-    private javax.swing.JTextField jtf_estado;
-    private javax.swing.JTextField jtf_id_cliente;
-    private javax.swing.JTextField jtf_nombre_cliente;
-    private javax.swing.JTextField jtf_numero_exterior;
-    private javax.swing.JTextField jtf_numero_interior;
-    private javax.swing.JTextField jtf_rfc;
-    private javax.swing.JTextField jtf_teléfono;
+    public javax.swing.JTextField jtf_apellido_materno;
+    public javax.swing.JTextField jtf_apellido_paterno;
+    public javax.swing.JTextField jtf_calle;
+    public javax.swing.JTextField jtf_ciudad;
+    public javax.swing.JTextField jtf_codigo_postal;
+    public javax.swing.JTextField jtf_colonia;
+    public javax.swing.JTextField jtf_email;
+    public javax.swing.JTextField jtf_estado;
+    public javax.swing.JTextField jtf_id_cliente;
+    public javax.swing.JTextField jtf_nombre_cliente;
+    public javax.swing.JTextField jtf_numero_exterior;
+    public javax.swing.JTextField jtf_numero_interior;
+    public javax.swing.JTextField jtf_rfc;
+    public javax.swing.JTextField jtf_telefono;
     // End of variables declaration//GEN-END:variables
+
+    public void setTitle(String dagasoft) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setResizable(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setLocationRelativeTo(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
