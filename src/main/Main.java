@@ -5,10 +5,6 @@
  */
 package main;
 
-import Controllers.ControllerClientes;
-import Models.ModelMain;
-import Views.ViewMenu;
-
 /**
  *
  * @author Norberto
