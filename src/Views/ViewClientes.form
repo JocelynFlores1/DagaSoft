@@ -68,7 +68,7 @@
                       <Component id="jpClientesTitulo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jpAdministracionClientes" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="32" max="32767" attributes="0"/>
                       <Component id="jpPieDePagina" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -152,11 +152,6 @@
                           </Group>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jb_insertar" min="-2" pref="115" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jb_nuevo" min="-2" pref="115" max="-2" attributes="0"/>
-                              </Group>
                               <Component id="jtf_nombre_cliente" alignment="0" max="32767" attributes="0"/>
                               <Component id="jtf_apellido_paterno" alignment="0" max="32767" attributes="0"/>
                               <Component id="jtf_apellido_materno" alignment="0" max="32767" attributes="0"/>
@@ -164,28 +159,44 @@
                               <Component id="jtf_rfc" alignment="0" max="32767" attributes="0"/>
                               <Component id="jtf_calle" alignment="0" max="32767" attributes="0"/>
                               <Component id="jtf_id_cliente" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jb_nuevo" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jb_insertar" min="-2" pref="115" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="228" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jl_colonia" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jl_numero_interior" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jl_numero_exterior" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jl_codigo_postal" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jl_email" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jl_ciudad" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jl_estado" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jb_cancelar" min="-2" pref="115" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jl_colonia" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jl_numero_interior" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jl_numero_exterior" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jl_codigo_postal" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jl_email" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jl_ciudad" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jl_estado" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jtf_colonia" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jtf_numero_interior" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jtf_numero_exterior" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jtf_codigo_postal" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jtf_email" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jtf_ciudad" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jtf_estado" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="jb_eliminar_cliente" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jb_modificar_cliente" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jtf_colonia" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jtf_numero_interior" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jtf_numero_exterior" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jtf_codigo_postal" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jtf_email" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jtf_ciudad" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jtf_estado" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="70" max="32767" attributes="0"/>
+                          <EmptySpace pref="58" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -194,6 +205,21 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jtf_colonia" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jtf_numero_interior" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jtf_numero_exterior" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="jtf_codigo_postal" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jtf_email" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jtf_ciudad" pref="37" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jtf_estado" pref="37" max="32767" attributes="0"/>
+                              </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
@@ -211,7 +237,7 @@
                                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                           <Component id="jl_estado" min="-2" pref="25" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jl_id_Cliente" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                               <Component id="jtf_id_cliente" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -250,26 +276,16 @@
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jtf_colonia" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="jtf_numero_interior" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="jtf_numero_exterior" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="jtf_codigo_postal" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="jtf_email" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="jtf_ciudad" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="jtf_estado" max="32767" attributes="0"/>
-                              </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jb_insertar" min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="jb_nuevo" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jb_eliminar_cliente" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="jb_insertar" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jb_cancelar" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jb_nuevo" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jb_modificar_cliente" alignment="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
@@ -593,6 +609,33 @@
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
+                <Component class="javax.swing.JButton" name="jb_eliminar_cliente">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Eliminar registro"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JButton" name="jb_modificar_cliente">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Modificar registro"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JButton" name="jb_cancelar">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Cancelar"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jpPieDePagina">
@@ -763,15 +806,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane1" alignment="0" pref="1154" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jtf_eliminar_cliente" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jtf_modificar_cliente" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jScrollPane1" pref="1154" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -780,13 +815,8 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="392" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jtf_eliminar_cliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtf_modificar_cliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" pref="416" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -799,7 +829,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="jTable1">
+                        <Component class="javax.swing.JTable" name="jtable_clientes">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="14" rowCount="21">
@@ -903,22 +933,6 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="jtf_eliminar_cliente">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Eliminar registro"/>
-                      </Properties>
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="jtf_modificar_cliente">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Modificar registro"/>
-                      </Properties>
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                      </AuxValues>
-                    </Component>
                   </SubComponents>
                 </Container>
               </SubComponents>

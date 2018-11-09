@@ -23,7 +23,6 @@ public class ControllerLogin implements ActionListener {
     public ControllerLogin(ModelLogin modelLogin, ViewLogin viewLogin) {
         this.modelLogin = modelLogin;
         this.viewLogin = viewLogin;
-        Models.ModelClientes modelClientes = new Models.ModelClientes();
         initComponents();
         viewLogin.jbLogin.addActionListener(this);
     }

@@ -6,11 +6,12 @@
 package Models;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -209,11 +210,8 @@ public class ModelClientes {
      * Consulta todo los registros .
      */
     public void conectarDB() {
-
         ModelConexion loginConexion = new ModelConexion();
         loginConexion.getConexion();
-
-        PreparedStatement ps = null;
         try {
             String consultaString = "select * from clientes";
             ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
@@ -225,7 +223,84 @@ public class ModelClientes {
                 System.out.println("Error de consulta");
             }
         } catch (SQLException e) {
-            System.out.println("Error tabla clientes" + e);
+            System.out.println("Error 02: tabla clientes" + e);
         }
     }
+
+    public void insertarNuevoCliente() {
+        ModelConexion loginConexion = new ModelConexion();
+        //Se obtiene la conexion para la clase
+
+        String sqlInsertarCliente = "insert into clientes (id_cliente, nombre_cliente, apellido_paterno_cliente, apellido_materno_cliente, telefono_cliente, rfc_cliente, calle_cliente, colonia_cliente, numero_exterior_cliente, numero_interior_cliente, codigo_postal_cliente, email_cliente, ciudad_cliente, estado_cliente) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        try {
+            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarCliente); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            System.out.println(getId_cliente());
+            ps.setString(1, getId_cliente());
+            ps.setString(2, getNombre_cliente());
+            ps.setString(3, getApellido_paterno());
+            ps.setString(4, getApellido_materno());
+            ps.setString(5, getTelefono());
+            ps.setString(6, getRfc());
+            ps.setString(7, getCalle());
+            ps.setString(8, getColonia());
+            ps.setString(9, getNumero_exterior());
+            ps.setString(10, getNumero_interior());
+            ps.setString(11, getCodigo_postal());
+            ps.setString(12, getEmail());
+            ps.setString(13, getCiudad());
+            ps.setString(14, getEstado());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error 03: Insertar nuevo cliente" + ex);
+        }
+    }
+
+    public void modificarDatosCliente() {
+        ModelConexion loginConexion = new ModelConexion();
+        //Se obtiene la conexion para la clase
+
+        String sqlModificarCliente = "update clientes set "
+                + "nombre_cliente=?, apellido_paterno_cliente=?, apellido_materno_cliente=?, telefono_cliente=?, rfc_cliente=?, "
+                + "calle_cliente=?, colonia_cliente=?, numero_exterior_cliente=?, numero_interior_cliente=?, codigo_postal_cliente=?, email_cliente=?, ciudad_cliente=?, "
+                + "estado_cliente=? where id_cliente = ?";
+        try {
+
+            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarCliente);
+
+            System.out.println(getId_cliente());
+
+            ps.setString(1, getNombre_cliente());
+            ps.setString(2, getApellido_paterno());
+            ps.setString(3, getApellido_materno());
+            ps.setString(4, getTelefono());
+            ps.setString(5, getRfc());
+            ps.setString(6, getCalle());
+            ps.setString(7, getColonia());
+            ps.setString(8, getNumero_exterior());
+            ps.setString(9, getNumero_interior());
+            ps.setString(10, getCodigo_postal());
+            ps.setString(11, getEmail());
+            ps.setString(12, getCiudad());
+            ps.setString(13, getEstado());
+            ps.setString(14, getId_cliente());
+            ps.executeUpdate();
+
+        } catch (SQLException ex) {
+            System.out.println("Error 04: Modificar datos cliente" + ex);
+        }
+    }
+
+    //Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
+    public void consultajTableClientes() {
+        ModelConexion loginConexion = new ModelConexion();
+        loginConexion.getConexion();
+        try {
+            String consultaString = "select * from clientes";
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            rs = ps.executeQuery();
+        } catch (SQLException e) {
+            System.out.println("Error 000000: tabla clientes" + e);
+        }
+    }
+    
 }
