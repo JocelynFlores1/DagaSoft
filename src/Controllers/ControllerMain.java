@@ -9,6 +9,9 @@ import Models.ModelMain;
 import Views.ViewMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import javax.swing.event.MenuListener;
 
 /**
  *
@@ -31,6 +34,7 @@ public class ControllerMain {
     private ControllerEmpleados controllerEmpleados;
     private ControllerProductos controllerProductos;
     private ControllerSucursales controllerSucursales;
+    private ControllerInicio controllerInicio;
 
     /**
      * Controlador principal del proyecto que un el modelMain y viewMain, ademas
@@ -48,6 +52,7 @@ public class ControllerMain {
         this.controllers = controllers;
         setControllers();
         setActionListener();
+        setMouseListener();
         initComponets();
     }
 
@@ -57,21 +62,24 @@ public class ControllerMain {
      * cada uno.
      */
     private void setControllers() {
-        controllerProveedores = (ControllerProveedores) controllers[0];
-        controllerClientes = (ControllerClientes) controllers[1];
-        controllerCompras = (ControllerCompras) controllers[2];
-        controllerEmpleados = (ControllerEmpleados) controllers[3];
-        controllerProductos = (ControllerProductos) controllers[4];
-        controllerSucursales = (ControllerSucursales) controllers[5];
+        controllerInicio = (ControllerInicio) controllers[0];
+        controllerProveedores = (ControllerProveedores) controllers[1];
+        controllerClientes = (ControllerClientes) controllers[2];
+        controllerCompras = (ControllerCompras) controllers[3];
+        controllerEmpleados = (ControllerEmpleados) controllers[4];
+        controllerProductos = (ControllerProductos) controllers[5];
+        controllerSucursales = (ControllerSucursales) controllers[6];
+
     }
 
     /**
      * Muesta la vista principal ViewMain.
      */
     private void initComponets() {
-        viewMenu.setTitle("Proveedores");
+        viewMenu.setTitle("Ferreteria   A C M E");
         viewMenu.setLocationRelativeTo(null);
         viewMenu.setVisible(true);
+        jmi_inicio_actionPerformed();
     }
 
     /**
@@ -86,6 +94,36 @@ public class ControllerMain {
         viewMenu.jmSucursales.addActionListener(actionListener);
         viewMenu.jmEmpleados.addActionListener(actionListener);
     }
+
+    private void setMouseListener() {
+        viewMenu.jmInicio.addMouseListener(mouseListener);
+    }
+
+    private final MouseListener mouseListener = new MouseListener() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            if (e.getSource() == viewMenu.jmInicio) {
+                jmi_inicio_actionPerformed();
+            }
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+        }
+    };
 
     /**
      * Evalua el componente que genero el evento y llama a un método en
@@ -121,6 +159,13 @@ public class ControllerMain {
      * 3.- Muestra el JPanel ViewDetalleContacto dentro del JFrame ViewMain
      * (incluido todo el funcionamiento programado).
      */
+    public void jmi_inicio_actionPerformed() {
+        viewMenu.setContentPane(controllerInicio.viewInicio);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Inicio");
+    }
+
     private void jmi_proveedores_actionPerformed() {
         viewMenu.setContentPane(controllerProveedores.viewProveedores);
         viewMenu.revalidate();

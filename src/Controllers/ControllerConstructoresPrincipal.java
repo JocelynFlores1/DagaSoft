@@ -5,6 +5,9 @@
  */
 package Controllers;
 
+import Models.ModelMain;
+import Views.ViewMenu;
+
 /**
  *
  * @author beto
@@ -12,6 +15,11 @@ package Controllers;
 public class ControllerConstructoresPrincipal {
 
     public void principalControllersMenu() {
+        
+        Models.ModelInicio modelInicio = new Models.ModelInicio();
+        Views.ViewInicio viewFondo = new Views.ViewInicio();
+        Controllers.ControllerInicio controllerInicio = new Controllers.ControllerInicio(modelInicio, viewFondo); 
+        
         Models.ModelClientes modelClientes = new Models.ModelClientes();
         Views.ViewClientes viewClientes = new Views.ViewClientes();
         Controllers.ControllerClientes controllerClientes = new Controllers.ControllerClientes(modelClientes, viewClientes);
@@ -36,16 +44,18 @@ public class ControllerConstructoresPrincipal {
         Views.ViewSucursales viewSucursales = new Views.ViewSucursales();
         Controllers.ControllerSucursales controllerSucursales = new Controllers.ControllerSucursales(modelSucursales, viewSucursales);
 
-        Object[] controllers = new Object[6];
-        controllers[0] = controllerProveedores;
-        controllers[1] = controllerClientes;
-        controllers[2] = controllerCompras;
-        controllers[3] = controllerEmpleados;
-        controllers[4] = controllerProductos;
-        controllers[5] = controllerSucursales;
 
-        Models.ModelMain modelMain = new Models.ModelMain();
-        Views.ViewMenu viewMenu = new Views.ViewMenu();
-        Controllers.ControllerMain controllerMain = new Controllers.ControllerMain(modelMain, viewMenu, controllers);
+        Object[] controllers = new Object[7];
+        controllers[0] = controllerInicio;
+        controllers[1] = controllerProveedores;
+        controllers[2] = controllerClientes;
+        controllers[3] = controllerCompras;
+        controllers[4] = controllerEmpleados;
+        controllers[5] = controllerProductos;
+        controllers[6] = controllerSucursales;
+
+        Models.ModelMain modelMain = new ModelMain();
+        Views.ViewMenu viewMenu = new ViewMenu();
+        ControllerMain controllerMain = new ControllerMain(modelMain, viewMenu, controllers);
     }
 }

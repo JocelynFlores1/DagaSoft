@@ -23,12 +23,12 @@ public class ControllerLogin implements ActionListener {
     public ControllerLogin(ModelLogin modelLogin, ViewLogin viewLogin) {
         this.modelLogin = modelLogin;
         this.viewLogin = viewLogin;
+        Models.ModelClientes modelClientes = new Models.ModelClientes();
         initComponents();
         viewLogin.jbLogin.addActionListener(this);
     }
 
     private void initComponents() {
-        JOptionPane.showMessageDialog(null, "Ferreteria Acme: Inicie Sesión");
         viewLogin.setVisible(true);
         viewLogin.setLocationRelativeTo(null);
         viewLogin.setTitle("Inicio de sesión Ferreteria Acme");
@@ -45,10 +45,10 @@ public class ControllerLogin implements ActionListener {
         String pass = new String(viewLogin.jpfPassword.getPassword());
         if (viewLogin.jtfUser.getText().equals(modelLogin.getUser()) && pass.equals(modelLogin.getPassword())) {
             viewLogin.dispose();
-            ControllerConstructoresPrincipal controllerConstructoresPrincipal = new ControllerConstructoresPrincipal();
-            controllerConstructoresPrincipal.principalControllersMenu();
             System.out.println(modelLogin.getPassword());
             System.out.println(modelLogin.getUser());
+            ControllerConstructoresPrincipal controllerConstructoresPrincipal = new ControllerConstructoresPrincipal();
+            controllerConstructoresPrincipal.principalControllersMenu();
         } else {
             JOptionPane.showMessageDialog(null, "Contraseña o nombre de usuario incorrectos");
             System.out.println(modelLogin.getPassword());
