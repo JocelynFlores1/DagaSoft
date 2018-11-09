@@ -9,6 +9,6 @@ package Models;
  *
  * @author Norberto
  */
-public class ModelMenu {
+public class ModelInicio {
     
 }

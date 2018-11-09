@@ -10,6 +10,7 @@ package Models;
  * @author Norberto
  */
 public class ModelLogin {
+
     private String user = "Admin";
     private String password = "123";
 
@@ -28,5 +29,4 @@ public class ModelLogin {
     public void setPassword(String password) {
         this.password = password;
     }
-    
 }
