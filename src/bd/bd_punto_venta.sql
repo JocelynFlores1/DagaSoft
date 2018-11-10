@@ -11,14 +11,11 @@
  Target Server Version : 50560
  File Encoding         : 65001
 
- Date: 09/11/2018 08:28:18
+ Date: 09/11/2018 18:45:30
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
-CREATE DATABASE ferreteriasacme;
-USE ferreteriasacme;
 
 -- ----------------------------
 -- Table structure for almacen
@@ -187,6 +184,7 @@ CREATE TABLE `sucursal`  (
   `numero_sucursal` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `ciudad_sucursal` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `telefono_sucursal` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `codigo_postal_sucursal` varchar(5) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`id_sucursal`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
