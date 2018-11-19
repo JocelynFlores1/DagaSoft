@@ -10,9 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -210,11 +207,11 @@ public class ModelClientes {
      * Consulta todo los registros .
      */
     public void conectarDB() {
-        ModelConexion loginConexion = new ModelConexion();
-        loginConexion.getConexion();
+        ModelConexion clienteConexion = new ModelConexion();
+        clienteConexion.getConexion();
         try {
             String consultaString = "select * from clientes";
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
 
             if (rs.next()) {
@@ -227,13 +224,19 @@ public class ModelClientes {
         }
     }
 
+    /**
+     * *
+     * Metodo que realiza la insercción de un nuevo cliente en la base de datos,
+     * obteniendo las variables que se guardaron en el controller
+     *
+     */
     public void insertarNuevoCliente() {
-        ModelConexion loginConexion = new ModelConexion();
+        ModelConexion clienteConexion = new ModelConexion();
         //Se obtiene la conexion para la clase
 
         String sqlInsertarCliente = "insert into clientes (id_cliente, nombre_cliente, apellido_paterno_cliente, apellido_materno_cliente, telefono_cliente, rfc_cliente, calle_cliente, colonia_cliente, numero_exterior_cliente, numero_interior_cliente, codigo_postal_cliente, email_cliente, ciudad_cliente, estado_cliente) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
-            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarCliente); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            ps = (com.mysql.jdbc.PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlInsertarCliente); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_cliente());
             ps.setString(1, getId_cliente());
             ps.setString(2, getNombre_cliente());
@@ -255,8 +258,13 @@ public class ModelClientes {
         }
     }
 
+    /**
+     * *
+     * Metodo que modifica los datos del cliente usando como referencia el
+     * id_cliente para guardar los cambios
+     */
     public void modificarDatosCliente() {
-        ModelConexion loginConexion = new ModelConexion();
+        ModelConexion clienteConexion = new ModelConexion();
         //Se obtiene la conexion para la clase
 
         String sqlModificarCliente = "update clientes set "
@@ -265,7 +273,7 @@ public class ModelClientes {
                 + "estado_cliente=? where id_cliente = ?";
         try {
 
-            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarCliente);
+            ps = (com.mysql.jdbc.PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlModificarCliente);
 
             System.out.println(getId_cliente());
 
@@ -290,7 +298,25 @@ public class ModelClientes {
         }
     }
 
-    //Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
+    public void borrarDatosCliente() {
+        ModelConexion clienteConexion = new ModelConexion();
+        //Se obtiene la conexion para la clase
+
+        String sqlBorrarCliente = "delete from clientes where id_cliente = ?";
+        try {
+
+            ps = (com.mysql.jdbc.PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlBorrarCliente);
+            //Este proceso permite establecer la conexion del objeto creado y enlazar la consulta con la base de datos para poder borrar el cliente.
+            ps.setString(1, getId_cliente());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error 05: Borrar datos cliente" + ex);
+        }
+    }
+
+    /***
+     * Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
+     */
     public void consultajTableClientes() {
         ModelConexion loginConexion = new ModelConexion();
         loginConexion.getConexion();
@@ -302,5 +328,5 @@ public class ModelClientes {
             System.out.println("Error 000000: tabla clientes" + e);
         }
     }
-    
+
 }

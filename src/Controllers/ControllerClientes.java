@@ -9,11 +9,6 @@ import Models.ModelClientes;
 import Views.ViewClientes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -41,6 +36,8 @@ public class ControllerClientes {
                 jmi_insertarC_actionPerformed();
             } else if (e.getSource() == viewClientes.jb_modificar_cliente) {
                 jmi_modificarC_actionPerformed();
+            } else if (e.getSource() == viewClientes.jb_eliminar_cliente) {
+                jmi_borrarC_actionListener();
             }
         }
     };
@@ -129,10 +126,11 @@ public class ControllerClientes {
             modelClientes.setEstado(viewClientes.jtf_estado.getText());
 
             modelClientes.insertarNuevoCliente();
-
+            tablaConsulta();
+            JOptionPane.showMessageDialog(null, "Registro almacenado correctamente");
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
-            JOptionPane.showMessageDialog(null, "No se guardo ningun producto");
+            JOptionPane.showMessageDialog(null, "No se guardo ningun cliente");
         }
     }
 
@@ -156,10 +154,28 @@ public class ControllerClientes {
             modelClientes.setEstado(viewClientes.jtf_estado.getText());
 
             modelClientes.modificarDatosCliente();
+            //Este comando realiza la accion de utlilzar el metodo de modificarDatosCliente usando el objeto construido en de modelClientes
+            JOptionPane.showMessageDialog(null, "Datos modificados correctamente");
+            tablaConsulta();
+            //Se usa el metodo tablaConsulta para actualizar los registros en jTableClientes
 
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
             JOptionPane.showMessageDialog(null, "No se guardo ningun cambio");
+        }
+    }
+
+    public void jmi_borrarC_actionListener() {
+        //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
+        int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea borrar los datos del cliente?", "Borrar cliente", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (cancelar == 0) {
+            modelClientes.setId_cliente(viewClientes.jtf_id_cliente.getText());
+            modelClientes.borrarDatosCliente();
+            tablaConsulta();
+            JOptionPane.showMessageDialog(null, "Los datos del cliente han sido eliminados");
+        } else {
+            ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
+            JOptionPane.showMessageDialog(null, "No se borro ningun registro");
         }
     }
 
@@ -203,13 +219,26 @@ public class ControllerClientes {
         }
     }
 
+    //Metodo que permite insertar todos los datos de la tabla en 
     public void insertarCamposTabla() {
         try {
             if (viewClientes.jtable_clientes.getSelectedRow() != -1) {
                 int fila = viewClientes.jtable_clientes.getSelectedRow();
 
                 viewClientes.jtf_id_cliente.setText(viewClientes.jtable_clientes.getValueAt(fila, 0).toString());
-
+                viewClientes.jtf_nombre_cliente.setText(viewClientes.jtable_clientes.getValueAt(fila, 1).toString());
+                viewClientes.jtf_apellido_paterno.setText(viewClientes.jtable_clientes.getValueAt(fila, 2).toString());
+                viewClientes.jtf_apellido_materno.setText(viewClientes.jtable_clientes.getValueAt(fila, 3).toString());
+                viewClientes.jtf_telefono.setText(viewClientes.jtable_clientes.getValueAt(fila, 4).toString());
+                viewClientes.jtf_rfc.setText(viewClientes.jtable_clientes.getValueAt(fila, 5).toString());
+                viewClientes.jtf_calle.setText(viewClientes.jtable_clientes.getValueAt(fila, 6).toString());
+                viewClientes.jtf_colonia.setText(viewClientes.jtable_clientes.getValueAt(fila, 7).toString());
+                viewClientes.jtf_numero_exterior.setText(viewClientes.jtable_clientes.getValueAt(fila, 8).toString());
+                viewClientes.jtf_numero_interior.setText(viewClientes.jtable_clientes.getValueAt(fila, 9).toString());
+                viewClientes.jtf_codigo_postal.setText(viewClientes.jtable_clientes.getValueAt(fila, 10).toString());
+                viewClientes.jtf_email.setText(viewClientes.jtable_clientes.getValueAt(fila, 11).toString());
+                viewClientes.jtf_ciudad.setText(viewClientes.jtable_clientes.getValueAt(fila, 12).toString());
+                viewClientes.jtf_estado.setText(viewClientes.jtable_clientes.getValueAt(fila, 13).toString());
             }
         } catch (Exception err) {
             JOptionPane.showMessageDialog(null, "Error:\nSelecciona un registro");

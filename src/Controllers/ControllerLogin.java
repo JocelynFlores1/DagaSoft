@@ -42,20 +42,25 @@ public class ControllerLogin implements ActionListener {
 
     private void iniciarSesion() {
         String pass = new String(viewLogin.jpfPassword.getPassword());
-        if (viewLogin.jtfUser.getText().equals(modelLogin.getUser()) && pass.equals(modelLogin.getPassword())) {
-            viewLogin.dispose();
-            System.out.println(modelLogin.getPassword());
-            System.out.println(modelLogin.getUser());
-            ControllerConstructoresPrincipal controllerConstructoresPrincipal = new ControllerConstructoresPrincipal();
-            controllerConstructoresPrincipal.principalControllersMenu();
-        } else {
-            JOptionPane.showMessageDialog(null, "Contraseña o nombre de usuario incorrectos");
-            System.out.println(modelLogin.getPassword());
-            System.out.println(modelLogin.getUser());
-            System.out.println(viewLogin.jtfUser.getText());
-            System.out.println(viewLogin.jpfPassword.getPassword());
 
+        if (!viewLogin.jtfUser.getText().equals("") && !pass.equals("")) {
+            modelLogin.setUser(viewLogin.jtfUser.getText());
+            modelLogin.setPassword(pass);
+
+            if (modelLogin.login()) {
+                String usuario = modelLogin.getUser();
+                String tipo = modelLogin.getTipoUsuario();
+                String sucursal = modelLogin.getSucursal();
+                ControllerConstructoresPrincipal constructoresPrincipal = new ControllerConstructoresPrincipal();
+                constructoresPrincipal.controllersPrincial(usuario, tipo, sucursal);
+                viewLogin.dispose();
+            } else {
+                System.out.println("Datos incorrectos");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Debe ingresar sus datos");
         }
+
     }
 
 }

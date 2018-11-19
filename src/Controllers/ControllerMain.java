@@ -5,13 +5,15 @@
  */
 package Controllers;
 
+import Models.ModelLogin;
 import Models.ModelMain;
+import Views.ViewLogin;
 import Views.ViewMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import javax.swing.event.MenuListener;
+import main.Main;
 
 /**
  *
@@ -93,6 +95,7 @@ public class ControllerMain {
         viewMenu.jmAlmacen.addActionListener(actionListener);
         viewMenu.jmSucursales.addActionListener(actionListener);
         viewMenu.jmEmpleados.addActionListener(actionListener);
+        viewMenu.jmCerrarSesion.addActionListener(actionListener);
     }
 
     private void setMouseListener() {
@@ -104,7 +107,7 @@ public class ControllerMain {
         public void mouseClicked(MouseEvent e) {
             if (e.getSource() == viewMenu.jmInicio) {
                 jmi_inicio_actionPerformed();
-            }
+            } 
         }
 
         @Override
@@ -144,6 +147,8 @@ public class ControllerMain {
                 jmi_sucursales_actionPerformed();
             } else if (e.getSource() == viewMenu.jmEmpleados) {
                 jmi_empleados_actionPerformed();
+            }else if (e.getSource() == viewMenu.jmCerrarSesion) {
+                jmi_cerrarSesion_actionPerformed();
             }
         }
     };
@@ -208,6 +213,14 @@ public class ControllerMain {
         System.out.println("Empleados");
     }
 
+    public void jmi_cerrarSesion_actionPerformed() {
+        viewMenu.dispose();
+        
+        ModelLogin modelLogin = new ModelLogin();
+        ViewLogin viewLogin = new ViewLogin();
+        ControllerLogin controllerLogin = new ControllerLogin(modelLogin, viewLogin);
+    }
+
     /**
      * Muestra el JPanel ViewAgenda dentro del JFrame ViewMain, (incluido todo
      * el funcionamiendo programado).
@@ -215,6 +228,7 @@ public class ControllerMain {
     /**
      * Cierra la aplicacion.
      */
+
     private void jmi_salir_actionPerformed() {
         System.exit(0);
     }

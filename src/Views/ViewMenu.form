@@ -88,7 +88,7 @@
             <Property name="text" type="java.lang.String" value="Sesi&#xf3;n"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jmAlmacen1">
+            <MenuItem class="javax.swing.JMenuItem" name="jmUsuarioSesion">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Usuario"/>
               </Properties>
@@ -96,7 +96,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jmAlmacen2">
+            <MenuItem class="javax.swing.JMenuItem" name="jmTipoUsuarioSesion">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tipo de usuario"/>
               </Properties>
@@ -104,7 +104,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jmAlmacen3">
+            <MenuItem class="javax.swing.JMenuItem" name="jmSucursalSesion">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sucursal"/>
               </Properties>
@@ -112,7 +112,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jmAlmacen4">
+            <MenuItem class="javax.swing.JMenuItem" name="jmCerrarSesion">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cerrar sesi&#xf3;n"/>
               </Properties>

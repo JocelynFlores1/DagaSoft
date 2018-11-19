@@ -39,10 +39,10 @@ public class ViewMenu extends javax.swing.JFrame {
         jmEmpleados = new javax.swing.JMenuItem();
         jmAcercaDe = new javax.swing.JMenu();
         jmSesion = new javax.swing.JMenu();
-        jmAlmacen1 = new javax.swing.JMenuItem();
-        jmAlmacen2 = new javax.swing.JMenuItem();
-        jmAlmacen3 = new javax.swing.JMenuItem();
-        jmAlmacen4 = new javax.swing.JMenuItem();
+        jmUsuarioSesion = new javax.swing.JMenuItem();
+        jmTipoUsuarioSesion = new javax.swing.JMenuItem();
+        jmSucursalSesion = new javax.swing.JMenuItem();
+        jmCerrarSesion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,17 +79,17 @@ public class ViewMenu extends javax.swing.JFrame {
 
         jmSesion.setText("Sesión");
 
-        jmAlmacen1.setText("Usuario");
-        jmSesion.add(jmAlmacen1);
+        jmUsuarioSesion.setText("Usuario");
+        jmSesion.add(jmUsuarioSesion);
 
-        jmAlmacen2.setText("Tipo de usuario");
-        jmSesion.add(jmAlmacen2);
+        jmTipoUsuarioSesion.setText("Tipo de usuario");
+        jmSesion.add(jmTipoUsuarioSesion);
 
-        jmAlmacen3.setText("Sucursal");
-        jmSesion.add(jmAlmacen3);
+        jmSucursalSesion.setText("Sucursal");
+        jmSesion.add(jmSucursalSesion);
 
-        jmAlmacen4.setText("Cerrar sesión");
-        jmSesion.add(jmAlmacen4);
+        jmCerrarSesion.setText("Cerrar sesión");
+        jmSesion.add(jmCerrarSesion);
 
         jMenuBar1.add(jmSesion);
 
@@ -148,17 +148,17 @@ public class ViewMenu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JMenu jmAcercaDe;
     public javax.swing.JMenuItem jmAlmacen;
-    public javax.swing.JMenuItem jmAlmacen1;
-    public javax.swing.JMenuItem jmAlmacen2;
-    public javax.swing.JMenuItem jmAlmacen3;
-    public javax.swing.JMenuItem jmAlmacen4;
+    public javax.swing.JMenuItem jmCerrarSesion;
     public javax.swing.JMenuItem jmClientes;
     public javax.swing.JMenuItem jmCompras;
     public javax.swing.JMenuItem jmEmpleados;
     public javax.swing.JMenu jmInicio;
     public javax.swing.JMenuItem jmProveedores;
     private javax.swing.JMenu jmSesion;
+    public javax.swing.JMenuItem jmSucursalSesion;
     public javax.swing.JMenuItem jmSucursales;
+    public javax.swing.JMenuItem jmTipoUsuarioSesion;
+    public javax.swing.JMenuItem jmUsuarioSesion;
     private javax.swing.JMenu jmVentanas;
     public javax.swing.JMenuItem jmVentas;
     // End of variables declaration//GEN-END:variables

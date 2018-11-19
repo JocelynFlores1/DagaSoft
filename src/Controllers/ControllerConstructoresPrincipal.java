@@ -14,38 +14,37 @@ import Views.ViewMenu;
  */
 public class ControllerConstructoresPrincipal {
 
-    public void principalControllersMenu() {
-        
-        Models.ModelInicio modelInicio = new Models.ModelInicio();
-        Views.ViewInicio viewFondo = new Views.ViewInicio();
-        Controllers.ControllerInicio controllerInicio = new Controllers.ControllerInicio(modelInicio, viewFondo); 
-        
-        Models.ModelClientes modelClientes = new Models.ModelClientes();
-        Views.ViewClientes viewClientes = new Views.ViewClientes();
-        Controllers.ControllerClientes controllerClientes = new Controllers.ControllerClientes(modelClientes, viewClientes);
+    Object[] controllers = new Object[7];
 
-        Models.ModelCompras modelCompras = new Models.ModelCompras();
-        Views.ViewCompras viewCompras = new Views.ViewCompras();
-        Controllers.ControllerCompras controllerCompras = new Controllers.ControllerCompras(modelCompras, viewCompras);
+    Models.ModelInicio modelInicio = new Models.ModelInicio();
+    Views.ViewInicio viewFondo = new Views.ViewInicio();
+    Controllers.ControllerInicio controllerInicio = new Controllers.ControllerInicio(modelInicio, viewFondo);
 
-        Models.ModelEmpleados modelEmpleados = new Models.ModelEmpleados();
-        Views.ViewEmpleados viewEmpleados = new Views.ViewEmpleados();
-        Controllers.ControllerEmpleados controllerEmpleados = new Controllers.ControllerEmpleados(modelEmpleados, viewEmpleados);
+    Models.ModelClientes modelClientes = new Models.ModelClientes();
+    Views.ViewClientes viewClientes = new Views.ViewClientes();
+    Controllers.ControllerClientes controllerClientes = new Controllers.ControllerClientes(modelClientes, viewClientes);
 
-        Models.ModelProductos modelProductos = new Models.ModelProductos();
-        Views.ViewProductos viewProductos = new Views.ViewProductos();
-        Controllers.ControllerProductos controllerProductos = new Controllers.ControllerProductos(modelProductos, viewProductos);
+    Models.ModelCompras modelCompras = new Models.ModelCompras();
+    Views.ViewCompras viewCompras = new Views.ViewCompras();
+    Controllers.ControllerCompras controllerCompras = new Controllers.ControllerCompras(modelCompras, viewCompras);
 
-        Models.ModelProveedores modelProveedores = new Models.ModelProveedores();
-        Views.ViewProveedores viewProveedores = new Views.ViewProveedores();
-        Controllers.ControllerProveedores controllerProveedores = new Controllers.ControllerProveedores(modelProveedores, viewProveedores);
+    Models.ModelEmpleados modelEmpleados = new Models.ModelEmpleados();
+    Views.ViewEmpleados viewEmpleados = new Views.ViewEmpleados();
+    Controllers.ControllerEmpleados controllerEmpleados = new Controllers.ControllerEmpleados(modelEmpleados, viewEmpleados);
 
-        Models.ModelSucursales modelSucursales = new Models.ModelSucursales();
-        Views.ViewSucursales viewSucursales = new Views.ViewSucursales();
-        Controllers.ControllerSucursales controllerSucursales = new Controllers.ControllerSucursales(modelSucursales, viewSucursales);
+    Models.ModelProductos modelProductos = new Models.ModelProductos();
+    Views.ViewProductos viewProductos = new Views.ViewProductos();
+    Controllers.ControllerProductos controllerProductos = new Controllers.ControllerProductos(modelProductos, viewProductos);
 
+    Models.ModelProveedores modelProveedores = new Models.ModelProveedores();
+    Views.ViewProveedores viewProveedores = new Views.ViewProveedores();
+    Controllers.ControllerProveedores controllerProveedores = new Controllers.ControllerProveedores(modelProveedores, viewProveedores);
 
-        Object[] controllers = new Object[7];
+    Models.ModelSucursales modelSucursales = new Models.ModelSucursales();
+    Views.ViewSucursales viewSucursales = new Views.ViewSucursales();
+    Controllers.ControllerSucursales controllerSucursales = new Controllers.ControllerSucursales(modelSucursales, viewSucursales);
+
+    public void controllersPrincial(String usuario, String tipo, String sucursal) {
         controllers[0] = controllerInicio;
         controllers[1] = controllerProveedores;
         controllers[2] = controllerClientes;
@@ -57,5 +56,9 @@ public class ControllerConstructoresPrincipal {
         Models.ModelMain modelMain = new ModelMain();
         Views.ViewMenu viewMenu = new ViewMenu();
         ControllerMain controllerMain = new ControllerMain(modelMain, viewMenu, controllers);
+        
+        viewMenu.jmUsuarioSesion.setText("Usuario: " + usuario);
+        viewMenu.jmTipoUsuarioSesion.setText("Tipo de usuario: " + tipo);
+        viewMenu.jmSucursalSesion.setText("Sucursal: " + sucursal);
     }
 }
