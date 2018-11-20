@@ -39,6 +39,7 @@ public class ModelEmpleados {
     public String tipo_empleado;
     public String usuario;
     public String contrasena;
+    private String id_sucursal;
     public String codigo_postal;
 
     public Connection getConexion() {
@@ -217,26 +218,34 @@ public class ModelEmpleados {
         this.codigo_postal = codigo_postal;
     }
 
+    public String getId_sucursal() {
+        return id_sucursal;
+    }
+
+    public void setId_sucursal(String id_sucursal) {
+        this.id_sucursal = id_sucursal;
+    }
+
     public void modificarDatos() {
         try {
             setId_empleado(rs.getString(1));
             setNombre_empleado(rs.getString(2));
             setApellido_paterno(rs.getString(3));
             setApellido_materno(rs.getString(4));
-            setTelefono(rs.getString(5));
-            setCalle(rs.getString(6));
-            setColonia(rs.getString(7));
-            setNumero_exterior(rs.getString(8));
-            setNumero_interior(rs.getString(9));
-            setRfc(rs.getString(10));
-            setNo_cueta(rs.getString(11));
-            setNo_seguro(rs.getString(12));
-            setBanco(rs.getString(13));
-            setCurp(rs.getString(14));
+            setCalle(rs.getString(5));
+            setColonia(rs.getString(6));
+            setNumero_exterior(rs.getString(7));
+            setNumero_interior(rs.getString(8));
+            setRfc(rs.getString(9));
+            setTelefono(rs.getString(10));
+            setCurp(rs.getString(11));
+            setNo_cueta(rs.getString(12));
+            setNo_seguro(rs.getString(13));
             setTipo_empleado(rs.getString(15));
             setUsuario(rs.getString(16));
             setContrasena(rs.getString(17));
-            setCodigo_postal(rs.getString(18));
+            setId_sucursal(rs.getString(18));
+            setCodigo_postal(rs.getString(19));
 
         } catch (SQLException e) {
             System.out.println("Error 01: modificar datos" + e);
@@ -269,7 +278,7 @@ public class ModelEmpleados {
         ModelConexion loginConexion = new ModelConexion();
         //Se obtiene la conexion para la clase
 
-        String sqlInsertarEmpleado = "insert into empleado (id_empleado, nombre_empleado, apellido_paterno_cliente, apellido_materno_cliente, telefono, calle, colonia, numero_exterior, numero_interior, rfc, no_cueta, no_seguro, banco, curp, tipo_empleado, usuario, contrasena, codigo_postal) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sqlInsertarEmpleado = "insert into empleado (id_empleado, nombre_empleado, apellido_paterno_cliente, apellido_materno_cliente, telefono, calle, colonia, numero_exterior, numero_interior, rfc, no_cueta, no_seguro, banco, curp, tipo_empleado, usuario, contrasena, codigo_postal, id_sucursal) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarEmpleado); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_empleado());
@@ -291,6 +300,7 @@ public class ModelEmpleados {
             ps.setString(16, getUsuario());
             ps.setString(17, getContrasena());
             ps.setString(18, getCodigo_postal());
+            ps.setString(19, getId_sucursal());
 
             ps.executeUpdate();
         } catch (SQLException ex) {
@@ -305,7 +315,7 @@ public class ModelEmpleados {
         String sqlModificarEmpleado = "update empleado set "
                 + "nombre_empleado=?, apellido_paterno=?, apellido_materno=?, calle=?, calle=?, "
                 + "calle=?, colonia=?, numero_exterior=?, numero_interior=?, rfc=?, no_cueta=?, no_seguro=?, "
-                + "banco=?, curp=?, tipo_empleado=?, usuario=?, contrasena=?, codigo_postal=?, where id_empleado = ?";
+                + "banco=?, curp=?, tipo_empleado=?, usuario=?, contrasena=?, codigo_postal=?, id_sucursal=? where id_empleado = ?";
         try {
 
             ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarEmpleado);
@@ -328,6 +338,7 @@ public class ModelEmpleados {
             ps.setString(15, getTipo_empleado());
             ps.setString(16, getUsuario());
             ps.setString(17, getContrasena());
+            ps.setString(17, getId_sucursal());
             ps.setString(18, getCodigo_postal());
             ps.executeUpdate();
 

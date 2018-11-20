@@ -12,6 +12,8 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -26,6 +28,13 @@ public class ControllerEmpleados {
     public ControllerEmpleados(ModelEmpleados modelEmpleados, ViewEmpleados viewEmpleados) {
         this.modelEmpleados = modelEmpleados;
         this.viewEmpleados = viewEmpleados;
+       initComponents();
+        tablaConsulta();
+        setActionListener();
+    }
+    public void initComponents() {
+        viewEmpleados.setVisible(true);
+        modelEmpleados.conectarDB();
         jtfCambiarCampos();
     }
 
@@ -83,6 +92,12 @@ public class ControllerEmpleados {
         viewEmpleados.jb_modificar.addActionListener(actionListener);
         viewEmpleados.jb_insertar.addActionListener(actionListener);
         viewEmpleados.jb_eliminar.addActionListener(actionListener);
+        viewEmpleados.jt_Empleados.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                insertarCamposTabla();
+            }
+        });
     }
 
     /**
