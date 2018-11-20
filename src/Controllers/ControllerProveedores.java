@@ -9,6 +9,8 @@ import Models.ModelProveedores;
 import Views.ViewProveedores;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 /**
  *
@@ -71,4 +73,21 @@ public class ControllerProveedores {
         viewProveedores.jtf_ciudad.setText(modelProveedores.getCiudad_proveedor());
         viewProveedores.jtf_estado.setText(modelProveedores.getEstado_proveedor());
     } 
+    
+       /**
+     * Método para agregar el actionListener a cada boton de la vista
+     */
+    public void setActionListener() {
+        viewProveedores.jb_nuevo.addActionListener(actionListener);
+        viewProveedores.jb_insertar.addActionListener(actionListener);
+        viewProveedores.jb_cancelar.addActionListener(actionListener);
+        viewProveedores.jb_modificar_proveedor.addActionListener(actionListener);
+        viewProveedores.jb_eliminar_proveedor.addActionListener(actionListener);
+        viewProveedores.jtable_proveedores.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                insertarCamposTabla();
+            }
+        });
+    }
 }
