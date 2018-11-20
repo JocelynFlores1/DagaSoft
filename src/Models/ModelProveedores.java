@@ -5,15 +5,12 @@
  */
 package Models;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
-import javax.swing.JOptionPane;
 /**
  *
- * @author Norberto
+ * @author Jocelyn
  */
 public class ModelProveedores {
     private Connection conexion;
@@ -126,51 +123,4 @@ public class ModelProveedores {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    public void modificarDatos() {
-        try {
-            this.setId_proveedor(rs.getString("id_proveedor"));
-            this.setNombre_proveedor(rs.getString("nombre_proveedor"));
-            this.setCalle(rs.getString("calle"));
-            this.setColonia(rs.getString("colonia"));
-            this.setNumero_exterior(rs.getInt("numero_exterior"));
-            this.setCodigo_postal(rs.getInt("codigo_postal"));
-            this.setCiudad(rs.getString("ciudad"));
-            this.setTelefono(rs.getString("telefono"));
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Error ModelProveedores 001: \n" + e.getMessage());
-        }
-    }
-    /**
-     * Método que realiza las siguietnes acciones: 
-     * 1.- Conecta con la base
-     * 2.- Consulta todo los registros .
-     */
-    public void conectarDB() {
-        try {
-            conexion = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dagasoft", "daga", "daga.2018");
-            st = conexion.createStatement();
-            rs = st.executeQuery("SELECT * FROM contactos;");
-            rs.next();
-            id_proveedor = rs.getString("id_proveedor");
-            nombre_proveedor = rs.getString("nombre_proveedor");
-            calle = rs.getString("calle");
-            colonia = rs.getString("colonia");
-            numero_exterior = rs.getInt("numero_exterior");
-            codigo_postal = rs.getInt("codigo_postal");
-            ciudad = rs.getString("ciudad");
-            telefono = rs.getString("colonia");
-            this.setId_proveedor(id_proveedor);
-            this.setNombre_proveedor(nombre_proveedor);
-            this.setCalle(calle);
-            this.setColonia(colonia);
-            this.setNumero_exterior(numero_exterior);
-            this.setCodigo_postal(codigo_postal);
-            this.setCiudad(ciudad);
-            this.setTelefono(telefono);
-        } catch (SQLException sql) {
-            JOptionPane.showMessageDialog(null, "Error ModelProveedores 002: " + sql.getMessage());
-        }
-
-    }
-
 }

@@ -29,226 +29,334 @@ public class ViewProveedores extends javax.swing.JPanel {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jLayeredPane2 = new javax.swing.JLayeredPane();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jl_id_proveedor = new javax.swing.JLabel();
+        jpProveedoresTitulo = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jpAdministracionProveedores = new javax.swing.JPanel();
+        jl_id_Proveedor = new javax.swing.JLabel();
         jtf_id_proveedor = new javax.swing.JTextField();
         jl_nombre_proveedor = new javax.swing.JLabel();
         jtf_nombre_proveedor = new javax.swing.JTextField();
         jl_calle = new javax.swing.JLabel();
         jtf_calle = new javax.swing.JTextField();
-        jl_colonia = new javax.swing.JLabel();
-        jtf_colonia = new javax.swing.JTextField();
         jl_numero_exterior = new javax.swing.JLabel();
         jtf_numero_exterior = new javax.swing.JTextField();
+        jl_colonia = new javax.swing.JLabel();
+        jtf_colonia = new javax.swing.JTextField();
         jl_codigo_postal = new javax.swing.JLabel();
         jtf_codigo_postal = new javax.swing.JTextField();
-        jl_ciudad = new javax.swing.JLabel();
-        jtf_ciudad = new javax.swing.JTextField();
         jl_telefono = new javax.swing.JLabel();
         jtf_telefono = new javax.swing.JTextField();
-        jb_nuevo = new javax.swing.JButton();
-        jb_modificar = new javax.swing.JButton();
-        jb_eliminar = new javax.swing.JButton();
+        jl_email = new javax.swing.JLabel();
+        jtf_email = new javax.swing.JTextField();
         jb_insertar = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jb_nuevo = new javax.swing.JButton();
+        jb_eliminar_proveedor = new javax.swing.JButton();
+        jb_modificar_proveedor = new javax.swing.JButton();
+        jb_cancelar = new javax.swing.JButton();
+        jl_estado = new javax.swing.JLabel();
+        jtf_estado = new javax.swing.JTextField();
+        jl_ciudad = new javax.swing.JLabel();
+        jtf_ciudad = new javax.swing.JTextField();
+        jpPieDePagina = new javax.swing.JPanel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
         jLayeredPane2.setPreferredSize(new java.awt.Dimension(1200, 600));
 
-        jPanel1.setBackground(new java.awt.Color(255, 51, 0));
+        jpProveedoresTitulo.setBackground(new java.awt.Color(204, 51, 0));
+        jpProveedoresTitulo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jpProveedoresTitulo.setPreferredSize(new java.awt.Dimension(425, 60));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Proveedores");
+        jLabel6.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Administración de proveedores");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(454, 454, 454)
-                .addComponent(jLabel1)
-                .addContainerGap(521, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
+        javax.swing.GroupLayout jpProveedoresTituloLayout = new javax.swing.GroupLayout(jpProveedoresTitulo);
+        jpProveedoresTitulo.setLayout(jpProveedoresTituloLayout);
+        jpProveedoresTituloLayout.setHorizontalGroup(
+            jpProveedoresTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpProveedoresTituloLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        jpProveedoresTituloLayout.setVerticalGroup(
+            jpProveedoresTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpProveedoresTituloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
-        jl_id_proveedor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_id_proveedor.setText("ID");
+        jpAdministracionProveedores.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos personales clientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
+        jpAdministracionProveedores.setOpaque(false);
 
-        jl_nombre_proveedor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_nombre_proveedor.setText("Nombre");
+        jl_id_Proveedor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_id_Proveedor.setText("ID proveedor");
 
-        jl_calle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_calle.setText("Calle");
-
-        jl_colonia.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_colonia.setText("Colonia");
-
-        jl_numero_exterior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_numero_exterior.setText("Número exterior");
-
-        jl_codigo_postal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_codigo_postal.setText("Código postal");
-
-        jl_ciudad.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_ciudad.setText("Ciudad");
-
-        jtf_ciudad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_ciudadActionPerformed(evt);
+        jtf_id_proveedor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_id_proveedor.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_id_proveedorKeyTyped(evt);
             }
         });
 
-        jl_telefono.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jl_telefono.setText("Teléfono");
+        jl_nombre_proveedor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_nombre_proveedor.setText("Nombre proveedor");
 
-        jb_nuevo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jtf_nombre_proveedor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_nombre_proveedor.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_nombre_proveedorKeyTyped(evt);
+            }
+        });
+
+        jl_calle.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_calle.setText("Calle");
+
+        jtf_calle.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_calle.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_calleKeyTyped(evt);
+            }
+        });
+
+        jl_numero_exterior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_numero_exterior.setText("Número exterior");
+
+        jtf_numero_exterior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_numero_exterior.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_numero_exteriorKeyTyped(evt);
+            }
+        });
+
+        jl_colonia.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_colonia.setText("Colonia");
+
+        jtf_colonia.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_colonia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_coloniaKeyTyped(evt);
+            }
+        });
+
+        jl_codigo_postal.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_codigo_postal.setText("Codigo postal");
+
+        jtf_codigo_postal.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_codigo_postal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_codigo_postalKeyTyped(evt);
+            }
+        });
+
+        jl_telefono.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_telefono.setText("Telefono");
+
+        jtf_telefono.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_telefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_telefonoKeyTyped(evt);
+            }
+        });
+
+        jl_email.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_email.setText("Email");
+
+        jtf_email.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_email.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtf_emailActionPerformed(evt);
+            }
+        });
+        jtf_email.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_emailKeyTyped(evt);
+            }
+        });
+
+        jb_insertar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jb_insertar.setText("Guardar");
+
+        jb_nuevo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jb_nuevo.setText("Nuevo");
 
-        jb_modificar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jb_modificar.setText("Modificar");
+        jb_eliminar_proveedor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jb_eliminar_proveedor.setText("Eliminar registro");
 
-        jb_eliminar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jb_eliminar.setText("Eliminar");
+        jb_modificar_proveedor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jb_modificar_proveedor.setText("Modificar registro");
 
-        jb_insertar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jb_insertar.setText("Insertar");
+        jb_cancelar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jb_cancelar.setText("Cancelar");
 
-        jPanel2.setBackground(new java.awt.Color(255, 51, 0));
+        jl_estado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_estado.setText("Estado");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jtf_estado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_estadoKeyTyped(evt);
+            }
+        });
+
+        jl_ciudad.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jl_ciudad.setText("Ciudad");
+
+        jtf_ciudad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_ciudadKeyTyped(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpAdministracionProveedoresLayout = new javax.swing.GroupLayout(jpAdministracionProveedores);
+        jpAdministracionProveedores.setLayout(jpAdministracionProveedoresLayout);
+        jpAdministracionProveedoresLayout.setHorizontalGroup(
+            jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpAdministracionProveedoresLayout.createSequentialGroup()
+                .addGap(126, 126, 126)
+                .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpAdministracionProveedoresLayout.createSequentialGroup()
+                        .addComponent(jb_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(111, 111, 111)
+                        .addComponent(jb_insertar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(111, 111, 111)
+                        .addComponent(jb_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(111, 111, 111)
+                        .addComponent(jb_eliminar_proveedor)
+                        .addGap(111, 111, 111)
+                        .addComponent(jb_modificar_proveedor))
+                    .addGroup(jpAdministracionProveedoresLayout.createSequentialGroup()
+                        .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jl_id_Proveedor)
+                            .addComponent(jl_nombre_proveedor)
+                            .addComponent(jl_calle)
+                            .addComponent(jl_numero_exterior)
+                            .addComponent(jl_colonia))
+                        .addGap(20, 20, 20)
+                        .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtf_nombre_proveedor)
+                            .addComponent(jtf_calle)
+                            .addComponent(jtf_numero_exterior)
+                            .addComponent(jtf_colonia)
+                            .addComponent(jtf_id_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(101, 101, 101)
+                        .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jpAdministracionProveedoresLayout.createSequentialGroup()
+                                    .addComponent(jl_codigo_postal)
+                                    .addGap(72, 72, 72)
+                                    .addComponent(jtf_codigo_postal, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jpAdministracionProveedoresLayout.createSequentialGroup()
+                                    .addComponent(jl_telefono)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jtf_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jpAdministracionProveedoresLayout.createSequentialGroup()
+                                .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jl_estado)
+                                    .addComponent(jl_email)
+                                    .addComponent(jl_ciudad))
+                                .addGap(120, 120, 120)
+                                .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jtf_email, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+                                    .addComponent(jtf_estado)
+                                    .addComponent(jtf_ciudad))))))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+        jpAdministracionProveedoresLayout.setVerticalGroup(
+            jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpAdministracionProveedoresLayout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jl_id_Proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_id_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jl_codigo_postal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_codigo_postal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jl_nombre_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_nombre_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jl_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jl_calle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jtf_calle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jl_email, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtf_email, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30)
+                .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jl_numero_exterior, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_numero_exterior, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jl_estado)
+                    .addComponent(jtf_estado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jtf_colonia)
+                        .addComponent(jl_ciudad)
+                        .addComponent(jtf_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jl_colonia, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpAdministracionProveedoresLayout.createSequentialGroup()
+                        .addGap(115, 115, 115)
+                        .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jb_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_eliminar_proveedor)
+                            .addComponent(jb_modificar_proveedor))
+                        .addContainerGap(32, Short.MAX_VALUE))
+                    .addGroup(jpAdministracionProveedoresLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                        .addGroup(jpAdministracionProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jb_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jb_insertar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32))))
+        );
+
+        jpPieDePagina.setBackground(new java.awt.Color(204, 51, 0));
+        jpPieDePagina.setPreferredSize(new java.awt.Dimension(452, 60));
+
+        javax.swing.GroupLayout jpPieDePaginaLayout = new javax.swing.GroupLayout(jpPieDePagina);
+        jpPieDePagina.setLayout(jpPieDePaginaLayout);
+        jpPieDePaginaLayout.setHorizontalGroup(
+            jpPieDePaginaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 93, Short.MAX_VALUE)
+        jpPieDePaginaLayout.setVerticalGroup(
+            jpPieDePaginaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
 
-        jLayeredPane2.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jl_id_proveedor, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_id_proveedor, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jl_nombre_proveedor, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_nombre_proveedor, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jl_calle, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_calle, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jl_colonia, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_colonia, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jl_numero_exterior, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_numero_exterior, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jl_codigo_postal, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_codigo_postal, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jl_ciudad, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_ciudad, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jl_telefono, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_telefono, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jb_nuevo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jb_modificar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jb_eliminar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jb_insertar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jpProveedoresTitulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jpAdministracionProveedores, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jpPieDePagina, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
         jLayeredPane2Layout.setHorizontalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jl_id_proveedor)
-                    .addComponent(jl_nombre_proveedor)
-                    .addComponent(jl_calle)
-                    .addComponent(jl_colonia))
-                .addGap(49, 49, 49)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jb_eliminar)
-                            .addComponent(jb_insertar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jb_nuevo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jb_modificar, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jtf_id_proveedor)
-                        .addComponent(jtf_nombre_proveedor)
-                        .addComponent(jtf_colonia, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
-                        .addComponent(jtf_calle)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 325, Short.MAX_VALUE)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jl_numero_exterior)
-                    .addComponent(jl_ciudad)
-                    .addComponent(jl_telefono)
-                    .addComponent(jl_codigo_postal))
-                .addGap(49, 49, 49)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jtf_numero_exterior)
-                    .addComponent(jtf_codigo_postal)
-                    .addComponent(jtf_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtf_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpPieDePagina, javax.swing.GroupLayout.DEFAULT_SIZE, 1267, Short.MAX_VALUE)
+                    .addComponent(jpProveedoresTitulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1267, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jLayeredPane2Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jpAdministracionProveedores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jLayeredPane2Layout.setVerticalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jl_id_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_id_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jtf_nombre_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jl_nombre_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(34, 34, 34)
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_calle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                            .addComponent(jl_calle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(31, 31, 31)
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_colonia, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                            .addComponent(jl_colonia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jl_numero_exterior)
-                            .addComponent(jtf_numero_exterior, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jl_codigo_postal)
-                            .addComponent(jtf_codigo_postal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(34, 34, 34)
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jl_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_telefono, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                            .addComponent(jl_telefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(18, 18, 18)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_nuevo)
-                    .addComponent(jb_insertar))
+                .addContainerGap()
+                .addComponent(jpProveedoresTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_eliminar)
-                    .addComponent(jb_modificar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jpAdministracionProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpPieDePagina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Proveedores", jLayeredPane2);
@@ -280,7 +388,7 @@ public class ViewProveedores extends javax.swing.JPanel {
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Registros", jLayeredPane1);
@@ -297,36 +405,131 @@ public class ViewProveedores extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtf_ciudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_ciudadActionPerformed
+    private void jtf_id_proveedorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_id_proveedorKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            Component rootPane = null;
+            JOptionPane.showMessageDialog(rootPane,"Ingresa solo letras");
+        }
+    }//GEN-LAST:event_jtf_id_proveedorKeyTyped
+
+    private void jtf_nombre_proveedorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_nombre_proveedorKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this,"Ingresa solo letras");
+        }
+    }//GEN-LAST:event_jtf_nombre_proveedorKeyTyped
+
+    private void jtf_calleKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_calleKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this,"Ingresa solo letras");
+        }
+    }//GEN-LAST:event_jtf_calleKeyTyped
+
+    private void jtf_numero_exteriorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_numero_exteriorKeyTyped
+        char c=evt.getKeyChar();
+        if(Character.isLetter(c)) {
+            getToolkit().beep();
+            evt.consume();// hace que la pulsación de la tecla se rechaze
+            JOptionPane.showMessageDialog(this,"Estas ingresando letras.Por favor Ingresa solo números");
+        }
+    }//GEN-LAST:event_jtf_numero_exteriorKeyTyped
+
+    private void jtf_coloniaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_coloniaKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this,"Ingresa solo letras");
+        }
+    }//GEN-LAST:event_jtf_coloniaKeyTyped
+
+    private void jtf_codigo_postalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_codigo_postalKeyTyped
+        char c=evt.getKeyChar();
+        if(Character.isLetter(c)) {
+            getToolkit().beep();
+            evt.consume();// hace que la pulsación de la tecla se rechaze
+            JOptionPane.showMessageDialog(this,"Estas ingresando letras.Por favor Ingresa solo números");
+        }
+    }//GEN-LAST:event_jtf_codigo_postalKeyTyped
+
+    private void jtf_telefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_telefonoKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtf_telefonoKeyTyped
+
+    private void jtf_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_emailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_ciudadActionPerformed
+    }//GEN-LAST:event_jtf_emailActionPerformed
+
+    private void jtf_emailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_emailKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtf_emailKeyTyped
+
+    private void jtf_estadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_estadoKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this,"Ingresa solo letras");
+        }
+    }//GEN-LAST:event_jtf_estadoKeyTyped
+
+    private void jtf_ciudadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_ciudadKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this,"Ingresa solo letras");
+        }
+    }//GEN-LAST:event_jtf_ciudadKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
-    public javax.swing.JButton jb_eliminar;
+    public javax.swing.JButton jb_cancelar;
+    public javax.swing.JButton jb_eliminar_proveedor;
     public javax.swing.JButton jb_insertar;
-    public javax.swing.JButton jb_modificar;
+    public javax.swing.JButton jb_modificar_proveedor;
     public javax.swing.JButton jb_nuevo;
     public javax.swing.JLabel jl_calle;
     public javax.swing.JLabel jl_ciudad;
     public javax.swing.JLabel jl_codigo_postal;
     public javax.swing.JLabel jl_colonia;
-    public javax.swing.JLabel jl_id_proveedor;
+    public javax.swing.JLabel jl_email;
+    public javax.swing.JLabel jl_estado;
+    public javax.swing.JLabel jl_id_Proveedor;
     public javax.swing.JLabel jl_nombre_proveedor;
     public javax.swing.JLabel jl_numero_exterior;
     public javax.swing.JLabel jl_telefono;
+    private javax.swing.JPanel jpAdministracionProveedores;
+    private javax.swing.JPanel jpPieDePagina;
+    private javax.swing.JPanel jpProveedoresTitulo;
     public javax.swing.JTextField jtf_calle;
     public javax.swing.JTextField jtf_ciudad;
     public javax.swing.JTextField jtf_codigo_postal;
     public javax.swing.JTextField jtf_colonia;
+    public javax.swing.JTextField jtf_email;
+    public javax.swing.JTextField jtf_estado;
     public javax.swing.JTextField jtf_id_proveedor;
     public javax.swing.JTextField jtf_nombre_proveedor;
     public javax.swing.JTextField jtf_numero_exterior;
