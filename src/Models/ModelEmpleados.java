@@ -298,4 +298,42 @@ public class ModelEmpleados {
         }
     }
 
+    public void modificarDatosEmpleado() {
+        ModelConexion loginConexion = new ModelConexion();
+        //Se obtiene la conexion para la clase
+
+        String sqlModificarEmpleado = "update empleado set "
+                + "nombre_empleado=?, apellido_paterno=?, apellido_materno=?, calle=?, calle=?, "
+                + "calle=?, colonia=?, numero_exterior=?, numero_interior=?, rfc=?, no_cueta=?, no_seguro=?, "
+                + "banco=?, curp=?, tipo_empleado=?, usuario=?, contrasena=?, codigo_postal=?, where id_empleado = ?";
+        try {
+
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarEmpleado);
+
+            System.out.println(getId_empleado());
+
+            ps.setString(1, getNombre_empleado());
+            ps.setString(2, getApellido_paterno());
+            ps.setString(3, getApellido_materno());
+            ps.setString(4, getTelefono());
+            ps.setString(5, getCalle());
+            ps.setString(6, getColonia());
+            ps.setString(7, getNumero_exterior());
+            ps.setString(8, getNumero_interior());
+            ps.setString(9, getRfc());
+            ps.setString(10, getNo_cueta());
+            ps.setString(11, getNo_seguro());
+            ps.setString(12, getBanco());
+            ps.setString(14, getCurp());
+            ps.setString(15, getTipo_empleado());
+            ps.setString(16, getUsuario());
+            ps.setString(17, getContrasena());
+            ps.setString(18, getCodigo_postal());
+            ps.executeUpdate();
+
+        } catch (SQLException ex) {
+            System.out.println("Error 04: Modificar datos empleado" + ex);
+        }
+    }
+
 }
