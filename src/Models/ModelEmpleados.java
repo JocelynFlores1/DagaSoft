@@ -265,4 +265,37 @@ public class ModelEmpleados {
         }
     }
 
+    public void insertarNuevoEmpleado() {
+        ModelConexion loginConexion = new ModelConexion();
+        //Se obtiene la conexion para la clase
+
+        String sqlInsertarEmpleado = "insert into empleado (id_empleado, nombre_empleado, apellido_paterno_cliente, apellido_materno_cliente, telefono, calle, colonia, numero_exterior, numero_interior, rfc, no_cueta, no_seguro, banco, curp, tipo_empleado, usuario, contrasena, codigo_postal) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        try {
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarEmpleado); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            System.out.println(getId_empleado());
+            ps.setString(1, getId_empleado());
+            ps.setString(2, getNombre_empleado());
+            ps.setString(3, getApellido_paterno());
+            ps.setString(4, getApellido_materno());
+            ps.setString(5, getTelefono());
+            ps.setString(6, getCalle());
+            ps.setString(7, getColonia());
+            ps.setString(8, getNumero_exterior());
+            ps.setString(9, getNumero_interior());
+            ps.setString(10, getRfc());
+            ps.setString(11, getNo_cueta());
+            ps.setString(12, getNo_seguro());
+            ps.setString(13, getBanco());
+            ps.setString(14, getCurp());
+            ps.setString(15, getTipo_empleado());
+            ps.setString(16, getUsuario());
+            ps.setString(17, getContrasena());
+            ps.setString(18, getCodigo_postal());
+
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error 03: Insertar nuevo empleado" + ex);
+        }
+    }
+
 }
