@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Norberto
+ * @author Jocelyn
  */
 public class ViewProveedores extends javax.swing.JPanel {
 
