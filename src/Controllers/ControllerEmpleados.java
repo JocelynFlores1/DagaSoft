@@ -116,4 +116,36 @@ public class ControllerEmpleados {
             JOptionPane.showMessageDialog(null, "No se guardo ningun empleado");
         }
     }
+    
+    
+    public void jmi_modificar() {
+        //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
+        int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea actualizar los datos del empleado?", "Guardar cambios", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (cancelar == 0) {
+            modelEmpleados.setId_empleado(viewEmpleados.jtf_id_empleado.getText());
+            modelEmpleados.setNombre_empleado(viewEmpleados.jtf_nombre_empleado.getText());
+            modelEmpleados.setApellido_paterno(viewEmpleados.jtf_apellido_paterno_empleado.getText());
+            modelEmpleados.setApellido_materno(viewEmpleados.jtf_apellido_materno_empleado.getText());
+            modelEmpleados.setTelefono(viewEmpleados.jtf_telefono_empleado.getText());
+            modelEmpleados.setCalle(viewEmpleados.jtf_calle_empleado.getText());
+            modelEmpleados.setColonia(viewEmpleados.jtf_colonia_empleado.getText());
+            modelEmpleados.setNumero_exterior(viewEmpleados.jtf_numero_exterior_empleado.getText());
+            modelEmpleados.setNumero_interior(viewEmpleados.jtf_no_interior_empleado.getText());
+            modelEmpleados.setRfc(viewEmpleados.jtf_rfc_empleado.getText());
+            modelEmpleados.setBanco(viewEmpleados.jtf_banco_empleado.getText());
+            modelEmpleados.setCurp(viewEmpleados.jtf_curp.getText());
+            modelEmpleados.setNo_cueta(viewEmpleados.jtf_no_cueta_empleado.getText());
+            modelEmpleados.setNo_seguro(viewEmpleados.jtf_no_seguro_empleado.getText());
+            modelEmpleados.setTipo_empleado(viewEmpleados.jtf_tipo_empleado.getText());
+            modelEmpleados.setUsuario(viewEmpleados.jtf_usuario_empleado.getText());
+            modelEmpleados.setContrasena(viewEmpleados.jtf_contrasena.getText());
+            modelEmpleados.setCodigo_postal(viewEmpleados.jtf_codigo_postal_empleado.getText());
+
+            modelEmpleados.modificarDatosEmpleado();
+
+        } else {
+            ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
+            JOptionPane.showMessageDialog(null, "No se guardo ningun cambio");
+        }
+    }
 }
