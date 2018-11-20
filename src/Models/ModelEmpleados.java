@@ -279,7 +279,7 @@ public class ModelEmpleados {
         //Se obtiene la conexion para la clase
 
         String sqlInsertarEmpleado = "insert into empleados (id_empleado, nombre_empleado, apellido_paterno_empleado, apellido_materno_empleado, telefono_empleado, calle_empleado,"
-                + " colonia_empleado, numero_exterior_empleado, numero_interior_empleado, rfc_empleado, numero_cueta_empleado, "
+                + " colonia_empleado, numero_exterior_empleado, numero_interior_empleado, rfc_empleado, numero_cuenta_empleado, "
                 + "nss_empleado, banco_empleado, curp_empleado, tipo_empleado, usuario_empleado, contrasena_empleado, "
                 + "cp_empleado, id_sucursal) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
