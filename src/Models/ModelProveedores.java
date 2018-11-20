@@ -207,4 +207,33 @@ public class ModelProveedores {
             System.out.println("Error 03: Insertar nuevo proveedor" + ex);
         }
     }
+
+    public void modificarDatosProveedor() {
+        ModelConexion loginConexion = new ModelConexion();
+        //Se obtiene la conexion para la clase
+
+        String sqlModificarProveedor = "update proveedores set "
+                + "nombre_proveedor=?, calle_proveedor=?, numero_exterior_proveedor=?, colonia_proveedor=?, codigo_postal_proveedor=?, "
+                + "telefono_proveedor=?, email_proveedor=?, ciudad_proveedor=?," + "estado_proveedor=? where id_cliente = ?";
+        try {
+
+            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarProveedor);
+
+            System.out.println(getId_proveedor());
+
+            ps.setString(1, getNombre_proveedor());
+            ps.setString(2, getCalle_proveedor());
+            ps.setString(3, getNumero_exterior_proveedor().toString());
+            ps.setString(4, getColonia_proveedor());
+            ps.setString(5, getCodigo_postal_proveedor().toString());
+            ps.setString(6, getTelefono_proveedor());
+            ps.setString(7, getEmail_proveedor());
+            ps.setString(8, getCiudad_proveedor());
+            ps.setString(9, getEstado_proveedor());
+            ps.setString(10, getId_proveedor());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error 04: Modificar datos proveedores" + ex);
+        }
+    }
 }
