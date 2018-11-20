@@ -44,5 +44,31 @@ public class ControllerProveedores {
     public ControllerProveedores(ModelProveedores modelProveedores, ViewProveedores viewProveedores) {
         this.modelProveedores = modelProveedores;
         this.viewProveedores = viewProveedores;
+        initComponents();
+        setActionListener();
+        tablaConsulta();
     }
+
+    public void initComponents() {
+        viewProveedores.setVisible(true);
+        modelProveedores.conectarDB();
+        jtfCambiarCampos();
+    }
+    
+     /**
+     * *
+     * Metodo que cambia los campos de los jTextField en ViewProveedores
+     */
+    public void jtfCambiarCampos() {
+        viewProveedores.jtf_id_proveedor.setText(modelProveedores.getId_proveedor());
+        viewProveedores.jtf_nombre_proveedor.setText(modelProveedores.getNombre_proveedor());
+        viewProveedores.jtf_calle.setText(modelProveedores.getCalle_proveedor());
+        viewProveedores.jtf_numero_exterior.setText(modelProveedores.getNumero_exterior_proveedor().toString());
+        viewProveedores.jtf_colonia.setText(modelProveedores.getColonia_proveedor());
+        viewProveedores.jtf_codigo_postal.setText(modelProveedores.getCodigo_postal_proveedor().toString());
+        viewProveedores.jtf_telefono.setText(modelProveedores.getTelefono_proveedor());
+        viewProveedores.jtf_email.setText(modelProveedores.getEmail_proveedor());
+        viewProveedores.jtf_ciudad.setText(modelProveedores.getCiudad_proveedor());
+        viewProveedores.jtf_estado.setText(modelProveedores.getEstado_proveedor());
+    } 
 }
