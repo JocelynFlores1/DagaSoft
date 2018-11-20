@@ -5,6 +5,9 @@
  */
 package Views;
 
+import java.awt.Component;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Norberto
