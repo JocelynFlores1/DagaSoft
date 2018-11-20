@@ -44,7 +44,7 @@ public class ViewProductos extends javax.swing.JPanel {
         jtf_precio_venta = new javax.swing.JTextField();
         jl_descripcion = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jta_Descripcion = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
         jb_eliminar_producto = new javax.swing.JButton();
         jb_modificar_producto = new javax.swing.JButton();
@@ -81,7 +81,7 @@ public class ViewProductos extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(255, 51, 0));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Productos");
 
@@ -90,9 +90,9 @@ public class ViewProductos extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(541, 541, 541)
+                .addGap(501, 501, 501)
                 .addComponent(jLabel1)
-                .addContainerGap(401, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,11 +108,11 @@ public class ViewProductos extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1186, Short.MAX_VALUE)
+            .addGap(0, 1177, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
+            .addGap(0, 85, Short.MAX_VALUE)
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -136,9 +136,9 @@ public class ViewProductos extends javax.swing.JPanel {
         jl_descripcion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_descripcion.setText("Descripción");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jta_Descripcion.setColumns(20);
+        jta_Descripcion.setRows(5);
+        jScrollPane1.setViewportView(jta_Descripcion);
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("CRUD "));
 
@@ -203,10 +203,9 @@ public class ViewProductos extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jl_nombre_producto)
                             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -235,7 +234,10 @@ public class ViewProductos extends javax.swing.JPanel {
                         .addGap(63, 63, 63)
                         .addComponent(jl_descripcion)
                         .addGap(35, 35, 35)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -267,9 +269,9 @@ public class ViewProductos extends javax.swing.JPanel {
                             .addComponent(jtf_precio_venta, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jl_descripcion)
                     .addComponent(jScrollPane1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLayeredPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -284,8 +286,10 @@ public class ViewProductos extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jLayeredPane1Layout.setVerticalGroup(
@@ -294,10 +298,10 @@ public class ViewProductos extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Productos", jLayeredPane1);
@@ -323,7 +327,7 @@ public class ViewProductos extends javax.swing.JPanel {
         jpProductosTitulo1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jpProductosTitulo1.setPreferredSize(new java.awt.Dimension(425, 60));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Inventario");
 
@@ -332,16 +336,15 @@ public class ViewProductos extends javax.swing.JPanel {
         jpProductosTitulo1Layout.setHorizontalGroup(
             jpProductosTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpProductosTitulo1Layout.createSequentialGroup()
-                .addGap(541, 541, 541)
+                .addGap(477, 477, 477)
                 .addComponent(jLabel2)
-                .addContainerGap(365, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpProductosTitulo1Layout.setVerticalGroup(
             jpProductosTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpProductosTitulo1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jpProductosTitulo1Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
         jpBordeTabla.setBackground(new java.awt.Color(204, 51, 0));
@@ -383,14 +386,14 @@ public class ViewProductos extends javax.swing.JPanel {
             jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBordeTablaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1154, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1145, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jpBordeTablaLayout.setVerticalGroup(
             jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBordeTablaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
                 .addGap(66, 66, 66))
         );
 
@@ -398,12 +401,12 @@ public class ViewProductos extends javax.swing.JPanel {
         jpBorde.setLayout(jpBordeLayout);
         jpBordeLayout.setHorizontalGroup(
             jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpPieDePagina1, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
-            .addGroup(jpBordeLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBordeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.DEFAULT_SIZE, 1168, Short.MAX_VALUE)
-                    .addComponent(jpBordeTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpPieDePagina1, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
+                    .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
+                    .addComponent(jpBordeTabla, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jpBordeLayout.setVerticalGroup(
@@ -468,17 +471,17 @@ public class ViewProductos extends javax.swing.JPanel {
         jpProductosTitulo2.setLayout(jpProductosTitulo2Layout);
         jpProductosTitulo2Layout.setHorizontalGroup(
             jpProductosTitulo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpProductosTitulo2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jpProductosTitulo2Layout.createSequentialGroup()
+                .addGap(424, 424, 424)
                 .addComponent(jLabel4)
-                .addGap(387, 387, 387))
+                .addContainerGap(468, Short.MAX_VALUE))
         );
         jpProductosTitulo2Layout.setVerticalGroup(
             jpProductosTitulo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpProductosTitulo2Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpProductosTitulo2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jpBordeTabla1.setBackground(new java.awt.Color(204, 51, 0));
@@ -520,14 +523,14 @@ public class ViewProductos extends javax.swing.JPanel {
             jpBordeTabla1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBordeTabla1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1154, Short.MAX_VALUE)
+                .addComponent(jScrollPane3)
                 .addContainerGap())
         );
         jpBordeTabla1Layout.setVerticalGroup(
             jpBordeTabla1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBordeTabla1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
                 .addGap(66, 66, 66))
         );
 
@@ -535,12 +538,12 @@ public class ViewProductos extends javax.swing.JPanel {
         jpBorde1.setLayout(jpBorde1Layout);
         jpBorde1Layout.setHorizontalGroup(
             jpBorde1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpPieDePagina2, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
-            .addGroup(jpBorde1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBorde1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jpBorde1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpProductosTitulo2, javax.swing.GroupLayout.DEFAULT_SIZE, 1168, Short.MAX_VALUE)
-                    .addComponent(jpBordeTabla1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jpBorde1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpPieDePagina2, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
+                    .addComponent(jpProductosTitulo2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
+                    .addComponent(jpBordeTabla1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jpBorde1Layout.setVerticalGroup(
@@ -606,9 +609,9 @@ public class ViewProductos extends javax.swing.JPanel {
         jpProductosTitulo3Layout.setHorizontalGroup(
             jpProductosTitulo3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpProductosTitulo3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(398, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addGap(324, 324, 324))
+                .addGap(393, 393, 393))
         );
         jpProductosTitulo3Layout.setVerticalGroup(
             jpProductosTitulo3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -657,14 +660,14 @@ public class ViewProductos extends javax.swing.JPanel {
             jpBordeTabla2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBordeTabla2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1154, Short.MAX_VALUE)
+                .addComponent(jScrollPane4)
                 .addContainerGap())
         );
         jpBordeTabla2Layout.setVerticalGroup(
             jpBordeTabla2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBordeTabla2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
                 .addGap(66, 66, 66))
         );
 
@@ -672,12 +675,12 @@ public class ViewProductos extends javax.swing.JPanel {
         jpBorde2.setLayout(jpBorde2Layout);
         jpBorde2Layout.setHorizontalGroup(
             jpBorde2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpPieDePagina3, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
-            .addGroup(jpBorde2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBorde2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jpBorde2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpProductosTitulo3, javax.swing.GroupLayout.DEFAULT_SIZE, 1168, Short.MAX_VALUE)
-                    .addComponent(jpBordeTabla2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jpBorde2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpPieDePagina3, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
+                    .addComponent(jpProductosTitulo3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
+                    .addComponent(jpBordeTabla2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jpBorde2Layout.setVerticalGroup(
@@ -731,54 +734,54 @@ public class ViewProductos extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JLayeredPane jLayeredPane2;
-    private javax.swing.JLayeredPane jLayeredPane3;
-    private javax.swing.JLayeredPane jLayeredPane4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JLayeredPane jLayeredPane1;
+    public javax.swing.JLayeredPane jLayeredPane2;
+    public javax.swing.JLayeredPane jLayeredPane3;
+    public javax.swing.JLayeredPane jLayeredPane4;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel jPanel2;
+    public javax.swing.JPanel jPanel3;
+    public javax.swing.JPanel jPanel4;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane2;
+    public javax.swing.JScrollPane jScrollPane3;
+    public javax.swing.JScrollPane jScrollPane4;
+    public javax.swing.JTabbedPane jTabbedPane1;
     public javax.swing.JButton jb_cancelar;
     public javax.swing.JButton jb_eliminar_producto;
     public javax.swing.JButton jb_insertar;
     public javax.swing.JButton jb_modificar_producto;
     public javax.swing.JButton jb_nuevo;
-    private javax.swing.JLabel jl_descripcion;
-    private javax.swing.JLabel jl_id_producto;
-    private javax.swing.JLabel jl_marca;
-    private javax.swing.JLabel jl_nombre_producto;
-    private javax.swing.JLabel jl_precio_venta;
-    private javax.swing.JLabel jl_tipo_producto;
-    private javax.swing.JPanel jpBorde;
-    private javax.swing.JPanel jpBorde1;
-    private javax.swing.JPanel jpBorde2;
-    private javax.swing.JPanel jpBordeTabla;
-    private javax.swing.JPanel jpBordeTabla1;
-    private javax.swing.JPanel jpBordeTabla2;
-    private javax.swing.JPanel jpPieDePagina1;
-    private javax.swing.JPanel jpPieDePagina2;
-    private javax.swing.JPanel jpPieDePagina3;
-    private javax.swing.JPanel jpProductosTitulo1;
-    private javax.swing.JPanel jpProductosTitulo2;
-    private javax.swing.JPanel jpProductosTitulo3;
+    public javax.swing.JLabel jl_descripcion;
+    public javax.swing.JLabel jl_id_producto;
+    public javax.swing.JLabel jl_marca;
+    public javax.swing.JLabel jl_nombre_producto;
+    public javax.swing.JLabel jl_precio_venta;
+    public javax.swing.JLabel jl_tipo_producto;
+    public javax.swing.JPanel jpBorde;
+    public javax.swing.JPanel jpBorde1;
+    public javax.swing.JPanel jpBorde2;
+    public javax.swing.JPanel jpBordeTabla;
+    public javax.swing.JPanel jpBordeTabla1;
+    public javax.swing.JPanel jpBordeTabla2;
+    public javax.swing.JPanel jpPieDePagina1;
+    public javax.swing.JPanel jpPieDePagina2;
+    public javax.swing.JPanel jpPieDePagina3;
+    public javax.swing.JPanel jpProductosTitulo1;
+    public javax.swing.JPanel jpProductosTitulo2;
+    public javax.swing.JPanel jpProductosTitulo3;
+    public javax.swing.JTextArea jta_Descripcion;
     public javax.swing.JTable jtable_almacen_local;
     public javax.swing.JTable jtable_almacen_sucursales;
     public javax.swing.JTable jtable_productos;
-    private javax.swing.JTextField jtf_id_producto;
-    private javax.swing.JTextField jtf_marca;
-    private javax.swing.JTextField jtf_nombre_producto;
-    private javax.swing.JTextField jtf_precio_venta;
-    private javax.swing.JComboBox<String> jtf_tipo_producto;
+    public javax.swing.JTextField jtf_id_producto;
+    public javax.swing.JTextField jtf_marca;
+    public javax.swing.JTextField jtf_nombre_producto;
+    public javax.swing.JTextField jtf_precio_venta;
+    public javax.swing.JComboBox<String> jtf_tipo_producto;
     // End of variables declaration//GEN-END:variables
 }
