@@ -157,6 +157,7 @@ public class ModelSucursales {
 
             if (rs.next()) {
                 modificarDatos();
+                System.out.println(rs.getString(1));
             } else {
                 System.out.println("Error de consulta");
             }
@@ -222,7 +223,7 @@ public class ModelSucursales {
         ModelConexion sucursalConexion = new ModelConexion();
         sucursalConexion.getConexion();
         try {
-            String consultaString = "select * from clientes";
+            String consultaString = "select * from sucursal";
             ps = (PreparedStatement) sucursalConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
