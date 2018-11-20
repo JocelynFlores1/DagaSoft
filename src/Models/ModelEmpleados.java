@@ -17,30 +17,30 @@ import java.sql.Statement;
  */
 public class ModelEmpleados {
 
-    public Connection conexion;
-    public Statement st;
-    public ResultSet rs;
-    public PreparedStatement ps;
+    private Connection conexion;
+    private Statement st;
+    private ResultSet rs;
+    private PreparedStatement ps;
 
-    public String id_empleado;
-    public String nombre_empleado;
-    public String apellido_paterno;
-    public String apellido_materno;
-    public String telefono;
-    public String calle;
-    public String colonia;
-    public String numero_exterior;
-    public String numero_interior;
-    public String rfc;
-    public String no_cueta;
-    public String no_seguro;
-    public String banco;
-    public String curp;
-    public String tipo_empleado;
-    public String usuario;
-    public String contrasena;
+    private String id_empleado;
+    private String nombre_empleado;
+    private String apellido_paterno;
+    private String apellido_materno;
+    private String telefono;
+    private String calle;
+    private String colonia;
+    private String numero_exterior;
+    private String numero_interior;
+    private String rfc;
+    private String no_cueta;
+    private String no_seguro;
+    private String banco;
+    private String curp;
+    private String tipo_empleado;
+    private String usuario;
+    private String contrasena;
     private String id_sucursal;
-    public String codigo_postal;
+    private String codigo_postal;
 
     public Connection getConexion() {
         return conexion;
@@ -118,7 +118,7 @@ public class ModelEmpleados {
         return calle;
     }
 
-    public void setCalle(String Calle) {
+    public void setCalle(String calle) {
         this.calle = calle;
     }
 
@@ -127,7 +127,7 @@ public class ModelEmpleados {
     }
 
     public void setColonia(String colonia) {
-        this.calle = calle;
+        this.colonia = colonia;
     }
 
     public String getNumero_exterior() {
@@ -226,7 +226,7 @@ public class ModelEmpleados {
         this.id_sucursal = id_sucursal;
     }
 
-    public void modificarDatos() {
+    public void modificarDatosEmpleados() {
         try {
             setId_empleado(rs.getString(1));
             setNombre_empleado(rs.getString(2));
@@ -241,12 +241,12 @@ public class ModelEmpleados {
             setCurp(rs.getString(11));
             setNo_cueta(rs.getString(12));
             setNo_seguro(rs.getString(13));
+            setBanco(rs.getString(14));
             setTipo_empleado(rs.getString(15));
             setUsuario(rs.getString(16));
             setContrasena(rs.getString(17));
             setId_sucursal(rs.getString(18));
             setCodigo_postal(rs.getString(19));
-
         } catch (SQLException e) {
             System.out.println("Error 01: modificar datos" + e);
         }
@@ -257,15 +257,15 @@ public class ModelEmpleados {
      * Consulta todo los registros .
      */
     public void conectarDB() {
-        ModelConexion loginConexion = new ModelConexion();
-        loginConexion.getConexion();
+        ModelConexion empleadoConexion = new ModelConexion();
+        empleadoConexion.getConexion();
         try {
             String consultaString = "select * from empleados";
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            ps = (PreparedStatement) empleadoConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
 
             if (rs.next()) {
-                modificarDatos();
+                modificarDatosEmpleados();
             } else {
                 System.out.println("Error de consulta");
             }
@@ -275,12 +275,15 @@ public class ModelEmpleados {
     }
 
     public void insertarNuevoEmpleado() {
-        ModelConexion loginConexion = new ModelConexion();
+        ModelConexion empleadoConexion = new ModelConexion();
         //Se obtiene la conexion para la clase
 
-        String sqlInsertarEmpleado = "insert into empleado (id_empleado, nombre_empleado, apellido_paterno_cliente, apellido_materno_cliente, telefono, calle, colonia, numero_exterior, numero_interior, rfc, no_cueta, no_seguro, banco, curp, tipo_empleado, usuario, contrasena, codigo_postal, id_sucursal) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sqlInsertarEmpleado = "insert into empleados (id_empleado, nombre_empleado, apellido_paterno_empleado, apellido_materno_empleado, telefono_empleado, calle_empleado,"
+                + " colonia_empleado, numero_exterior_empleado, numero_interior_empleado, rfc_empleado, numero_cueta_empleado, "
+                + "nss_empleado, banco_empleado, curp_empleado, tipo_empleado, usuario_empleado, contrasena_empleado, "
+                + "cp_empleado, id_sucursal) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarEmpleado); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            ps = (PreparedStatement) empleadoConexion.getConexion().prepareStatement(sqlInsertarEmpleado); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_empleado());
             ps.setString(1, getId_empleado());
             ps.setString(2, getNombre_empleado());
@@ -309,16 +312,17 @@ public class ModelEmpleados {
     }
 
     public void modificarDatosEmpleado() {
-        ModelConexion loginConexion = new ModelConexion();
+        ModelConexion empleadoConexion = new ModelConexion();
         //Se obtiene la conexion para la clase
 
-        String sqlModificarEmpleado = "update empleado set "
-                + "nombre_empleado=?, apellido_paterno=?, apellido_materno=?, calle=?, calle=?, "
-                + "calle=?, colonia=?, numero_exterior=?, numero_interior=?, rfc=?, no_cueta=?, no_seguro=?, "
-                + "banco=?, curp=?, tipo_empleado=?, usuario=?, contrasena=?, codigo_postal=?, id_sucursal=? where id_empleado = ?";
+        String sqlModificarEmpleado = "update empleados set "
+                + "nombre_empleado=?, apellido_paterno_empleado=?, apellido_materno_empleado=?, telefono_empleado=?, calle_empleado=?, colonia_empleado=?, "
+                + "numero_exterior_empleado=?, numero_interior_empleado=?, rfc_empleado=?, numero_cuenta_empleado=?, nss_empleado=?, "
+                + "banco_empleado=?, curp_empleado=?, tipo_empleado=?, usuario_empleado=?, contrasena_empleado=?, cp_empleado=?, "
+                + "id_sucursal=? where id_empleado = ?";
         try {
 
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarEmpleado);
+            ps = (PreparedStatement) empleadoConexion.getConexion().prepareStatement(sqlModificarEmpleado);
 
             System.out.println(getId_empleado());
 
@@ -334,12 +338,13 @@ public class ModelEmpleados {
             ps.setString(10, getNo_cueta());
             ps.setString(11, getNo_seguro());
             ps.setString(12, getBanco());
-            ps.setString(14, getCurp());
-            ps.setString(15, getTipo_empleado());
-            ps.setString(16, getUsuario());
-            ps.setString(17, getContrasena());
-            ps.setString(17, getId_sucursal());
-            ps.setString(18, getCodigo_postal());
+            ps.setString(13, getCurp());
+            ps.setString(14, getTipo_empleado());
+            ps.setString(15, getUsuario());
+            ps.setString(16, getContrasena());
+            ps.setString(17, getCodigo_postal());
+            ps.setString(18, getId_sucursal());
+            ps.setString(19, getId_empleado());
             ps.executeUpdate();
 
         } catch (SQLException ex) {
@@ -348,13 +353,13 @@ public class ModelEmpleados {
     }
 
     public void borrarDatosCliente() {
-        ModelConexion clienteConexion = new ModelConexion();
+        ModelConexion empleadoConexion = new ModelConexion();
         //Se obtiene la conexion para la clase
 
         String sqlBorrarCliente = "delete from empleados where id_empleado = ?";
         try {
 
-            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlBorrarCliente);
+            ps = (PreparedStatement) empleadoConexion.getConexion().prepareStatement(sqlBorrarCliente);
             //Este proceso permite establecer la conexion del objeto creado y enlazar la consulta con la base de datos para poder borrar el cliente.
             ps.setString(1, getId_empleado());
             ps.executeUpdate();
@@ -365,11 +370,11 @@ public class ModelEmpleados {
 
     //Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
     public void consultajt_empleado() {
-        ModelConexion loginConexion = new ModelConexion();
-        loginConexion.getConexion();
+        ModelConexion empleadoConexion = new ModelConexion();
+        empleadoConexion.getConexion();
         try {
             String consultaString = "select * from empleados";
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            ps = (PreparedStatement) empleadoConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
             System.out.println("Error 06: tabla empleados" + e);

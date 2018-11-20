@@ -28,10 +28,11 @@ public class ControllerEmpleados {
     public ControllerEmpleados(ModelEmpleados modelEmpleados, ViewEmpleados viewEmpleados) {
         this.modelEmpleados = modelEmpleados;
         this.viewEmpleados = viewEmpleados;
-       initComponents();
+        initComponents();
         tablaConsulta();
         setActionListener();
     }
+
     public void initComponents() {
         viewEmpleados.setVisible(true);
         modelEmpleados.conectarDB();
@@ -61,6 +62,7 @@ public class ControllerEmpleados {
         viewEmpleados.jtf_usuario_empleado.setText(modelEmpleados.getUsuario());
         viewEmpleados.jtf_contrasena.setText(modelEmpleados.getContrasena());
         viewEmpleados.jtf_codigo_postal_empleado.setText(modelEmpleados.getCodigo_postal());
+        viewEmpleados.jtf_sucursal_empleado.setText(modelEmpleados.getId_sucursal());
     }
     /**
      * Objeto de tipo ActionListener para atrapar los eventos actionPerformed y
@@ -129,6 +131,9 @@ public class ControllerEmpleados {
             modelEmpleados.setCodigo_postal(viewEmpleados.jtf_codigo_postal_empleado.getText());
 
             modelEmpleados.insertarNuevoEmpleado();
+
+            JOptionPane.showMessageDialog(null, "Nuevo empleado registrado");
+            tablaConsulta();
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
             JOptionPane.showMessageDialog(null, "No se guardo ningun empleado");
@@ -159,6 +164,9 @@ public class ControllerEmpleados {
             modelEmpleados.setCodigo_postal(viewEmpleados.jtf_codigo_postal_empleado.getText());
 
             modelEmpleados.modificarDatosEmpleado();
+            
+            JOptionPane.showMessageDialog(null, "Datos del empleado modificados");
+            tablaConsulta();
 
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
@@ -226,5 +234,6 @@ public class ControllerEmpleados {
     }
 
     public void jmi_eliminar() {
+        
     }
 }

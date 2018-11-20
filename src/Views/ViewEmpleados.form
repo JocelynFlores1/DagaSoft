@@ -276,12 +276,16 @@
                                       </Group>
                                       <Component id="jl_banco" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="157" pref="157" max="-2" attributes="0"/>
-                                      <Component id="jtf_rfc_empleado" min="-2" pref="331" max="-2" attributes="0"/>
-                                  </Group>
                                   <Component id="jl_rfc" min="-2" pref="121" max="-2" attributes="0"/>
                                   <Component id="jl_codigo_postal" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jl_codigo_postal1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="157" pref="157" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jtf_rfc_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
+                                          <Component id="jtf_sucursal_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                               <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           </Group>
@@ -398,12 +402,21 @@
                                   </Group>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jb_nuevo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jb_cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jb_modificar" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jb_insertar" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jb_eliminar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jb_nuevo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jb_cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jb_modificar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jb_insertar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jb_eliminar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jtf_sucursal_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                                          <Component id="jl_codigo_postal1" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -830,6 +843,27 @@
                     <Component class="javax.swing.JButton" name="jb_nuevo">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Nuevo"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jl_codigo_postal1">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="14" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Sucursal"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jtf_sucursal_empleado">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="14" style="1"/>
+                        </Property>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
