@@ -222,4 +222,18 @@ public class ControllerProveedores {
         viewProveedores.jtf_ciudad.setText("");
         viewProveedores.jtf_estado.setText("");
     }
+    
+        public void jmi_borrarC_actionListener() {
+        //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
+        int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea borrar los datos del proveedor?", "Borrar datos", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (cancelar == 0) {
+            modelProveedores.setId_proveedor(viewProveedores.jtf_id_proveedor.getText());
+            modelProveedores.borrarDatosCliente();
+            tablaConsulta();
+            JOptionPane.showMessageDialog(null, "Los datos del proveedor han sido eliminados");
+        } else {
+            ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
+            JOptionPane.showMessageDialog(null, "No se borro ningun registro");
+        }
+    }
 }
