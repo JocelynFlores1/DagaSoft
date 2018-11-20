@@ -74,7 +74,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
         jb_eliminar = new javax.swing.JButton();
         jb_insertar = new javax.swing.JButton();
         jb_modificar = new javax.swing.JButton();
-        jb_guardar = new javax.swing.JButton();
+        jb_cancelar = new javax.swing.JButton();
         jb_nuevo = new javax.swing.JButton();
         jLayeredPane2 = new javax.swing.JLayeredPane();
         jPanel1 = new javax.swing.JPanel();
@@ -238,7 +238,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
 
         jb_modificar.setText("Modificar");
 
-        jb_guardar.setText("Guardar");
+        jb_cancelar.setText("Cancelar");
 
         jb_nuevo.setText("Nuevo");
 
@@ -276,12 +276,12 @@ public class ViewEmpleados extends javax.swing.JPanel {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jb_nuevo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jb_guardar)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_modificar)
-                        .addGap(18, 18, 18)
                         .addComponent(jb_insertar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jb_cancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jb_modificar)
+                        .addGap(13, 13, 13)
                         .addComponent(jb_eliminar)
                         .addGap(1, 1, 1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 255, Short.MAX_VALUE)
@@ -405,7 +405,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_nuevo)
-                    .addComponent(jb_guardar)
+                    .addComponent(jb_cancelar)
                     .addComponent(jb_modificar)
                     .addComponent(jb_insertar)
                     .addComponent(jb_eliminar))
@@ -545,8 +545,8 @@ public class ViewEmpleados extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
+    public javax.swing.JButton jb_cancelar;
     public javax.swing.JButton jb_eliminar;
-    public javax.swing.JButton jb_guardar;
     public javax.swing.JButton jb_insertar;
     public javax.swing.JButton jb_modificar;
     public javax.swing.JButton jb_nuevo;

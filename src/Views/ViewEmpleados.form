@@ -229,12 +229,12 @@
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="jb_nuevo" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jb_guardar" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jb_modificar" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jb_insertar" min="-2" pref="81" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jb_cancelar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jb_modificar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                                       <Component id="jb_eliminar" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                   </Group>
@@ -400,7 +400,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jb_nuevo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jb_guardar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jb_cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jb_modificar" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jb_insertar" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jb_eliminar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -711,9 +711,9 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jb_guardar">
+                    <Component class="javax.swing.JButton" name="jb_cancelar">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Guardar"/>
+                        <Property name="text" type="java.lang.String" value="Cancelar"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
