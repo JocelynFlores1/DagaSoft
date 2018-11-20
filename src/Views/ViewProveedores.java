@@ -62,8 +62,12 @@ public class ViewProveedores extends javax.swing.JPanel {
         jtf_ciudad = new javax.swing.JTextField();
         jpPieDePagina = new javax.swing.JPanel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        jpBorde = new javax.swing.JPanel();
+        jpPieDePagina1 = new javax.swing.JPanel();
+        jpProveedoresTitulo1 = new javax.swing.JPanel();
+        jpBordeTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtable_proveedores = new javax.swing.JTable();
 
         jLayeredPane2.setPreferredSize(new java.awt.Dimension(1200, 600));
 
@@ -364,34 +368,129 @@ public class ViewProveedores extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Proveedores", jLayeredPane2);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jpBorde.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        jpBorde.setOpaque(false);
+
+        jpPieDePagina1.setBackground(new java.awt.Color(204, 51, 0));
+        jpPieDePagina1.setPreferredSize(new java.awt.Dimension(452, 60));
+
+        javax.swing.GroupLayout jpPieDePagina1Layout = new javax.swing.GroupLayout(jpPieDePagina1);
+        jpPieDePagina1.setLayout(jpPieDePagina1Layout);
+        jpPieDePagina1Layout.setHorizontalGroup(
+            jpPieDePagina1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jpPieDePagina1Layout.setVerticalGroup(
+            jpPieDePagina1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jpProveedoresTitulo1.setBackground(new java.awt.Color(204, 51, 0));
+        jpProveedoresTitulo1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jpProveedoresTitulo1.setPreferredSize(new java.awt.Dimension(425, 60));
+
+        javax.swing.GroupLayout jpProveedoresTitulo1Layout = new javax.swing.GroupLayout(jpProveedoresTitulo1);
+        jpProveedoresTitulo1.setLayout(jpProveedoresTitulo1Layout);
+        jpProveedoresTitulo1Layout.setHorizontalGroup(
+            jpProveedoresTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jpProveedoresTitulo1Layout.setVerticalGroup(
+            jpProveedoresTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 54, Short.MAX_VALUE)
+        );
+
+        jpBordeTabla.setBackground(new java.awt.Color(204, 51, 0));
+        jpBordeTabla.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+
+        jtable_proveedores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "id_proveedor", "nombre_proveedor", "calle", "colonia", "número_exterior", "codigo_postal", "ciudad", "telefono"
+                "ID", "Nombre", "Calle", "Número exterior", "Colonia", "Código Postal", "Teléfono", "Email", "Ciudad", "Estado"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtable_proveedores);
 
-        jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        javax.swing.GroupLayout jpBordeTablaLayout = new javax.swing.GroupLayout(jpBordeTabla);
+        jpBordeTabla.setLayout(jpBordeTablaLayout);
+        jpBordeTablaLayout.setHorizontalGroup(
+            jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBordeTablaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1235, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jpBordeTablaLayout.setVerticalGroup(
+            jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBordeTablaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
+                .addGap(66, 66, 66))
+        );
+
+        javax.swing.GroupLayout jpBordeLayout = new javax.swing.GroupLayout(jpBorde);
+        jpBorde.setLayout(jpBordeLayout);
+        jpBordeLayout.setHorizontalGroup(
+            jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jpPieDePagina1, javax.swing.GroupLayout.DEFAULT_SIZE, 1261, Short.MAX_VALUE)
+            .addGroup(jpBordeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jpProveedoresTitulo1, javax.swing.GroupLayout.DEFAULT_SIZE, 1249, Short.MAX_VALUE)
+                    .addComponent(jpBordeTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jpBordeLayout.setVerticalGroup(
+            jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBordeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpProveedoresTitulo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpBordeTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jpPieDePagina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jLayeredPane1.setLayer(jpBorde, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1273, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jpBorde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE))
+                .addComponent(jpBorde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Registros", jLayeredPane1);
@@ -404,7 +503,7 @@ public class ViewProveedores extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 738, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -508,7 +607,6 @@ public class ViewProveedores extends javax.swing.JPanel {
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
     public javax.swing.JButton jb_cancelar;
     public javax.swing.JButton jb_eliminar_proveedor;
     public javax.swing.JButton jb_insertar;
@@ -525,8 +623,13 @@ public class ViewProveedores extends javax.swing.JPanel {
     public javax.swing.JLabel jl_numero_exterior;
     public javax.swing.JLabel jl_telefono;
     private javax.swing.JPanel jpAdministracionProveedores;
+    private javax.swing.JPanel jpBorde;
+    private javax.swing.JPanel jpBordeTabla;
     private javax.swing.JPanel jpPieDePagina;
+    private javax.swing.JPanel jpPieDePagina1;
     private javax.swing.JPanel jpProveedoresTitulo;
+    private javax.swing.JPanel jpProveedoresTitulo1;
+    public javax.swing.JTable jtable_proveedores;
     public javax.swing.JTextField jtf_calle;
     public javax.swing.JTextField jtf_ciudad;
     public javax.swing.JTextField jtf_codigo_postal;
