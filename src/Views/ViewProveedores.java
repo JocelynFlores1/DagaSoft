@@ -509,11 +509,11 @@ public class ViewProveedores extends javax.swing.JPanel {
 
     private void jtf_id_proveedorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_id_proveedorKeyTyped
         char validar = evt.getKeyChar();
-        if(Character.isDigit(validar)){
+        if(!Character.isDigit(validar) && !Character.isAlphabetic(validar)){
             getToolkit().beep();
             evt.consume();
             Component rootPane = null;
-            JOptionPane.showMessageDialog(rootPane,"Ingresa solo letras");
+            JOptionPane.showMessageDialog(rootPane,"Ingresa solo letras o numeros");
         }
     }//GEN-LAST:event_jtf_id_proveedorKeyTyped
 
@@ -564,7 +564,7 @@ public class ViewProveedores extends javax.swing.JPanel {
 
     private void jtf_telefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_telefonoKeyTyped
         char validar = evt.getKeyChar();
-        if(Character.isDigit(validar)){
+        if(!Character.isDigit(validar)){
             getToolkit().beep();
             evt.consume();
         }
@@ -575,11 +575,7 @@ public class ViewProveedores extends javax.swing.JPanel {
     }//GEN-LAST:event_jtf_emailActionPerformed
 
     private void jtf_emailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_emailKeyTyped
-        char validar = evt.getKeyChar();
-        if(Character.isDigit(validar)){
-            getToolkit().beep();
-            evt.consume();
-        }
+
     }//GEN-LAST:event_jtf_emailKeyTyped
 
     private void jtf_estadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_estadoKeyTyped
