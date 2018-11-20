@@ -36,6 +36,7 @@ public class ModelClientes {
     private String email;
     private String ciudad;
     private String estado;
+    private String c = "";
 
     public Connection getConexion() {
         return conexion;
@@ -314,8 +315,10 @@ public class ModelClientes {
         }
     }
 
-    /***
-     * Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
+    /**
+     * *
+     * Metodo que permite insertar los datos de la tabla de la base de datos en
+     * un jTable en java
      */
     public void consultajTableClientes() {
         ModelConexion loginConexion = new ModelConexion();
@@ -329,4 +332,32 @@ public class ModelClientes {
         }
     }
 
+    public void consultaGenerarCodigos() {
+        // String SQL="select count(*) from factura";
+        //String SQL="SELECT MAX(cod_emp) AS cod_emp FROM empleado";
+        //String SQL="SELECT @@identity AS ID"; 
+
+        ModelConexion conn = new ModelConexion();
+        Connection con = conn.getConexion();
+        String SQL = "select max(id_cliente) from clientes";
+
+        try {
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(SQL);
+            if (rs.next()) {
+                c = rs.getString(1);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error" + ex);
+        }
+
+    }
+
+    public String getC() {
+        return c;
+    }
+
+    public void setC(String c) {
+        this.c = c;
+    }
 }

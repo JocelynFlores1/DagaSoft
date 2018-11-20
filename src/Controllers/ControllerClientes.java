@@ -6,11 +6,15 @@
 package Controllers;
 
 import Models.ModelClientes;
+import Models.ModelGenerarCodigos;
 import Views.ViewClientes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -38,6 +42,8 @@ public class ControllerClientes {
                 jmi_modificarC_actionPerformed();
             } else if (e.getSource() == viewClientes.jb_eliminar_cliente) {
                 jmi_borrarC_actionListener();
+            } else if (e.getSource() == viewClientes.jb_nuevo) {
+                jmi_nuevoC_actionPerformed();
             }
         }
     };
@@ -93,6 +99,7 @@ public class ControllerClientes {
         viewClientes.jb_cancelar.addActionListener(actionListener);
         viewClientes.jb_modificar_cliente.addActionListener(actionListener);
         viewClientes.jb_eliminar_cliente.addActionListener(actionListener);
+        viewClientes.jb_nuevo.addActionListener(actionListener);
         viewClientes.jtable_clientes.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -242,6 +249,55 @@ public class ControllerClientes {
             }
         } catch (Exception err) {
             JOptionPane.showMessageDialog(null, "Error:\nSelecciona un registro");
+        }
+    }
+
+    public void jmi_nuevoC_actionPerformed() {
+        codigos();
+        viewClientes.jtf_nombre_cliente.setText("");
+        viewClientes.jtf_apellido_paterno.setText("");
+        viewClientes.jtf_apellido_materno.setText("");
+        viewClientes.jtf_telefono.setText("");
+        viewClientes.jtf_rfc.setText("");
+        viewClientes.jtf_calle.setText("");
+        viewClientes.jtf_colonia.setText("");
+        viewClientes.jtf_numero_exterior.setText("");
+        viewClientes.jtf_numero_interior.setText("");
+        viewClientes.jtf_codigo_postal.setText("");
+        viewClientes.jtf_email.setText("");
+        viewClientes.jtf_ciudad.setText("");
+        viewClientes.jtf_estado.setText("");
+    }
+
+    /**
+     * Este metodo permite generar codigos automaticamente con una consulta en
+     * la base de datos desde models.ModelClientes.GenerarCodigos
+     */
+    public void codigos() {
+
+        int j;
+        int cont = 1;
+        String num = "";
+        ModelClientes modelClientes = new ModelClientes();
+
+        if (modelClientes.getC() == null) {
+            viewClientes.jtf_id_cliente.setText("ACME-C0000001");
+        } else {
+            char r1 = modelClientes.getC().charAt(2);
+            char r2 = modelClientes.getC().charAt(3);
+            char r3 = modelClientes.getC().charAt(4);
+            char r4 = modelClientes.getC().charAt(5);
+            char r5 = modelClientes.getC().charAt(6);
+            char r6 = modelClientes.getC().charAt(7);
+            char r7 = modelClientes.getC().charAt(8);
+ 
+            String r = "";
+            r = "" + r1 + r2 + r3 + r4 + r5 + r6 + r7;
+            j = Integer.parseInt(r);
+            ModelGenerarCodigos gen = new ModelGenerarCodigos();
+            gen.generar(j);
+            viewClientes.jtf_id_cliente.setText("ACME-C" + gen.serie());
+
         }
     }
 }
