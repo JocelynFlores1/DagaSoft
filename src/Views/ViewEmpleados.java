@@ -40,35 +40,35 @@ public class ViewEmpleados extends javax.swing.JPanel {
         jl_nombre_empleado = new javax.swing.JLabel();
         jtf_nombre_empleado = new javax.swing.JTextField();
         jl_apellido_paterno = new javax.swing.JLabel();
-        jtf_apellido_paterno = new javax.swing.JTextField();
+        jtf_apellido_paterno_empleado = new javax.swing.JTextField();
         jl_apellido_materno = new javax.swing.JLabel();
-        jtf_apellido_materno = new javax.swing.JTextField();
+        jtf_apellido_materno_empleado = new javax.swing.JTextField();
         jl_telefono = new javax.swing.JLabel();
-        jtf_telefono = new javax.swing.JTextField();
+        jtf_telefono_empleado = new javax.swing.JTextField();
         jl_rfc = new javax.swing.JLabel();
-        jtf_rfc = new javax.swing.JTextField();
+        jtf_rfc_empleado = new javax.swing.JTextField();
         jl_calle = new javax.swing.JLabel();
-        jtf_calle = new javax.swing.JTextField();
+        jtf_calle_empleado = new javax.swing.JTextField();
         jl_colonia = new javax.swing.JLabel();
-        jtf_colonia = new javax.swing.JTextField();
+        jtf_colonia_empleado = new javax.swing.JTextField();
         jl_numero_interior = new javax.swing.JLabel();
-        jtf_numero_interior = new javax.swing.JTextField();
+        jtf_numero_exterior_empleado = new javax.swing.JTextField();
         jl_numero_exterior = new javax.swing.JLabel();
         jtf_numero_exterior = new javax.swing.JTextField();
         jl_codigo_postal = new javax.swing.JLabel();
-        jtf_codigo_postal = new javax.swing.JTextField();
+        jtf_no_interior_empleado = new javax.swing.JTextField();
         jl_no_cueta = new javax.swing.JLabel();
-        jtf_no_cueta = new javax.swing.JTextField();
+        jtf_no_cueta_empleado = new javax.swing.JTextField();
         jl_no_seguro = new javax.swing.JLabel();
-        jtf_no_seguro = new javax.swing.JTextField();
+        jtf_no_seguro_empleado = new javax.swing.JTextField();
         jl_banco = new javax.swing.JLabel();
-        jtf_banco = new javax.swing.JTextField();
+        jtf_banco_empleado = new javax.swing.JTextField();
         jl_curp = new javax.swing.JLabel();
         jtf_curp = new javax.swing.JTextField();
         jl_tipo_empleado = new javax.swing.JLabel();
         jtf_tipo_empleado = new javax.swing.JTextField();
         jl_usuario = new javax.swing.JLabel();
-        jtf_usuario = new javax.swing.JTextField();
+        jtf_usuario_empleado = new javax.swing.JTextField();
         jl_contrasena = new javax.swing.JLabel();
         jtf_contrasena = new javax.swing.JTextField();
         jb_eliminar = new javax.swing.JButton();
@@ -145,42 +145,42 @@ public class ViewEmpleados extends javax.swing.JPanel {
         jl_apellido_paterno.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_apellido_paterno.setText("Apellido Paterno");
 
-        jtf_apellido_paterno.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_apellido_paterno_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_apellido_materno.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_apellido_materno.setText("Apellido Materno");
 
-        jtf_apellido_materno.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_apellido_materno_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_telefono.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_telefono.setText("Teléfono");
 
-        jtf_telefono.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jtf_telefono.addActionListener(new java.awt.event.ActionListener() {
+        jtf_telefono_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_telefono_empleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_telefonoActionPerformed(evt);
+                jtf_telefono_empleadoActionPerformed(evt);
             }
         });
 
         jl_rfc.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_rfc.setText("R.F.C");
 
-        jtf_rfc.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_rfc_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_calle.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_calle.setText("Calle");
 
-        jtf_calle.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_calle_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_colonia.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_colonia.setText("Colonia");
 
-        jtf_colonia.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_colonia_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_numero_interior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_numero_interior.setText("Número exterior");
 
-        jtf_numero_interior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_numero_exterior_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_numero_exterior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_numero_exterior.setText("Número exterior");
@@ -190,27 +190,27 @@ public class ViewEmpleados extends javax.swing.JPanel {
         jl_codigo_postal.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_codigo_postal.setText("Código postal");
 
-        jtf_codigo_postal.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_no_interior_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_no_cueta.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_no_cueta.setText("No. Cuenta");
 
-        jtf_no_cueta.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jtf_no_cueta.addActionListener(new java.awt.event.ActionListener() {
+        jtf_no_cueta_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_no_cueta_empleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_no_cuetaActionPerformed(evt);
+                jtf_no_cueta_empleadoActionPerformed(evt);
             }
         });
 
         jl_no_seguro.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_no_seguro.setText("No. Seguro");
 
-        jtf_no_seguro.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_no_seguro_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_banco.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_banco.setText("Banco");
 
-        jtf_banco.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_banco_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_curp.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_curp.setText("Curp");
@@ -225,7 +225,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
         jl_usuario.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_usuario.setText("Usuario");
 
-        jtf_usuario.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_usuario_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_contrasena.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_contrasena.setText("Contraseña");
@@ -264,13 +264,13 @@ public class ViewEmpleados extends javax.swing.JPanel {
                         .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtf_id_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jtf_codigo_postal, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jtf_numero_interior, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jtf_colonia, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jtf_calle, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jtf_telefono, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jtf_apellido_materno, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jtf_apellido_paterno, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_no_interior_empleado, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_numero_exterior_empleado, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_colonia_empleado, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_calle_empleado, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_telefono_empleado, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_apellido_materno_empleado, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_apellido_paterno_empleado, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jtf_nombre_empleado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE))))
                     .addGroup(jp_datospersonalesLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -290,7 +290,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
                         .addGroup(jp_datospersonalesLayout.createSequentialGroup()
                             .addComponent(jl_no_cueta, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                            .addComponent(jtf_no_cueta, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtf_no_cueta_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_datospersonalesLayout.createSequentialGroup()
                             .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -306,15 +306,15 @@ public class ViewEmpleados extends javax.swing.JPanel {
                                     .addComponent(jtf_tipo_empleado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(jtf_contrasena)
-                                        .addComponent(jtf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jtf_usuario_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jtf_numero_exterior, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtf_banco)
-                                    .addComponent(jtf_no_seguro, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jtf_banco_empleado)
+                                    .addComponent(jtf_no_seguro_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addComponent(jl_banco, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jp_datospersonalesLayout.createSequentialGroup()
                         .addGap(157, 157, 157)
-                        .addComponent(jtf_rfc, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtf_rfc_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jl_rfc, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jl_codigo_postal))
                 .addGap(70, 70, 70))
@@ -328,22 +328,22 @@ public class ViewEmpleados extends javax.swing.JPanel {
                         .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jp_datospersonalesLayout.createSequentialGroup()
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jtf_apellido_materno, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtf_apellido_materno_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jl_apellido_materno, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(20, 20, 20)
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jtf_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtf_telefono_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jl_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(20, 20, 20)
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtf_calle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtf_calle_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jl_calle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(20, 20, 20)
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jp_datospersonalesLayout.createSequentialGroup()
-                                        .addComponent(jtf_colonia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jtf_colonia_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(20, 20, 20)
-                                        .addComponent(jtf_numero_interior, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jtf_numero_exterior_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jp_datospersonalesLayout.createSequentialGroup()
                                         .addComponent(jl_colonia, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(20, 20, 20)
@@ -351,17 +351,17 @@ public class ViewEmpleados extends javax.swing.JPanel {
                             .addGroup(jp_datospersonalesLayout.createSequentialGroup()
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jp_datospersonalesLayout.createSequentialGroup()
-                                        .addComponent(jtf_no_cueta, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jtf_no_cueta_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(45, 45, 45))
                                     .addGroup(jp_datospersonalesLayout.createSequentialGroup()
                                         .addComponent(jl_no_cueta, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(20, 20, 20)
                                         .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jtf_no_seguro, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtf_no_seguro_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jl_no_seguro, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(20, 20, 20)
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jtf_banco, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtf_banco_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jl_banco, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -373,7 +373,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
                                     .addComponent(jtf_tipo_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(20, 20, 20)
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jtf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtf_usuario_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jl_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(21, 21, 21)
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -381,7 +381,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
                                     .addComponent(jtf_contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(20, 20, 20)
                         .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_codigo_postal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_no_interior_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtf_numero_exterior, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jp_datospersonalesLayout.createSequentialGroup()
                                 .addGap(2, 2, 2)
@@ -393,14 +393,14 @@ public class ViewEmpleados extends javax.swing.JPanel {
                             .addComponent(jl_id_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtf_id_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jl_rfc, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_rfc, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtf_rfc_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(20, 20, 20)
                         .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jtf_nombre_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jl_nombre_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(20, 20, 20)
                         .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jtf_apellido_paterno, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_apellido_paterno_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jl_apellido_paterno, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -524,13 +524,13 @@ public class ViewEmpleados extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtf_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_telefonoActionPerformed
+    private void jtf_telefono_empleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_telefono_empleadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_telefonoActionPerformed
+    }//GEN-LAST:event_jtf_telefono_empleadoActionPerformed
 
-    private void jtf_no_cuetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_no_cuetaActionPerformed
+    private void jtf_no_cueta_empleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_no_cueta_empleadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_no_cuetaActionPerformed
+    }//GEN-LAST:event_jtf_no_cueta_empleadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -550,42 +550,42 @@ public class ViewEmpleados extends javax.swing.JPanel {
     public javax.swing.JButton jb_insertar;
     public javax.swing.JButton jb_modificar;
     public javax.swing.JButton jb_nuevo;
-    private javax.swing.JLabel jl_apellido_materno;
-    private javax.swing.JLabel jl_apellido_paterno;
-    private javax.swing.JLabel jl_banco;
-    private javax.swing.JLabel jl_calle;
-    private javax.swing.JLabel jl_codigo_postal;
-    private javax.swing.JLabel jl_colonia;
-    private javax.swing.JLabel jl_contrasena;
-    private javax.swing.JLabel jl_curp;
-    private javax.swing.JLabel jl_id_empleado;
-    private javax.swing.JLabel jl_no_cueta;
-    private javax.swing.JLabel jl_no_seguro;
-    private javax.swing.JLabel jl_nombre_empleado;
-    private javax.swing.JLabel jl_numero_exterior;
-    private javax.swing.JLabel jl_numero_interior;
-    private javax.swing.JLabel jl_rfc;
-    private javax.swing.JLabel jl_telefono;
-    private javax.swing.JLabel jl_tipo_empleado;
-    private javax.swing.JLabel jl_usuario;
+    public javax.swing.JLabel jl_apellido_materno;
+    public javax.swing.JLabel jl_apellido_paterno;
+    public javax.swing.JLabel jl_banco;
+    public javax.swing.JLabel jl_calle;
+    public javax.swing.JLabel jl_codigo_postal;
+    public javax.swing.JLabel jl_colonia;
+    public javax.swing.JLabel jl_contrasena;
+    public javax.swing.JLabel jl_curp;
+    public javax.swing.JLabel jl_id_empleado;
+    public javax.swing.JLabel jl_no_cueta;
+    public javax.swing.JLabel jl_no_seguro;
+    public javax.swing.JLabel jl_nombre_empleado;
+    public javax.swing.JLabel jl_numero_exterior;
+    public javax.swing.JLabel jl_numero_interior;
+    public javax.swing.JLabel jl_rfc;
+    public javax.swing.JLabel jl_telefono;
+    public javax.swing.JLabel jl_tipo_empleado;
+    public javax.swing.JLabel jl_usuario;
     private javax.swing.JPanel jp_datospersonales;
-    private javax.swing.JTextField jtf_apellido_materno;
-    private javax.swing.JTextField jtf_apellido_paterno;
-    private javax.swing.JTextField jtf_banco;
-    private javax.swing.JTextField jtf_calle;
-    private javax.swing.JTextField jtf_codigo_postal;
-    private javax.swing.JTextField jtf_colonia;
-    private javax.swing.JTextField jtf_contrasena;
-    private javax.swing.JTextField jtf_curp;
-    private javax.swing.JTextField jtf_id_empleado;
-    private javax.swing.JTextField jtf_no_cueta;
-    private javax.swing.JTextField jtf_no_seguro;
-    private javax.swing.JTextField jtf_nombre_empleado;
-    private javax.swing.JTextField jtf_numero_exterior;
-    private javax.swing.JTextField jtf_numero_interior;
-    private javax.swing.JTextField jtf_rfc;
-    private javax.swing.JTextField jtf_telefono;
-    private javax.swing.JTextField jtf_tipo_empleado;
-    private javax.swing.JTextField jtf_usuario;
+    public javax.swing.JTextField jtf_apellido_materno_empleado;
+    public javax.swing.JTextField jtf_apellido_paterno_empleado;
+    public javax.swing.JTextField jtf_banco_empleado;
+    public javax.swing.JTextField jtf_calle_empleado;
+    public javax.swing.JTextField jtf_colonia_empleado;
+    public javax.swing.JTextField jtf_contrasena;
+    public javax.swing.JTextField jtf_curp;
+    public javax.swing.JTextField jtf_id_empleado;
+    public javax.swing.JTextField jtf_no_cueta_empleado;
+    public javax.swing.JTextField jtf_no_interior_empleado;
+    public javax.swing.JTextField jtf_no_seguro_empleado;
+    public javax.swing.JTextField jtf_nombre_empleado;
+    public javax.swing.JTextField jtf_numero_exterior;
+    public javax.swing.JTextField jtf_numero_exterior_empleado;
+    public javax.swing.JTextField jtf_rfc_empleado;
+    public javax.swing.JTextField jtf_telefono_empleado;
+    public javax.swing.JTextField jtf_tipo_empleado;
+    public javax.swing.JTextField jtf_usuario_empleado;
     // End of variables declaration//GEN-END:variables
 }

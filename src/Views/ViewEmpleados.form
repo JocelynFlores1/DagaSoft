@@ -214,13 +214,13 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jtf_id_empleado" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
                                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jtf_codigo_postal" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_numero_interior" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_colonia" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_calle" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_telefono" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_apellido_materno" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_apellido_paterno" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jtf_no_interior_empleado" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jtf_numero_exterior_empleado" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jtf_colonia_empleado" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jtf_calle_empleado" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jtf_telefono_empleado" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jtf_apellido_materno_empleado" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jtf_apellido_paterno_empleado" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jtf_nombre_empleado" alignment="0" pref="270" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -245,7 +245,7 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="jl_no_cueta" min="-2" pref="103" max="-2" attributes="0"/>
                                           <EmptySpace pref="54" max="32767" attributes="0"/>
-                                          <Component id="jtf_no_cueta" min="-2" pref="334" max="-2" attributes="0"/>
+                                          <Component id="jtf_no_cueta_empleado" min="-2" pref="334" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -264,13 +264,13 @@
                                                   <Component id="jtf_tipo_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
                                                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                                       <Component id="jtf_contrasena" max="32767" attributes="0"/>
-                                                      <Component id="jtf_usuario" min="-2" pref="331" max="-2" attributes="0"/>
+                                                      <Component id="jtf_usuario_empleado" min="-2" pref="331" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="jtf_numero_exterior" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jtf_banco" max="32767" attributes="0"/>
-                                                  <Component id="jtf_no_seguro" min="-2" pref="334" max="-2" attributes="0"/>
+                                                  <Component id="jtf_banco_empleado" max="32767" attributes="0"/>
+                                                  <Component id="jtf_no_seguro_empleado" min="-2" pref="334" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -278,7 +278,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="157" pref="157" max="-2" attributes="0"/>
-                                      <Component id="jtf_rfc" min="-2" pref="331" max="-2" attributes="0"/>
+                                      <Component id="jtf_rfc_empleado" min="-2" pref="331" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jl_rfc" min="-2" pref="121" max="-2" attributes="0"/>
                                   <Component id="jl_codigo_postal" min="-2" max="-2" attributes="0"/>
@@ -296,25 +296,25 @@
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="jtf_apellido_materno" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                                                  <Component id="jtf_apellido_materno_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                                   <Component id="jl_apellido_materno" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="jtf_telefono" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                                                  <Component id="jtf_telefono_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                                   <Component id="jl_telefono" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jtf_calle" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                                  <Component id="jtf_calle_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                                                   <Component id="jl_calle" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <Component id="jtf_colonia" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jtf_colonia_empleado" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                                      <Component id="jtf_numero_interior" min="-2" pref="25" max="-2" attributes="0"/>
+                                                      <Component id="jtf_numero_exterior_empleado" min="-2" pref="25" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
                                                       <Component id="jl_colonia" min="-2" pref="25" max="-2" attributes="0"/>
@@ -326,21 +326,21 @@
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jtf_no_cueta" min="-2" pref="25" max="-2" attributes="0"/>
+                                                      <Component id="jtf_no_cueta_empleado" min="-2" pref="25" max="-2" attributes="0"/>
                                                       <EmptySpace min="45" pref="45" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <Component id="jl_no_cueta" min="-2" pref="25" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jtf_no_seguro" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                                          <Component id="jtf_no_seguro_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                                           <Component id="jl_no_seguro" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jtf_banco" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                                  <Component id="jtf_banco_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                                   <Component id="jl_banco" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -355,7 +355,7 @@
                                               </Group>
                                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jtf_usuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jtf_usuario_empleado" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jl_usuario" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
@@ -367,7 +367,7 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jtf_codigo_postal" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jtf_no_interior_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="jtf_numero_exterior" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Group type="102" attributes="0">
                                               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
@@ -383,7 +383,7 @@
                                           <Component id="jl_id_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="jtf_id_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="jl_rfc" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="jtf_rfc" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jtf_rfc_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
@@ -392,7 +392,7 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jtf_apellido_paterno" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jtf_apellido_paterno_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="jl_apellido_paterno" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -418,6 +418,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="ID Empleado"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jtf_id_empleado">
                       <Properties>
@@ -425,6 +428,9 @@
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_nombre_empleado">
                       <Properties>
@@ -433,6 +439,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Nombre (s)"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jtf_nombre_empleado">
                       <Properties>
@@ -440,6 +449,9 @@
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_apellido_paterno">
                       <Properties>
@@ -448,13 +460,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Apellido Paterno"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_apellido_paterno">
+                    <Component class="javax.swing.JTextField" name="jtf_apellido_paterno_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_apellido_materno">
                       <Properties>
@@ -463,13 +481,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Apellido Materno"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_apellido_materno">
+                    <Component class="javax.swing.JTextField" name="jtf_apellido_materno_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_telefono">
                       <Properties>
@@ -478,16 +502,22 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_telefono">
+                    <Component class="javax.swing.JTextField" name="jtf_telefono_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_telefonoActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_telefono_empleadoActionPerformed"/>
                       </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_rfc">
                       <Properties>
@@ -496,13 +526,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="R.F.C"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_rfc">
+                    <Component class="javax.swing.JTextField" name="jtf_rfc_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_calle">
                       <Properties>
@@ -511,13 +547,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Calle"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_calle">
+                    <Component class="javax.swing.JTextField" name="jtf_calle_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_colonia">
                       <Properties>
@@ -526,13 +568,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Colonia"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_colonia">
+                    <Component class="javax.swing.JTextField" name="jtf_colonia_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_numero_interior">
                       <Properties>
@@ -541,13 +589,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="N&#xfa;mero exterior"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_numero_interior">
+                    <Component class="javax.swing.JTextField" name="jtf_numero_exterior_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_numero_exterior">
                       <Properties>
@@ -556,6 +610,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="N&#xfa;mero exterior"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jtf_numero_exterior">
                       <Properties>
@@ -563,6 +620,9 @@
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_codigo_postal">
                       <Properties>
@@ -571,13 +631,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="C&#xf3;digo postal"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_codigo_postal">
+                    <Component class="javax.swing.JTextField" name="jtf_no_interior_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_no_cueta">
                       <Properties>
@@ -586,16 +652,22 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="No. Cuenta"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_no_cueta">
+                    <Component class="javax.swing.JTextField" name="jtf_no_cueta_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_no_cuetaActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_no_cueta_empleadoActionPerformed"/>
                       </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_no_seguro">
                       <Properties>
@@ -604,13 +676,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="No. Seguro"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_no_seguro">
+                    <Component class="javax.swing.JTextField" name="jtf_no_seguro_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_banco">
                       <Properties>
@@ -619,13 +697,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Banco"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_banco">
+                    <Component class="javax.swing.JTextField" name="jtf_banco_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_curp">
                       <Properties>
@@ -634,6 +718,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Curp"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jtf_curp">
                       <Properties>
@@ -641,6 +728,9 @@
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_tipo_empleado">
                       <Properties>
@@ -649,6 +739,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Tipo empleado"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jtf_tipo_empleado">
                       <Properties>
@@ -656,6 +749,9 @@
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_usuario">
                       <Properties>
@@ -664,13 +760,19 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Usuario"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_usuario">
+                    <Component class="javax.swing.JTextField" name="jtf_usuario_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jl_contrasena">
                       <Properties>
@@ -679,6 +781,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jtf_contrasena">
                       <Properties>
@@ -686,6 +791,9 @@
                           <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JButton" name="jb_eliminar">
                       <Properties>
