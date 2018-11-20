@@ -336,4 +336,17 @@ public class ModelEmpleados {
         }
     }
 
+    //Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
+    public void consultajt_empleado() {
+        ModelConexion loginConexion = new ModelConexion();
+        loginConexion.getConexion();
+        try {
+            String consultaString = "select * from empleados";
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            rs = ps.executeQuery();
+        } catch (SQLException e) {
+            System.out.println("Error 05: tabla empleados" + e);
+        }
+    }
+
 }
