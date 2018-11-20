@@ -8,6 +8,7 @@ package Models;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -216,4 +217,29 @@ public class ModelEmpleados {
         this.codigo_postal = codigo_postal;
     }
 
+    public void modificarDatos() {
+        try {
+            setId_empleado(rs.getString(1));
+            setNombre_empleado(rs.getString(2));
+            setApellido_paterno(rs.getString(3));
+            setApellido_materno(rs.getString(4));
+            setTelefono(rs.getString(5));
+            setCalle(rs.getString(6));
+            setColonia(rs.getString(7));
+            setNumero_exterior(rs.getString(8));
+            setNumero_interior(rs.getString(9));
+            setRfc(rs.getString(10));
+            setNo_cueta(rs.getString(11));
+            setNo_seguro(rs.getString(12));
+            setBanco(rs.getString(13));
+            setCurp(rs.getString(14));
+            setTipo_empleado(rs.getString(15));
+            setUsuario(rs.getString(16));
+            setContrasena(rs.getString(17));
+            setCodigo_postal(rs.getString(18));
+
+        } catch (SQLException e) {
+            System.out.println("Error 01: modificar datos" + e);
+        }
+    }
 }
