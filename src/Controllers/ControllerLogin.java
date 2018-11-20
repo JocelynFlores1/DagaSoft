@@ -7,8 +7,11 @@ package Controllers;
 
 import Models.ModelLogin;
 import Views.ViewLogin;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -24,18 +27,24 @@ public class ControllerLogin implements ActionListener {
         this.modelLogin = modelLogin;
         this.viewLogin = viewLogin;
         initComponents();
-        viewLogin.jbLogin.addActionListener(this);
+        viewLogin.jbIniciar.addActionListener(this);
     }
 
     private void initComponents() {
         viewLogin.setVisible(true);
         viewLogin.setLocationRelativeTo(null);
         viewLogin.setTitle("Inicio de sesión Ferreteria Acme");
+
+        ImageIcon imagenUno = new ImageIcon(getClass().getResource("/img/login.png"));
+        Image fondoUno = imagenUno.getImage().getScaledInstance(viewLogin.jl_Login.getWidth(), viewLogin.jl_Login.getHeight(), Image.SCALE_SMOOTH);
+        Icon iconoEscalado = new ImageIcon(fondoUno);
+        viewLogin.jl_Login.setIcon(iconoEscalado);
+        viewLogin.setResizable(false);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == viewLogin.jbLogin) {
+        if (e.getSource() == viewLogin.jbIniciar) {
             iniciarSesion();
         }
     }
