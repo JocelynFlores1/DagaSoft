@@ -61,10 +61,10 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jtf_id_proveedor" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtf_nombre_proveedor" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtf_colonia" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtf_calle" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
+                                  <Component id="jtf_id_sucursal" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jtf_nombre_sucursal" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jtf_colonia_sucursal" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jtf_calle_sucursal" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="50" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -75,10 +75,10 @@
                               </Group>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jtf_numero_exterior" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtf_codigo_postal" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jtf_telefono" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
-                                  <Component id="jtf_ciudad" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
+                                  <Component id="jtf_numero_exterior_sucursal" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jtf_codigo_postal_sucursal" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jtf_telefono_sucursal" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
+                                  <Component id="jtf_ciudad_sucursal" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="32" max="32767" attributes="0"/>
                           </Group>
@@ -105,28 +105,28 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jl_id_proveedor" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="jtf_id_proveedor" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="jtf_id_sucursal" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jtf_nombre_proveedor" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jtf_nombre_sucursal" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="jl_nombre_proveedor" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jtf_calle" alignment="1" pref="32" max="32767" attributes="0"/>
+                                  <Component id="jtf_calle_sucursal" alignment="1" pref="32" max="32767" attributes="0"/>
                                   <Component id="jl_calle" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jtf_colonia" alignment="0" pref="30" max="32767" attributes="0"/>
+                                  <Component id="jtf_colonia_sucursal" alignment="0" pref="30" max="32767" attributes="0"/>
                                   <Component id="jl_colonia" alignment="1" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jtf_numero_exterior" min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Component id="jtf_numero_exterior_sucursal" min="-2" pref="29" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
@@ -137,7 +137,7 @@
                               </Group>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jtf_codigo_postal" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="jtf_codigo_postal_sucursal" min="-2" pref="30" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
@@ -148,11 +148,11 @@
                               </Group>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jl_ciudad" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="jtf_ciudad" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jtf_ciudad_sucursal" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jtf_telefono" alignment="1" pref="30" max="32767" attributes="0"/>
+                                  <Component id="jtf_telefono_sucursal" alignment="1" pref="30" max="32767" attributes="0"/>
                                   <Component id="jl_telefono" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -223,7 +223,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtf_id_proveedor">
+            <Component class="javax.swing.JTextField" name="jtf_id_sucursal">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
@@ -239,7 +239,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtf_nombre_proveedor">
+            <Component class="javax.swing.JTextField" name="jtf_nombre_sucursal">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
@@ -255,7 +255,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtf_calle">
+            <Component class="javax.swing.JTextField" name="jtf_calle_sucursal">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
@@ -271,7 +271,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtf_colonia">
+            <Component class="javax.swing.JTextField" name="jtf_colonia_sucursal">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
@@ -287,7 +287,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtf_numero_exterior">
+            <Component class="javax.swing.JTextField" name="jtf_numero_exterior_sucursal">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
@@ -303,7 +303,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtf_codigo_postal">
+            <Component class="javax.swing.JTextField" name="jtf_codigo_postal_sucursal">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
@@ -319,9 +319,9 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtf_ciudad">
+            <Component class="javax.swing.JTextField" name="jtf_ciudad_sucursal">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_ciudadActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_ciudad_sucursalActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -338,7 +338,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtf_telefono">
+            <Component class="javax.swing.JTextField" name="jtf_telefono_sucursal">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
