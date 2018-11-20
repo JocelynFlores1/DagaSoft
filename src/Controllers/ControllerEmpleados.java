@@ -9,7 +9,10 @@ import Models.ModelEmpleados;
 import Views.ViewEmpleados;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -116,8 +119,7 @@ public class ControllerEmpleados {
             JOptionPane.showMessageDialog(null, "No se guardo ningun empleado");
         }
     }
-    
-    
+
     public void jmi_modificar() {
         //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea actualizar los datos del empleado?", "Guardar cambios", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -146,6 +148,49 @@ public class ControllerEmpleados {
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
             JOptionPane.showMessageDialog(null, "No se guardo ningun cambio");
+        }
+    }
+
+    public void tablaConsulta() {
+        try {
+            DefaultTableModel modelo = new DefaultTableModel();
+            viewEmpleados.jt_Empleados.setModel(modelo);
+            modelEmpleados.consultajt_empleado();
+
+            ResultSetMetaData rsMd = modelEmpleados.getRs().getMetaData();
+            int cantidadColumnas = rsMd.getColumnCount();
+
+            modelo.addColumn("ID");
+            modelo.addColumn("Nombre");
+            modelo.addColumn("Ap. Paterno");
+            modelo.addColumn("Ap. Materno");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("Calle");
+            modelo.addColumn("Colonia");
+            modelo.addColumn("No. exterior");
+            modelo.addColumn("No. Interior");
+            modelo.addColumn("RFC");
+            modelo.addColumn("No. cueta");
+            modelo.addColumn("No. seguro ");
+            modelo.addColumn("Banco");
+            modelo.addColumn("Tipo. empleado");
+            modelo.addColumn("Usuario");
+            modelo.addColumn("Contrasena");
+            modelo.addColumn("C. postal");
+            while (modelEmpleados.getRs().next()) {
+
+                Object[] filas = new Object[cantidadColumnas];
+
+                for (int i = 0; i < cantidadColumnas; i++) {
+
+                    filas[i] = modelEmpleados.getRs().getObject(i + 1);
+                }
+
+                modelo.addRow(filas);
+
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error" + ex);
         }
     }
 }
