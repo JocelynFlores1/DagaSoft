@@ -45,7 +45,7 @@ public class ControllerSucursales {
                 jmi_insertarC_actionPerformed();
             } else if (e.getSource() == viewSucursales.jb_modificar) {
                 jmi_modificarC_actionPerformed();
-            }
+            } else if (e.getSource() == viewSucursales.jb_eliminar){}
         }
     };
 
