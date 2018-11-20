@@ -157,7 +157,7 @@ public class ModelProveedores {
             setEmail_proveedor(rs.getString(8));
             setCiudad_proveedor(rs.getString(9));
             setEstado_proveedor(rs.getString(10));
-            
+
             System.out.println(rs.getString(1));
         } catch (SQLException e) {
             System.out.println("Error 01: modificar datos" + e);
@@ -239,6 +239,22 @@ public class ModelProveedores {
         }
     }
 
+    public void borrarDatosCliente() {
+        ModelConexion clienteConexion = new ModelConexion();
+        //Se obtiene la conexion para la clase
+
+        String sqlBorrarCliente = "delete from proveedores where id_cliente = ?";
+        try {
+
+            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlBorrarCliente);
+            //Este proceso permite establecer la conexion del objeto creado y enlazar la consulta con la base de datos para poder borrar el cliente.
+            ps.setString(1, getId_proveedor());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error 05: Borrar datos cliente" + ex);
+        }
+    }
+
     //Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
     public void consultajTableProveedores() {
         ModelConexion loginConexion = new ModelConexion();
@@ -248,7 +264,7 @@ public class ModelProveedores {
             ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
-            System.out.println("Error 000000: tabla proveedores" + e);
+            System.out.println("Error 06: tabla proveedores" + e);
         }
     }
 }
