@@ -236,7 +236,7 @@ public class ModelClientes {
 
         String sqlInsertarCliente = "insert into clientes (id_cliente, nombre_cliente, apellido_paterno_cliente, apellido_materno_cliente, telefono_cliente, rfc_cliente, calle_cliente, colonia_cliente, numero_exterior_cliente, numero_interior_cliente, codigo_postal_cliente, email_cliente, ciudad_cliente, estado_cliente) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
-            ps = (com.mysql.jdbc.PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlInsertarCliente); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlInsertarCliente); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_cliente());
             ps.setString(1, getId_cliente());
             ps.setString(2, getNombre_cliente());
@@ -273,7 +273,7 @@ public class ModelClientes {
                 + "estado_cliente=? where id_cliente = ?";
         try {
 
-            ps = (com.mysql.jdbc.PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlModificarCliente);
+            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlModificarCliente);
 
             System.out.println(getId_cliente());
 
@@ -305,7 +305,7 @@ public class ModelClientes {
         String sqlBorrarCliente = "delete from clientes where id_cliente = ?";
         try {
 
-            ps = (com.mysql.jdbc.PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlBorrarCliente);
+            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlBorrarCliente);
             //Este proceso permite establecer la conexion del objeto creado y enlazar la consulta con la base de datos para poder borrar el cliente.
             ps.setString(1, getId_cliente());
             ps.executeUpdate();
