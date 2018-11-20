@@ -336,6 +336,22 @@ public class ModelEmpleados {
         }
     }
 
+    public void borrarDatosCliente() {
+        ModelConexion clienteConexion = new ModelConexion();
+        //Se obtiene la conexion para la clase
+
+        String sqlBorrarCliente = "delete from empleados where id_empleado = ?";
+        try {
+
+            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlBorrarCliente);
+            //Este proceso permite establecer la conexion del objeto creado y enlazar la consulta con la base de datos para poder borrar el cliente.
+            ps.setString(1, getId_empleado());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error 05: Borrar datos empleado" + ex);
+        }
+    }
+
     //Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
     public void consultajt_empleado() {
         ModelConexion loginConexion = new ModelConexion();
@@ -345,7 +361,7 @@ public class ModelEmpleados {
             ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
-            System.out.println("Error 05: tabla empleados" + e);
+            System.out.println("Error 06: tabla empleados" + e);
         }
     }
 
