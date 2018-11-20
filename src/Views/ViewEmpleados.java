@@ -54,7 +54,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
         jl_numero_interior = new javax.swing.JLabel();
         jtf_numero_exterior_empleado = new javax.swing.JTextField();
         jl_numero_exterior = new javax.swing.JLabel();
-        jtf_numero_exterior = new javax.swing.JTextField();
+        jtf_codigo_postal_empleado = new javax.swing.JTextField();
         jl_codigo_postal = new javax.swing.JLabel();
         jtf_no_interior_empleado = new javax.swing.JTextField();
         jl_no_cueta = new javax.swing.JLabel();
@@ -185,7 +185,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
         jl_numero_exterior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_numero_exterior.setText("Número exterior");
 
-        jtf_numero_exterior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jtf_codigo_postal_empleado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jl_codigo_postal.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jl_codigo_postal.setText("Código postal");
@@ -307,7 +307,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(jtf_contrasena)
                                         .addComponent(jtf_usuario_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jtf_numero_exterior, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jtf_codigo_postal_empleado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jtf_banco_empleado)
                                     .addComponent(jtf_no_seguro_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -382,7 +382,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
                         .addGap(20, 20, 20)
                         .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtf_no_interior_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_numero_exterior, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_codigo_postal_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jp_datospersonalesLayout.createSequentialGroup()
                                 .addGap(2, 2, 2)
                                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -573,6 +573,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
     public javax.swing.JTextField jtf_apellido_paterno_empleado;
     public javax.swing.JTextField jtf_banco_empleado;
     public javax.swing.JTextField jtf_calle_empleado;
+    public javax.swing.JTextField jtf_codigo_postal_empleado;
     public javax.swing.JTextField jtf_colonia_empleado;
     public javax.swing.JTextField jtf_contrasena;
     public javax.swing.JTextField jtf_curp;
@@ -581,7 +582,6 @@ public class ViewEmpleados extends javax.swing.JPanel {
     public javax.swing.JTextField jtf_no_interior_empleado;
     public javax.swing.JTextField jtf_no_seguro_empleado;
     public javax.swing.JTextField jtf_nombre_empleado;
-    public javax.swing.JTextField jtf_numero_exterior;
     public javax.swing.JTextField jtf_numero_exterior_empleado;
     public javax.swing.JTextField jtf_rfc_empleado;
     public javax.swing.JTextField jtf_telefono_empleado;

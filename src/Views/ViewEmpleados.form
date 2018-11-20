@@ -266,7 +266,7 @@
                                                       <Component id="jtf_contrasena" max="32767" attributes="0"/>
                                                       <Component id="jtf_usuario_empleado" min="-2" pref="331" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jtf_numero_exterior" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
+                                                  <Component id="jtf_codigo_postal_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                                   <Component id="jtf_banco_empleado" max="32767" attributes="0"/>
@@ -368,7 +368,7 @@
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jtf_no_interior_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="jtf_numero_exterior" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jtf_codigo_postal_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Group type="102" attributes="0">
                                               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -614,7 +614,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jtf_numero_exterior">
+                    <Component class="javax.swing.JTextField" name="jtf_codigo_postal_empleado">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="14" style="1"/>
