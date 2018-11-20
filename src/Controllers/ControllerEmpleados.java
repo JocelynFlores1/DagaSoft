@@ -164,7 +164,7 @@ public class ControllerEmpleados {
             modelEmpleados.setCodigo_postal(viewEmpleados.jtf_codigo_postal_empleado.getText());
 
             modelEmpleados.modificarDatosEmpleado();
-            
+
             JOptionPane.showMessageDialog(null, "Datos del empleado modificados");
             tablaConsulta();
 
@@ -231,9 +231,29 @@ public class ControllerEmpleados {
     }
 
     public void jmi_nuevo() {
+        viewEmpleados.jtf_id_empleado.setText("");
+        viewEmpleados.jtf_nombre_empleado.setText("");
+        viewEmpleados.jtf_apellido_paterno_empleado.setText("");
+        viewEmpleados.jtf_apellido_materno_empleado.setText("");
+        viewEmpleados.jtf_telefono_empleado.setText("");
+        viewEmpleados.jtf_calle_empleado.setText("");
+        viewEmpleados.jtf_colonia_empleado.setText("");
+        viewEmpleados.jtf_numero_exterior_empleado.setText("");
+        viewEmpleados.jtf_no_interior_empleado.setText("");
+        viewEmpleados.jtf_rfc_empleado.setText("");
+        viewEmpleados.jtf_no_cueta_empleado.setText("");
+        viewEmpleados.jtf_no_seguro_empleado.setText("");
+        viewEmpleados.jtf_banco_empleado.setText("");
+        viewEmpleados.jtf_curp.setText("");
+        viewEmpleados.jtf_tipo_empleado.setText("");
+        viewEmpleados.jtf_usuario_empleado.setText("");
+        viewEmpleados.jtf_contrasena.setText("");
+        viewEmpleados.jtf_codigo_postal_empleado.setText("");
+        viewEmpleados.jtf_sucursal_empleado.setText("");
+
     }
 
     public void jmi_eliminar() {
-        
+
     }
 }
