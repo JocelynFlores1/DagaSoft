@@ -190,7 +190,7 @@ public class ModelProveedores {
 
         String sqlInsertarProveedor = "insert into proveedores (id_proveedor, nombre_proveedor,calle_proveedor,numero_exterior_proveedor,colonia_proveedor,codigo_postal_proveedor, telefono_proveedor, email_proveedor,ciudad_proveedor,estado_proveedor) VALUES(?,?,?,?,?,?,?,?,?,?)";
         try {
-            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarProveedor); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarProveedor); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_proveedor());
             ps.setString(1, getId_proveedor());
             ps.setString(2, getNombre_proveedor());
@@ -217,7 +217,7 @@ public class ModelProveedores {
                 + "telefono_proveedor=?, email_proveedor=?, ciudad_proveedor=?," + "estado_proveedor=? where id_cliente = ?";
         try {
 
-            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarProveedor);
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarProveedor);
 
             System.out.println(getId_proveedor());
 
