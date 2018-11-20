@@ -236,4 +236,18 @@ public class ModelProveedores {
             System.out.println("Error 04: Modificar datos proveedores" + ex);
         }
     }
+
+    //Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
+    public void consultajTableProveedores() {
+        ModelConexion loginConexion = new ModelConexion();
+        loginConexion.getConexion();
+        try {
+            String consultaString = "select * from proveedores";
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            rs = ps.executeQuery();
+        } catch (SQLException e) {
+            System.out.println("Error 000000: tabla proveedores" + e);
+        }
+    }
+
 }
