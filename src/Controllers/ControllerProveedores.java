@@ -36,6 +36,8 @@ public class ControllerProveedores {
                 jmi_insertarP_actionPerformed();
             } else if (e.getSource() == viewProveedores.jb_modificar_proveedor) {
                 jmi_modificarP_actionPerformed();
+            } else if (e.getSource() == viewProveedores.jb_nuevo) {
+                jmi_nuevoP_actionPerformed();
             }
         }
     };
@@ -118,6 +120,8 @@ public class ControllerProveedores {
 
             modelProveedores.insertarNuevoProveedor();
 
+            tablaConsulta();
+
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
             JOptionPane.showMessageDialog(null, "No se guardo ningún registro");
@@ -141,6 +145,7 @@ public class ControllerProveedores {
 
             modelProveedores.modificarDatosProveedor();
 
+            tablaConsulta();
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
             JOptionPane.showMessageDialog(null, "No se guardo ningun cambio");
@@ -203,5 +208,18 @@ public class ControllerProveedores {
         } catch (Exception err) {
             JOptionPane.showMessageDialog(null, "Error:\nSelecciona un registro");
         }
+    }
+
+    public void jmi_nuevoP_actionPerformed() {
+        viewProveedores.jtf_id_proveedor.setText("");
+        viewProveedores.jtf_nombre_proveedor.setText("");
+        viewProveedores.jtf_calle.setText("");
+        viewProveedores.jtf_numero_exterior.setText("");
+        viewProveedores.jtf_colonia.setText("");
+        viewProveedores.jtf_codigo_postal.setText("");
+        viewProveedores.jtf_telefono.setText("");
+        viewProveedores.jtf_email.setText("");
+        viewProveedores.jtf_ciudad.setText("");
+        viewProveedores.jtf_estado.setText("");
     }
 }
