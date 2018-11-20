@@ -4,45 +4,33 @@
  * and open the template in the editor.
  */
 package Models;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
 /**
  *
  * @author Jocelyn
  */
 public class ModelProveedores {
+
     private Connection conexion;
     private Statement st;
     private ResultSet rs;
     private PreparedStatement ps;
-    
+
     private String id_proveedor;
     private String nombre_proveedor;
-    private String calle;
-    private String colonia;
-    private Integer numero_exterior;
-    private Integer codigo_postal;
-
-    public Integer getNumero_exterior() {
-        return numero_exterior;
-    }
-
-    public void setNumero_exterior(Integer numero_exterior) {
-        this.numero_exterior = numero_exterior;
-    }
-
-    public Integer getCodigo_postal() {
-        return codigo_postal;
-    }
-
-    public void setCodigo_postal(Integer codigo_postal) {
-        this.codigo_postal = codigo_postal;
-    }
-    private String ciudad;
-    private String telefono;
-
+    private String calle_proveedor;
+    private Integer numero_exterior_proveedor;
+    private String colonia_proveedor;
+    private Integer codigo_postal_proveedor;
+    private String telefono_proveedor;
+    private String email_proveedor;
+    private String ciudad_proveedor;
+    private String estado_proveedor;
 
     public Connection getConexion() {
         return conexion;
@@ -92,35 +80,68 @@ public class ModelProveedores {
         this.nombre_proveedor = nombre_proveedor;
     }
 
-    public String getCalle() {
-        return calle;
+    public String getCalle_proveedor() {
+        return calle_proveedor;
     }
 
-    public void setCalle(String calle) {
-        this.calle = calle;
+    public void setCalle_proveedor(String calle_proveedor) {
+        this.calle_proveedor = calle_proveedor;
     }
 
-    public String getColonia() {
-        return colonia;
+    public Integer getNumero_exterior_proveedor() {
+        return numero_exterior_proveedor;
     }
 
-    public void setColonia(String colonia) {
-        this.colonia = colonia;
-    }
-     
-    public String getCiudad() {
-        return ciudad;
+    public void setNumero_exterior_proveedor(Integer numero_exterior_proveedor) {
+        this.numero_exterior_proveedor = numero_exterior_proveedor;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public String getColonia_proveedor() {
+        return colonia_proveedor;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public void setColonia_proveedor(String colonia_proveedor) {
+        this.colonia_proveedor = colonia_proveedor;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public Integer getCodigo_postal_proveedor() {
+        return codigo_postal_proveedor;
     }
+
+    public void setCodigo_postal_proveedor(Integer codigo_postal_proveedor) {
+        this.codigo_postal_proveedor = codigo_postal_proveedor;
+    }
+
+    public String getTelefono_proveedor() {
+        return telefono_proveedor;
+    }
+
+    public void setTelefono_proveedor(String telefono_proveedor) {
+        this.telefono_proveedor = telefono_proveedor;
+    }
+
+    public String getEmail_proveedor() {
+        return email_proveedor;
+    }
+
+    public void setEmail_proveedor(String email_proveedor) {
+        this.email_proveedor = email_proveedor;
+    }
+
+    public String getCiudad_proveedor() {
+        return ciudad_proveedor;
+    }
+
+    public void setCiudad_proveedor(String ciudad_proveedor) {
+        this.ciudad_proveedor = ciudad_proveedor;
+    }
+
+    public String getEstado_proveedor() {
+        return estado_proveedor;
+    }
+
+    public void setEstado_proveedor(String estao_proveedor) {
+        this.estado_proveedor = estao_proveedor;
+    }
+
 }
