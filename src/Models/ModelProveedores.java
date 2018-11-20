@@ -25,9 +25,9 @@ public class ModelProveedores {
     private String id_proveedor;
     private String nombre_proveedor;
     private String calle_proveedor;
-    private Integer numero_exterior_proveedor;
+    private String numero_exterior_proveedor;
     private String colonia_proveedor;
-    private Integer codigo_postal_proveedor;
+    private String codigo_postal_proveedor;
     private String telefono_proveedor;
     private String email_proveedor;
     private String ciudad_proveedor;
@@ -89,11 +89,11 @@ public class ModelProveedores {
         this.calle_proveedor = calle_proveedor;
     }
 
-    public Integer getNumero_exterior_proveedor() {
+    public String getNumero_exterior_proveedor() {
         return numero_exterior_proveedor;
     }
 
-    public void setNumero_exterior_proveedor(Integer numero_exterior_proveedor) {
+    public void setNumero_exterior_proveedor(String numero_exterior_proveedor) {
         this.numero_exterior_proveedor = numero_exterior_proveedor;
     }
 
@@ -105,11 +105,11 @@ public class ModelProveedores {
         this.colonia_proveedor = colonia_proveedor;
     }
 
-    public Integer getCodigo_postal_proveedor() {
+    public String getCodigo_postal_proveedor() {
         return codigo_postal_proveedor;
     }
 
-    public void setCodigo_postal_proveedor(Integer codigo_postal_proveedor) {
+    public void setCodigo_postal_proveedor(String codigo_postal_proveedor) {
         this.codigo_postal_proveedor = codigo_postal_proveedor;
     }
 
@@ -141,8 +141,8 @@ public class ModelProveedores {
         return estado_proveedor;
     }
 
-    public void setEstado_proveedor(String estao_proveedor) {
-        this.estado_proveedor = estao_proveedor;
+    public void setEstado_proveedor(String estado_proveedor) {
+        this.estado_proveedor = estado_proveedor;
     }
 
     public void modificarDatos() {
@@ -150,13 +150,15 @@ public class ModelProveedores {
             setId_proveedor(rs.getString(1));
             setNombre_proveedor(rs.getString(2));
             setCalle_proveedor(rs.getString(3));
-            setNumero_exterior_proveedor(Integer.parseInt(rs.getString(4)));
+            setNumero_exterior_proveedor(rs.getString(4));
             setColonia_proveedor(rs.getString(5));
-            setCodigo_postal_proveedor(Integer.parseInt(rs.getString(6)));
+            setCodigo_postal_proveedor(rs.getString(6));
             setTelefono_proveedor(rs.getString(7));
             setEmail_proveedor(rs.getString(8));
             setCiudad_proveedor(rs.getString(9));
             setEstado_proveedor(rs.getString(10));
+            
+            System.out.println(rs.getString(1));
         } catch (SQLException e) {
             System.out.println("Error 01: modificar datos" + e);
         }
@@ -167,11 +169,11 @@ public class ModelProveedores {
      * Consulta todo los registros .
      */
     public void conectarDB() {
-        ModelConexion loginConexion = new ModelConexion();
-        loginConexion.getConexion();
+        ModelConexion proveevorConexion = new ModelConexion();
+        proveevorConexion.getConexion();
         try {
             String consultaString = "select * from proveedores";
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            ps = (PreparedStatement) proveevorConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
 
             if (rs.next()) {
@@ -195,9 +197,9 @@ public class ModelProveedores {
             ps.setString(1, getId_proveedor());
             ps.setString(2, getNombre_proveedor());
             ps.setString(3, getCalle_proveedor());
-            ps.setString(4, getNumero_exterior_proveedor().toString());
+            ps.setString(4, getNumero_exterior_proveedor());
             ps.setString(5, getColonia_proveedor());
-            ps.setString(6, getCodigo_postal_proveedor().toString());
+            ps.setString(6, getCodigo_postal_proveedor());
             ps.setString(7, getTelefono_proveedor());
             ps.setString(8, getEmail_proveedor());
             ps.setString(9, getCiudad_proveedor());
@@ -223,9 +225,9 @@ public class ModelProveedores {
 
             ps.setString(1, getNombre_proveedor());
             ps.setString(2, getCalle_proveedor());
-            ps.setString(3, getNumero_exterior_proveedor().toString());
+            ps.setString(3, getNumero_exterior_proveedor());
             ps.setString(4, getColonia_proveedor());
-            ps.setString(5, getCodigo_postal_proveedor().toString());
+            ps.setString(5, getCodigo_postal_proveedor());
             ps.setString(6, getTelefono_proveedor());
             ps.setString(7, getEmail_proveedor());
             ps.setString(8, getCiudad_proveedor());
@@ -249,5 +251,4 @@ public class ModelProveedores {
             System.out.println("Error 000000: tabla proveedores" + e);
         }
     }
-
 }
