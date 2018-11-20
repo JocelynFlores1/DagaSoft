@@ -193,4 +193,23 @@ public class ControllerEmpleados {
             System.out.println("Error" + ex);
         }
     }
+
+    public void insertarCamposTabla() {
+        try {
+            if (viewEmpleados.jt_Empleados.getSelectedRow() != -1) {
+                int fila = viewEmpleados.jt_Empleados.getSelectedRow();
+
+                viewEmpleados.jtf_id_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 0).toString());
+
+            }
+        } catch (Exception err) {
+            JOptionPane.showMessageDialog(null, "Error:\nSelecciona un registro");
+        }
+    }
+
+    public void jmi_nuevo() {
+    }
+
+    public void jmi_eliminar() {
+    }
 }
