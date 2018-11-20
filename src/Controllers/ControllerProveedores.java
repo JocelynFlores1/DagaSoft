@@ -9,9 +9,12 @@ import Models.ModelProveedores;
 import Views.ViewProveedores;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -140,6 +143,42 @@ public class ControllerProveedores {
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
             JOptionPane.showMessageDialog(null, "No se guardo ningun cambio");
+        }
+    }
+    
+    public void tablaConsulta() {
+        try {
+            DefaultTableModel modelo = new DefaultTableModel();
+            viewProveedores.jtable_proveedores.setModel(modelo);
+            modelProveedores.consultajTableProveedores();
+
+            ResultSetMetaData rsMd = modelProveedores.getRs().getMetaData();
+            int cantidadColumnas = rsMd.getColumnCount();
+
+            modelo.addColumn("ID");
+            modelo.addColumn("Nombre");
+            modelo.addColumn("Calle");
+            modelo.addColumn("Número exterior");
+            modelo.addColumn("Colonia");
+            modelo.addColumn("Codigo postal");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("Email");
+            modelo.addColumn("Ciudad");
+            modelo.addColumn("Estado");
+            while (modelProveedores.getRs().next()) {
+
+                Object[] filas = new Object[cantidadColumnas];
+
+                for (int i = 0; i < cantidadColumnas; i++) {
+
+                    filas[i] = modelProveedores.getRs().getObject(i + 1);
+                }
+
+                modelo.addRow(filas);
+
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error" + ex);
         }
     }
 }
