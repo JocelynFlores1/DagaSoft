@@ -240,18 +240,18 @@ public class ModelProveedores {
     }
 
     public void borrarDatosCliente() {
-        ModelConexion clienteConexion = new ModelConexion();
+        ModelConexion proveedorConexion = new ModelConexion();
         //Se obtiene la conexion para la clase
 
-        String sqlBorrarCliente = "delete from proveedores where id_cliente = ?";
+        String sqlBorrarProveedor = "delete from proveedores where id_proveedor = ?";
         try {
 
-            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlBorrarCliente);
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlBorrarProveedor);
             //Este proceso permite establecer la conexion del objeto creado y enlazar la consulta con la base de datos para poder borrar el cliente.
             ps.setString(1, getId_proveedor());
             ps.executeUpdate();
         } catch (SQLException ex) {
-            System.out.println("Error 05: Borrar datos cliente" + ex);
+            System.out.println("Error 05: Borrar datos proveedor" + ex);
         }
     }
 
