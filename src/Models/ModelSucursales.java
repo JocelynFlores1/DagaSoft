@@ -192,8 +192,8 @@ public class ModelSucursales {
         //Se obtiene la conexion para la clase
 
         String sqlModificarSucursal = "update sucursal set "
-                + "Nombre_sucursal=?, calle_sucursal=?, coloia_sucursal=?, colonia_sucursal=?, numero_sucursal=?, "
-                + "ciudad_sucursal=?, telefono_sucursal=?,codigo_sucursal=?,";
+                + "nombre_sucursal=?, calle_sucursal=?, colonia_sucursal=?, numero_sucursal=?, ciudad_sucursal=?, "
+                + "telefono_sucursal=?, codigo_postal_sucursal=? where codigo_sucursal=?,";
 
         try {
 
@@ -201,14 +201,14 @@ public class ModelSucursales {
 
             System.out.println(getIdSucursal());
 
-            ps.setString(1, getIdSucursal());
-            ps.setString(2, getNombreSucursal());
-            ps.setString(5, getCalleSucursal());
-            ps.setString(6, getColoniaSucursal());
-            ps.setString(7, getNumeroexteriorSucursal());
-            ps.setString(8, getCiudadSucursal());
-            ps.setString(9, getTelefonoSucursal());
-            ps.setString(10, getCodigopostalSucursal());
+            ps.setString(8, getIdSucursal());
+            ps.setString(1, getNombreSucursal());
+            ps.setString(2, getCalleSucursal());
+            ps.setString(3, getColoniaSucursal());
+            ps.setString(4, getNumeroexteriorSucursal());
+            ps.setString(5, getCiudadSucursal());
+            ps.setString(6, getTelefonoSucursal());
+            ps.setString(7, getCodigopostalSucursal());
             ps.executeUpdate();
 
         } catch (SQLException ex) {
