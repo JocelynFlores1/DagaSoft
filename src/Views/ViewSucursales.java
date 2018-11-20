@@ -32,29 +32,34 @@ public class ViewSucursales extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jl_id_proveedor = new javax.swing.JLabel();
-        jtf_id_proveedor = new javax.swing.JTextField();
+        jtf_id_sucursal = new javax.swing.JTextField();
         jl_nombre_proveedor = new javax.swing.JLabel();
-        jtf_nombre_proveedor = new javax.swing.JTextField();
+        jtf_nombre_sucursal = new javax.swing.JTextField();
         jl_calle = new javax.swing.JLabel();
-        jtf_calle = new javax.swing.JTextField();
+        jtf_calle_sucursal = new javax.swing.JTextField();
         jl_colonia = new javax.swing.JLabel();
-        jtf_colonia = new javax.swing.JTextField();
+        jtf_colonia_sucursal = new javax.swing.JTextField();
         jl_numero_exterior = new javax.swing.JLabel();
-        jtf_numero_exterior = new javax.swing.JTextField();
+        jtf_numero_exterior_sucursal = new javax.swing.JTextField();
         jl_codigo_postal = new javax.swing.JLabel();
-        jtf_codigo_postal = new javax.swing.JTextField();
+        jtf_codigo_postal_sucursal = new javax.swing.JTextField();
         jl_ciudad = new javax.swing.JLabel();
-        jtf_ciudad = new javax.swing.JTextField();
+        jtf_ciudad_sucursal = new javax.swing.JTextField();
         jl_telefono = new javax.swing.JLabel();
-        jtf_telefono = new javax.swing.JTextField();
+        jtf_telefono_sucursal = new javax.swing.JTextField();
         jb_nuevo = new javax.swing.JButton();
         jb_modificar = new javax.swing.JButton();
         jb_eliminar = new javax.swing.JButton();
         jb_insertar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jpBorde = new javax.swing.JPanel();
+        jpPieDePagina1 = new javax.swing.JPanel();
+        jpProductosTitulo1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jpBordeTabla = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jt_sucursales = new javax.swing.JTable();
 
         jLayeredPane2.setPreferredSize(new java.awt.Dimension(1200, 600));
 
@@ -102,9 +107,9 @@ public class ViewSucursales extends javax.swing.JPanel {
         jl_ciudad.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_ciudad.setText("Ciudad");
 
-        jtf_ciudad.addActionListener(new java.awt.event.ActionListener() {
+        jtf_ciudad_sucursal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_ciudadActionPerformed(evt);
+                jtf_ciudad_sucursalActionPerformed(evt);
             }
         });
 
@@ -138,21 +143,21 @@ public class ViewSucursales extends javax.swing.JPanel {
 
         jLayeredPane2.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_id_proveedor, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_id_proveedor, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jtf_id_sucursal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_nombre_proveedor, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_nombre_proveedor, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jtf_nombre_sucursal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_calle, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_calle, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jtf_calle_sucursal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_colonia, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_colonia, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jtf_colonia_sucursal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_numero_exterior, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_numero_exterior, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jtf_numero_exterior_sucursal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_codigo_postal, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_codigo_postal, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jtf_codigo_postal_sucursal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_ciudad, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_ciudad, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jtf_ciudad_sucursal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_telefono, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jtf_telefono, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jtf_telefono_sucursal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jb_nuevo, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jb_modificar, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jb_eliminar, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -176,10 +181,10 @@ public class ViewSucursales extends javax.swing.JPanel {
                 .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_id_proveedor)
-                            .addComponent(jtf_nombre_proveedor)
-                            .addComponent(jtf_colonia)
-                            .addComponent(jtf_calle, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtf_id_sucursal)
+                            .addComponent(jtf_nombre_sucursal)
+                            .addComponent(jtf_colonia_sucursal)
+                            .addComponent(jtf_calle_sucursal, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jl_numero_exterior)
@@ -188,10 +193,10 @@ public class ViewSucursales extends javax.swing.JPanel {
                             .addComponent(jl_codigo_postal))
                         .addGap(20, 20, 20)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_numero_exterior)
-                            .addComponent(jtf_codigo_postal)
-                            .addComponent(jtf_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtf_numero_exterior_sucursal)
+                            .addComponent(jtf_codigo_postal_sucursal)
+                            .addComponent(jtf_telefono_sucursal, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_ciudad_sucursal, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(32, Short.MAX_VALUE))
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
                         .addComponent(jb_insertar)
@@ -212,23 +217,23 @@ public class ViewSucursales extends javax.swing.JPanel {
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jl_id_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_id_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtf_id_sucursal, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(31, 31, 31)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jtf_nombre_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_nombre_sucursal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jl_nombre_proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(34, 34, 34)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_calle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                            .addComponent(jtf_calle_sucursal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                             .addComponent(jl_calle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(31, 31, 31)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_colonia, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                            .addComponent(jtf_colonia_sucursal, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                             .addComponent(jl_colonia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                                .addComponent(jtf_numero_exterior, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jtf_numero_exterior_sucursal, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(31, 31, 31))
                             .addGroup(jLayeredPane2Layout.createSequentialGroup()
                                 .addGap(1, 1, 1)
@@ -236,7 +241,7 @@ public class ViewSucursales extends javax.swing.JPanel {
                                 .addGap(29, 29, 29)))
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                                .addComponent(jtf_codigo_postal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jtf_codigo_postal_sucursal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(34, 34, 34))
                             .addGroup(jLayeredPane2Layout.createSequentialGroup()
                                 .addGap(2, 2, 2)
@@ -244,10 +249,10 @@ public class ViewSucursales extends javax.swing.JPanel {
                                 .addGap(30, 30, 30)))
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jl_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtf_ciudad_sucursal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(31, 31, 31)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_telefono, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                            .addComponent(jtf_telefono_sucursal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                             .addComponent(jl_telefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -259,36 +264,134 @@ public class ViewSucursales extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jTabbedPane1.addTab("Proveedores", jLayeredPane2);
+        jTabbedPane1.addTab("Sucursales", jLayeredPane2);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jpBorde.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        jpBorde.setOpaque(false);
+
+        jpPieDePagina1.setBackground(new java.awt.Color(204, 51, 0));
+        jpPieDePagina1.setPreferredSize(new java.awt.Dimension(452, 60));
+
+        javax.swing.GroupLayout jpPieDePagina1Layout = new javax.swing.GroupLayout(jpPieDePagina1);
+        jpPieDePagina1.setLayout(jpPieDePagina1Layout);
+        jpPieDePagina1Layout.setHorizontalGroup(
+            jpPieDePagina1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jpPieDePagina1Layout.setVerticalGroup(
+            jpPieDePagina1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jpProductosTitulo1.setBackground(new java.awt.Color(204, 51, 0));
+        jpProductosTitulo1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jpProductosTitulo1.setPreferredSize(new java.awt.Dimension(425, 60));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Registros de sucursales");
+
+        javax.swing.GroupLayout jpProductosTitulo1Layout = new javax.swing.GroupLayout(jpProductosTitulo1);
+        jpProductosTitulo1.setLayout(jpProductosTitulo1Layout);
+        jpProductosTitulo1Layout.setHorizontalGroup(
+            jpProductosTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpProductosTitulo1Layout.createSequentialGroup()
+                .addGap(334, 334, 334)
+                .addComponent(jLabel2)
+                .addContainerGap(337, Short.MAX_VALUE))
+        );
+        jpProductosTitulo1Layout.setVerticalGroup(
+            jpProductosTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpProductosTitulo1Layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpBordeTabla.setBackground(new java.awt.Color(204, 51, 0));
+        jpBordeTabla.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
+
+        jt_sucursales.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "id_proveedor", "nombre_proveedor", "calle", "colonia", "número_exterior", "codigo_postal", "ciudad", "telefono"
+                "ID", "Nombre producto", "Tipo producto", "Descripción ", "Marca"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane2.setViewportView(jt_sucursales);
 
-        jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        javax.swing.GroupLayout jpBordeTablaLayout = new javax.swing.GroupLayout(jpBordeTabla);
+        jpBordeTabla.setLayout(jpBordeTablaLayout);
+        jpBordeTablaLayout.setHorizontalGroup(
+            jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBordeTablaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
+        );
+        jpBordeTablaLayout.setVerticalGroup(
+            jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBordeTablaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                .addGap(66, 66, 66))
+        );
+
+        javax.swing.GroupLayout jpBordeLayout = new javax.swing.GroupLayout(jpBorde);
+        jpBorde.setLayout(jpBordeLayout);
+        jpBordeLayout.setHorizontalGroup(
+            jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBordeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpPieDePagina1, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+                    .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+                    .addComponent(jpBordeTabla, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jpBordeLayout.setVerticalGroup(
+            jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBordeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpBordeTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jpPieDePagina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jLayeredPane1.setLayer(jpBorde, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 983, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jpBorde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE))
+            .addComponent(jpBorde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Registros", jLayeredPane1);
@@ -305,20 +408,20 @@ public class ViewSucursales extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtf_ciudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_ciudadActionPerformed
+    private void jtf_ciudad_sucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_ciudad_sucursalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_ciudadActionPerformed
+    }//GEN-LAST:event_jtf_ciudad_sucursalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
     public javax.swing.JButton jb_eliminar;
     public javax.swing.JButton jb_insertar;
     public javax.swing.JButton jb_modificar;
@@ -331,13 +434,18 @@ public class ViewSucursales extends javax.swing.JPanel {
     public javax.swing.JLabel jl_nombre_proveedor;
     public javax.swing.JLabel jl_numero_exterior;
     public javax.swing.JLabel jl_telefono;
-    public javax.swing.JTextField jtf_calle;
-    public javax.swing.JTextField jtf_ciudad;
-    public javax.swing.JTextField jtf_codigo_postal;
-    public javax.swing.JTextField jtf_colonia;
-    public javax.swing.JTextField jtf_id_proveedor;
-    public javax.swing.JTextField jtf_nombre_proveedor;
-    public javax.swing.JTextField jtf_numero_exterior;
-    public javax.swing.JTextField jtf_telefono;
+    public javax.swing.JPanel jpBorde;
+    public javax.swing.JPanel jpBordeTabla;
+    public javax.swing.JPanel jpPieDePagina1;
+    public javax.swing.JPanel jpProductosTitulo1;
+    public javax.swing.JTable jt_sucursales;
+    public javax.swing.JTextField jtf_calle_sucursal;
+    public javax.swing.JTextField jtf_ciudad_sucursal;
+    public javax.swing.JTextField jtf_codigo_postal_sucursal;
+    public javax.swing.JTextField jtf_colonia_sucursal;
+    public javax.swing.JTextField jtf_id_sucursal;
+    public javax.swing.JTextField jtf_nombre_sucursal;
+    public javax.swing.JTextField jtf_numero_exterior_sucursal;
+    public javax.swing.JTextField jtf_telefono_sucursal;
     // End of variables declaration//GEN-END:variables
 }

@@ -157,6 +157,7 @@ public class ModelSucursales {
 
             if (rs.next()) {
                 modificarDatos();
+                System.out.println(rs.getString(1));
             } else {
                 System.out.println("Error de consulta");
             }
@@ -169,18 +170,19 @@ public class ModelSucursales {
         ModelConexion sucursalConexion = new ModelConexion();
         //Se obtiene la conexion para la clase
 
-        String sqlInsertarSucursal = "insert into sucursal (id_sucursal,nombre_sucursal,calle_sucursal,colonia_sucursal,numero_sucursal, ciudad_sucursal,telefono_sucursal,codigo_postal_sucursal) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sqlInsertarSucursal = "insert into sucursal (id_sucursal, nombre_sucursal, calle_sucursal, colonia_sucursal,"
+                + "numero_sucursal, ciudad_sucursal, telefono_sucursal, codigo_postal_sucursal) VALUES(?,?,?,?,?,?,?,?)";
         try {
             ps = (com.mysql.jdbc.PreparedStatement) sucursalConexion.getConexion().prepareStatement(sqlInsertarSucursal); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getIdSucursal());
             ps.setString(1, getIdSucursal());
             ps.setString(2, getNombreSucursal());
-            ps.setString(5, getCalleSucursal());
-            ps.setString(6, getColoniaSucursal());
-            ps.setString(7, getNumeroexteriorSucursal());
-            ps.setString(8, getCiudadSucursal());
-            ps.setString(9, getTelefonoSucursal());
-            ps.setString(10, getCodigopostalSucursal());
+            ps.setString(3, getCalleSucursal());
+            ps.setString(4, getColoniaSucursal());
+            ps.setString(5, getNumeroexteriorSucursal());
+            ps.setString(6, getCiudadSucursal());
+            ps.setString(7, getTelefonoSucursal());
+            ps.setString(8, getCodigopostalSucursal());
             ps.executeUpdate();
         } catch (SQLException ex) {
             System.out.println("Error 03: Insertar nuevo cliente" + ex);
@@ -221,7 +223,7 @@ public class ModelSucursales {
         ModelConexion sucursalConexion = new ModelConexion();
         sucursalConexion.getConexion();
         try {
-            String consultaString = "select * from clientes";
+            String consultaString = "select * from sucursal";
             ps = (PreparedStatement) sucursalConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
