@@ -7,7 +7,7 @@ package Views;
 
 /**
  *
- * @author Norberto
+ * @author Dany
  */
 public class ViewEmpleados extends javax.swing.JPanel {
 
@@ -71,8 +71,11 @@ public class ViewEmpleados extends javax.swing.JPanel {
         jtf_usuario = new javax.swing.JTextField();
         jl_contrasena = new javax.swing.JLabel();
         jtf_contrasena = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jb_eliminar = new javax.swing.JButton();
+        jb_insertar = new javax.swing.JButton();
+        jb_modificar = new javax.swing.JButton();
+        jb_guardar = new javax.swing.JButton();
+        jb_nuevo = new javax.swing.JButton();
         jLayeredPane2 = new javax.swing.JLayeredPane();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -119,7 +122,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
                     .addGroup(jPanelAdminDeUSers1Layout.createSequentialGroup()
                         .addComponent(jLabelAdmUsuLogo1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -229,44 +232,58 @@ public class ViewEmpleados extends javax.swing.JPanel {
 
         jtf_contrasena.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        jButton1.setText("Nuevo");
+        jb_eliminar.setText("Eliminar");
 
-        jButton2.setText("Guardar");
+        jb_insertar.setText("Insertar");
+
+        jb_modificar.setText("Modificar");
+
+        jb_guardar.setText("Guardar");
+
+        jb_nuevo.setText("Nuevo");
 
         javax.swing.GroupLayout jp_datospersonalesLayout = new javax.swing.GroupLayout(jp_datospersonales);
         jp_datospersonales.setLayout(jp_datospersonalesLayout);
         jp_datospersonalesLayout.setHorizontalGroup(
             jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_datospersonalesLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jl_nombre_empleado)
-                    .addComponent(jl_id_empleado)
-                    .addComponent(jl_apellido_paterno)
-                    .addComponent(jl_apellido_materno)
-                    .addComponent(jl_telefono)
-                    .addComponent(jl_calle)
-                    .addComponent(jl_colonia)
-                    .addComponent(jl_numero_interior)
-                    .addComponent(jl_numero_exterior))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtf_id_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jp_datospersonalesLayout.createSequentialGroup()
-                            .addComponent(jButton1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jButton2)
-                            .addGap(104, 104, 104))
-                        .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jtf_codigo_postal, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_numero_interior, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_colonia, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_calle, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_telefono, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_apellido_materno, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_apellido_paterno, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_nombre_empleado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE))))
+                .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jp_datospersonalesLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jl_nombre_empleado)
+                            .addComponent(jl_id_empleado)
+                            .addComponent(jl_apellido_paterno)
+                            .addComponent(jl_apellido_materno)
+                            .addComponent(jl_telefono)
+                            .addComponent(jl_calle)
+                            .addComponent(jl_colonia)
+                            .addComponent(jl_numero_interior)
+                            .addComponent(jl_numero_exterior))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_id_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jtf_codigo_postal, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_numero_interior, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_colonia, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_calle, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_telefono, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_apellido_materno, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_apellido_paterno, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jtf_nombre_empleado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE))))
+                    .addGroup(jp_datospersonalesLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jb_nuevo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jb_guardar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_modificar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_insertar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jb_eliminar)
+                        .addGap(1, 1, 1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 255, Short.MAX_VALUE)
                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -385,11 +402,14 @@ public class ViewEmpleados extends javax.swing.JPanel {
                         .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jtf_apellido_paterno, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jl_apellido_paterno, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jp_datospersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(37, 37, 37))
+                    .addComponent(jb_nuevo)
+                    .addComponent(jb_guardar)
+                    .addComponent(jb_modificar)
+                    .addComponent(jb_insertar)
+                    .addComponent(jb_eliminar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanelAdminDeUSers2Layout = new javax.swing.GroupLayout(jPanelAdminDeUSers2);
@@ -405,7 +425,7 @@ public class ViewEmpleados extends javax.swing.JPanel {
             jPanelAdminDeUSers2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelAdminDeUSers2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jp_datospersonales, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jp_datospersonales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jLayeredPane1.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -419,8 +439,8 @@ public class ViewEmpleados extends javax.swing.JPanel {
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelAdminDeUSers1, javax.swing.GroupLayout.DEFAULT_SIZE, 1358, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1358, Short.MAX_VALUE)
+                    .addComponent(jPanelAdminDeUSers1, javax.swing.GroupLayout.DEFAULT_SIZE, 1372, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1372, Short.MAX_VALUE)
                     .addComponent(jPanelAdminDeUSers2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -514,8 +534,6 @@ public class ViewEmpleados extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabelAdmUsuLogo1;
     private javax.swing.JLayeredPane jLayeredPane1;
@@ -527,6 +545,11 @@ public class ViewEmpleados extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
+    public javax.swing.JButton jb_eliminar;
+    public javax.swing.JButton jb_guardar;
+    public javax.swing.JButton jb_insertar;
+    public javax.swing.JButton jb_modificar;
+    public javax.swing.JButton jb_nuevo;
     private javax.swing.JLabel jl_apellido_materno;
     private javax.swing.JLabel jl_apellido_paterno;
     private javax.swing.JLabel jl_banco;
