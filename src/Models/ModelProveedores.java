@@ -161,8 +161,8 @@ public class ModelProveedores {
             System.out.println("Error 01: modificar datos" + e);
         }
     }
-    
-        /**
+
+    /**
      * Método que realiza las siguietnes acciones: 1.- Conecta con la base 2.-
      * Consulta todo los registros .
      */
@@ -183,6 +183,28 @@ public class ModelProveedores {
             System.out.println("Error 02: tabla proveedores" + e);
         }
     }
-    
-    
+
+    public void insertarNuevoProveedor() {
+        ModelConexion loginConexion = new ModelConexion();
+        //Se obtiene la conexion para la clase
+
+        String sqlInsertarProveedor = "insert into proveedores (id_proveedor, nombre_proveedor,calle_proveedor,numero_exterior_proveedor,colonia_proveedor,codigo_postal_proveedor, telefono_proveedor, email_proveedor,ciudad_proveedor,estado_proveedor) VALUES(?,?,?,?,?,?,?,?,?,?)";
+        try {
+            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarProveedor); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            System.out.println(getId_proveedor());
+            ps.setString(1, getId_proveedor());
+            ps.setString(2, getNombre_proveedor());
+            ps.setString(3, getCalle_proveedor());
+            ps.setString(4, getNumero_exterior_proveedor().toString());
+            ps.setString(5, getColonia_proveedor());
+            ps.setString(6, getCodigo_postal_proveedor().toString());
+            ps.setString(7, getTelefono_proveedor());
+            ps.setString(8, getEmail_proveedor());
+            ps.setString(9, getCiudad_proveedor());
+            ps.setString(10, getEstado_proveedor());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error 03: Insertar nuevo proveedor" + ex);
+        }
+    }
 }
