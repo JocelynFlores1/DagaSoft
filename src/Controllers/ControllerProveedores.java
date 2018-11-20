@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Norberto
+ * @author Jocelyn
  */
 public class ControllerProveedores {
 
@@ -52,13 +52,14 @@ public class ControllerProveedores {
         this.viewProveedores = viewProveedores;
         initComponents();
         setActionListener();
-        tablaConsulta();
+        jtfCambiarCampos();
+
     }
 
     public void initComponents() {
         viewProveedores.setVisible(true);
         modelProveedores.conectarDB();
-        jtfCambiarCampos();
+        tablaConsulta();
     }
 
     /**
@@ -69,9 +70,9 @@ public class ControllerProveedores {
         viewProveedores.jtf_id_proveedor.setText(modelProveedores.getId_proveedor());
         viewProveedores.jtf_nombre_proveedor.setText(modelProveedores.getNombre_proveedor());
         viewProveedores.jtf_calle.setText(modelProveedores.getCalle_proveedor());
-        viewProveedores.jtf_numero_exterior.setText(modelProveedores.getNumero_exterior_proveedor().toString());
+        viewProveedores.jtf_numero_exterior.setText(modelProveedores.getNumero_exterior_proveedor());
         viewProveedores.jtf_colonia.setText(modelProveedores.getColonia_proveedor());
-        viewProveedores.jtf_codigo_postal.setText(modelProveedores.getCodigo_postal_proveedor().toString());
+        viewProveedores.jtf_codigo_postal.setText(modelProveedores.getCodigo_postal_proveedor());
         viewProveedores.jtf_telefono.setText(modelProveedores.getTelefono_proveedor());
         viewProveedores.jtf_email.setText(modelProveedores.getEmail_proveedor());
         viewProveedores.jtf_ciudad.setText(modelProveedores.getCiudad_proveedor());
@@ -107,9 +108,9 @@ public class ControllerProveedores {
             modelProveedores.setId_proveedor(viewProveedores.jtf_id_proveedor.getText());
             modelProveedores.setNombre_proveedor(viewProveedores.jtf_nombre_proveedor.getText());
             modelProveedores.setCalle_proveedor(viewProveedores.jtf_calle.getText());
-            modelProveedores.setNumero_exterior_proveedor(Integer.parseInt(viewProveedores.jtf_numero_exterior.getText()));
+            modelProveedores.setNumero_exterior_proveedor(viewProveedores.jtf_numero_exterior.getText());
             modelProveedores.setColonia_proveedor(viewProveedores.jtf_colonia.getText());
-            modelProveedores.setCodigo_postal_proveedor(Integer.parseInt(viewProveedores.jtf_codigo_postal.getText()));
+            modelProveedores.setCodigo_postal_proveedor(viewProveedores.jtf_codigo_postal.getText());
             modelProveedores.setTelefono_proveedor(viewProveedores.jtf_telefono.getText());
             modelProveedores.setEmail_proveedor(viewProveedores.jtf_email.getText());
             modelProveedores.setCiudad_proveedor(viewProveedores.jtf_ciudad.getText());
@@ -130,9 +131,9 @@ public class ControllerProveedores {
             modelProveedores.setId_proveedor(viewProveedores.jtf_id_proveedor.getText());
             modelProveedores.setNombre_proveedor(viewProveedores.jtf_nombre_proveedor.getText());
             modelProveedores.setCalle_proveedor(viewProveedores.jtf_calle.getText());
-            modelProveedores.setNumero_exterior_proveedor(Integer.parseInt(viewProveedores.jtf_numero_exterior.getText()));
+            modelProveedores.setNumero_exterior_proveedor(viewProveedores.jtf_numero_exterior.getText());
             modelProveedores.setColonia_proveedor(viewProveedores.jtf_colonia.getText());
-            modelProveedores.setCodigo_postal_proveedor(Integer.parseInt(viewProveedores.jtf_codigo_postal.getText()));
+            modelProveedores.setCodigo_postal_proveedor(viewProveedores.jtf_codigo_postal.getText());
             modelProveedores.setTelefono_proveedor(viewProveedores.jtf_telefono.getText());
             modelProveedores.setEmail_proveedor(viewProveedores.jtf_email.getText());
             modelProveedores.setCiudad_proveedor(viewProveedores.jtf_ciudad.getText());
@@ -145,7 +146,7 @@ public class ControllerProveedores {
             JOptionPane.showMessageDialog(null, "No se guardo ningun cambio");
         }
     }
-    
+
     public void tablaConsulta() {
         try {
             DefaultTableModel modelo = new DefaultTableModel();
@@ -179,6 +180,28 @@ public class ControllerProveedores {
             }
         } catch (SQLException ex) {
             System.out.println("Error" + ex);
+        }
+    }
+
+    public void insertarCamposTabla() {
+        try {
+            if (viewProveedores.jtable_proveedores.getSelectedRow() != -1) {
+                int fila = viewProveedores.jtable_proveedores.getSelectedRow();
+
+                viewProveedores.jtf_id_proveedor.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 0).toString());
+                viewProveedores.jtf_nombre_proveedor.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 1).toString());
+                viewProveedores.jtf_calle.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 2).toString());
+                viewProveedores.jtf_numero_exterior.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 3).toString());
+                viewProveedores.jtf_colonia.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 4).toString());
+                viewProveedores.jtf_codigo_postal.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 5).toString());
+                viewProveedores.jtf_telefono.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 6).toString());
+                viewProveedores.jtf_email.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 7).toString());
+                viewProveedores.jtf_ciudad.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 8).toString());
+                viewProveedores.jtf_estado.setText(viewProveedores.jtable_proveedores.getValueAt(fila, 9).toString());
+
+            }
+        } catch (Exception err) {
+            JOptionPane.showMessageDialog(null, "Error:\nSelecciona un registro");
         }
     }
 }
