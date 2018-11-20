@@ -9,6 +9,7 @@ import Models.ModelEmpleados;
 import Views.ViewEmpleados;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -47,7 +48,7 @@ public class ControllerEmpleados {
         viewEmpleados.jtf_tipo_empleado.setText(modelEmpleados.getTipo_empleado());
         viewEmpleados.jtf_usuario_empleado.setText(modelEmpleados.getUsuario());
         viewEmpleados.jtf_contrasena.setText(modelEmpleados.getContrasena());
-        viewEmpleados.jtf_no_interior_empleado.setText(modelEmpleados.getCodigo_postal());
+        viewEmpleados.jtf_codigo_postal_empleado.setText(modelEmpleados.getCodigo_postal());
     }
     /**
      * Objeto de tipo ActionListener para atrapar los eventos actionPerformed y
@@ -79,5 +80,40 @@ public class ControllerEmpleados {
         viewEmpleados.jb_modificar.addActionListener(actionListener);
         viewEmpleados.jb_insertar.addActionListener(actionListener);
         viewEmpleados.jb_eliminar.addActionListener(actionListener);
+    }
+
+    /**
+     * *
+     * Modelo que permite insertar el texto obenido en los jTextField de
+     * ViewClientes e inserta los valores en las variables de ModelClientes
+     */
+    public void jmi_insertarE() {
+        //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
+        int cancelar = JOptionPane.showConfirmDialog(null, "¿Vas a guardar un nuevo empleado?", "Guardar empleado", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (cancelar == 0) {
+            modelEmpleados.setId_empleado(viewEmpleados.jtf_id_empleado.getText());
+            modelEmpleados.setNombre_empleado(viewEmpleados.jtf_nombre_empleado.getText());
+            modelEmpleados.setApellido_paterno(viewEmpleados.jtf_apellido_paterno_empleado.getText());
+            modelEmpleados.setApellido_materno(viewEmpleados.jtf_apellido_materno_empleado.getText());
+            modelEmpleados.setTelefono(viewEmpleados.jtf_telefono_empleado.getText());
+            modelEmpleados.setCalle(viewEmpleados.jtf_calle_empleado.getText());
+            modelEmpleados.setColonia(viewEmpleados.jtf_colonia_empleado.getText());
+            modelEmpleados.setNumero_exterior(viewEmpleados.jtf_numero_exterior_empleado.getText());
+            modelEmpleados.setNumero_interior(viewEmpleados.jtf_no_interior_empleado.getText());
+            modelEmpleados.setRfc(viewEmpleados.jtf_rfc_empleado.getText());
+            modelEmpleados.setNo_cueta(viewEmpleados.jtf_no_cueta_empleado.getText());
+            modelEmpleados.setNo_seguro(viewEmpleados.jtf_no_seguro_empleado.getText());
+            modelEmpleados.setBanco(viewEmpleados.jtf_banco_empleado.getText());
+            modelEmpleados.setCurp(viewEmpleados.jtf_curp.getText());
+            modelEmpleados.setTipo_empleado(viewEmpleados.jtf_tipo_empleado.getText());
+            modelEmpleados.setUsuario(viewEmpleados.jtf_usuario_empleado.getText());
+            modelEmpleados.setContrasena(viewEmpleados.jtf_contrasena.getText());
+            modelEmpleados.setCodigo_postal(viewEmpleados.jtf_codigo_postal_empleado.getText());
+
+            modelEmpleados.insertarNuevoEmpleado();
+        } else {
+            ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
+            JOptionPane.showMessageDialog(null, "No se guardo ningun empleado");
+        }
     }
 }
