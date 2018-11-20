@@ -8,6 +8,7 @@ package Models;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -144,4 +145,20 @@ public class ModelProveedores {
         this.estado_proveedor = estao_proveedor;
     }
 
+    public void modificarDatos() {
+        try {
+            setId_proveedor(rs.getString(1));
+            setNombre_proveedor(rs.getString(2));
+            setCalle_proveedor(rs.getString(3));
+            setNumero_exterior_proveedor(Integer.parseInt(rs.getString(4)));
+            setColonia_proveedor(rs.getString(5));
+            setCodigo_postal_proveedor(Integer.parseInt(rs.getString(6)));
+            setTelefono_proveedor(rs.getString(7));
+            setEmail_proveedor(rs.getString(8));
+            setCiudad_proveedor(rs.getString(9));
+            setEstado_proveedor(rs.getString(10));
+        } catch (SQLException e) {
+            System.out.println("Error 01: modificar datos" + e);
+        }
+    }
 }
