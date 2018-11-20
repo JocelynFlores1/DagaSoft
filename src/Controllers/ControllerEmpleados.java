@@ -187,19 +187,22 @@ public class ControllerEmpleados {
             modelo.addColumn("Nombre");
             modelo.addColumn("Ap. Paterno");
             modelo.addColumn("Ap. Materno");
-            modelo.addColumn("Telefono");
             modelo.addColumn("Calle");
             modelo.addColumn("Colonia");
             modelo.addColumn("No. exterior");
             modelo.addColumn("No. Interior");
             modelo.addColumn("RFC");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("CURP");
             modelo.addColumn("No. cueta");
             modelo.addColumn("No. seguro ");
             modelo.addColumn("Banco");
             modelo.addColumn("Tipo. empleado");
             modelo.addColumn("Usuario");
             modelo.addColumn("Contrasena");
+            modelo.addColumn("Sucursal");
             modelo.addColumn("C. postal");
+            
             while (modelEmpleados.getRs().next()) {
 
                 Object[] filas = new Object[cantidadColumnas];
@@ -223,7 +226,24 @@ public class ControllerEmpleados {
                 int fila = viewEmpleados.jt_Empleados.getSelectedRow();
 
                 viewEmpleados.jtf_id_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 0).toString());
-
+                viewEmpleados.jtf_nombre_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 1).toString());
+                viewEmpleados.jtf_apellido_paterno_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 2).toString());
+                viewEmpleados.jtf_apellido_materno_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 3).toString());
+                viewEmpleados.jtf_calle_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 4).toString());
+                viewEmpleados.jtf_colonia_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 5).toString());
+                viewEmpleados.jtf_numero_exterior_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 6).toString());
+                viewEmpleados.jtf_no_interior_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 7).toString());
+                viewEmpleados.jtf_rfc_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 8).toString());
+                viewEmpleados.jtf_telefono_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 9).toString());
+                viewEmpleados.jtf_curp.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 10).toString());
+                viewEmpleados.jtf_no_cueta_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 11).toString());
+                viewEmpleados.jtf_no_seguro_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 12).toString());
+                viewEmpleados.jtf_banco_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 13).toString());
+                viewEmpleados.jtf_tipo_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 14).toString());
+                viewEmpleados.jtf_usuario_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 15).toString());
+                viewEmpleados.jtf_contrasena.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 16).toString());
+                viewEmpleados.jtf_sucursal_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 18).toString());
+                viewEmpleados.jtf_codigo_postal_empleado.setText(viewEmpleados.jt_Empleados.getValueAt(fila, 17).toString());
             }
         } catch (Exception err) {
             JOptionPane.showMessageDialog(null, "Error:\nSelecciona un registro");
