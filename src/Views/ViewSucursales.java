@@ -53,8 +53,13 @@ public class ViewSucursales extends javax.swing.JPanel {
         jb_insertar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jpBorde = new javax.swing.JPanel();
+        jpPieDePagina1 = new javax.swing.JPanel();
+        jpProductosTitulo1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jpBordeTabla = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jt_sucursales = new javax.swing.JTable();
 
         jLayeredPane2.setPreferredSize(new java.awt.Dimension(1200, 600));
 
@@ -259,36 +264,134 @@ public class ViewSucursales extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jTabbedPane1.addTab("Proveedores", jLayeredPane2);
+        jTabbedPane1.addTab("Sucursales", jLayeredPane2);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jpBorde.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        jpBorde.setOpaque(false);
+
+        jpPieDePagina1.setBackground(new java.awt.Color(204, 51, 0));
+        jpPieDePagina1.setPreferredSize(new java.awt.Dimension(452, 60));
+
+        javax.swing.GroupLayout jpPieDePagina1Layout = new javax.swing.GroupLayout(jpPieDePagina1);
+        jpPieDePagina1.setLayout(jpPieDePagina1Layout);
+        jpPieDePagina1Layout.setHorizontalGroup(
+            jpPieDePagina1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jpPieDePagina1Layout.setVerticalGroup(
+            jpPieDePagina1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jpProductosTitulo1.setBackground(new java.awt.Color(204, 51, 0));
+        jpProductosTitulo1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jpProductosTitulo1.setPreferredSize(new java.awt.Dimension(425, 60));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Registros de sucursales");
+
+        javax.swing.GroupLayout jpProductosTitulo1Layout = new javax.swing.GroupLayout(jpProductosTitulo1);
+        jpProductosTitulo1.setLayout(jpProductosTitulo1Layout);
+        jpProductosTitulo1Layout.setHorizontalGroup(
+            jpProductosTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpProductosTitulo1Layout.createSequentialGroup()
+                .addGap(334, 334, 334)
+                .addComponent(jLabel2)
+                .addContainerGap(337, Short.MAX_VALUE))
+        );
+        jpProductosTitulo1Layout.setVerticalGroup(
+            jpProductosTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpProductosTitulo1Layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpBordeTabla.setBackground(new java.awt.Color(204, 51, 0));
+        jpBordeTabla.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
+
+        jt_sucursales.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "id_proveedor", "nombre_proveedor", "calle", "colonia", "número_exterior", "codigo_postal", "ciudad", "telefono"
+                "ID", "Nombre producto", "Tipo producto", "Descripción ", "Marca"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane2.setViewportView(jt_sucursales);
 
-        jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        javax.swing.GroupLayout jpBordeTablaLayout = new javax.swing.GroupLayout(jpBordeTabla);
+        jpBordeTabla.setLayout(jpBordeTablaLayout);
+        jpBordeTablaLayout.setHorizontalGroup(
+            jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBordeTablaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
+        );
+        jpBordeTablaLayout.setVerticalGroup(
+            jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBordeTablaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                .addGap(66, 66, 66))
+        );
+
+        javax.swing.GroupLayout jpBordeLayout = new javax.swing.GroupLayout(jpBorde);
+        jpBorde.setLayout(jpBordeLayout);
+        jpBordeLayout.setHorizontalGroup(
+            jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBordeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jpPieDePagina1, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+                    .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+                    .addComponent(jpBordeTabla, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jpBordeLayout.setVerticalGroup(
+            jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBordeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpBordeTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jpPieDePagina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jLayeredPane1.setLayer(jpBorde, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 983, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jpBorde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE))
+            .addComponent(jpBorde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Registros", jLayeredPane1);
@@ -312,13 +415,13 @@ public class ViewSucursales extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
     public javax.swing.JButton jb_eliminar;
     public javax.swing.JButton jb_insertar;
     public javax.swing.JButton jb_modificar;
@@ -331,6 +434,11 @@ public class ViewSucursales extends javax.swing.JPanel {
     public javax.swing.JLabel jl_nombre_proveedor;
     public javax.swing.JLabel jl_numero_exterior;
     public javax.swing.JLabel jl_telefono;
+    public javax.swing.JPanel jpBorde;
+    public javax.swing.JPanel jpBordeTabla;
+    public javax.swing.JPanel jpPieDePagina1;
+    public javax.swing.JPanel jpProductosTitulo1;
+    public javax.swing.JTable jt_sucursales;
     public javax.swing.JTextField jtf_calle;
     public javax.swing.JTextField jtf_ciudad;
     public javax.swing.JTextField jtf_codigo_postal;
