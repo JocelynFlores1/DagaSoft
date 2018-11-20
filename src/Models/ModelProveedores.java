@@ -161,4 +161,28 @@ public class ModelProveedores {
             System.out.println("Error 01: modificar datos" + e);
         }
     }
+    
+        /**
+     * Método que realiza las siguietnes acciones: 1.- Conecta con la base 2.-
+     * Consulta todo los registros .
+     */
+    public void conectarDB() {
+        ModelConexion loginConexion = new ModelConexion();
+        loginConexion.getConexion();
+        try {
+            String consultaString = "select * from proveedores";
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                modificarDatos();
+            } else {
+                System.out.println("Error de consulta");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error 02: tabla proveedores" + e);
+        }
+    }
+    
+    
 }
