@@ -6,7 +6,9 @@
 package Controllers;
 
 import Models.ModelLogin;
+import Models.ModelMain;
 import Views.ViewLogin;
+import Views.ViewMenu;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -60,8 +62,11 @@ public class ControllerLogin implements ActionListener {
                 String usuario = modelLogin.getUser();
                 String tipo = modelLogin.getTipoUsuario();
                 String sucursal = modelLogin.getSucursal();
-                ControllerConstructoresPrincipal constructoresPrincipal = new ControllerConstructoresPrincipal();
-                constructoresPrincipal.controllersPrincial(usuario, tipo, sucursal);
+                
+                ModelMain modelMain = new ModelMain();
+                ViewMenu viewMenu = new ViewMenu();
+                ControllerMain controllerMain = new ControllerMain(modelMain, viewMenu);
+                
                 viewLogin.dispose();
             } else {
                 System.out.println("Datos incorrectos");
