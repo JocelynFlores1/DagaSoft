@@ -14,27 +14,27 @@ public class ModelGenerarCodigos {
         this.dato = dato;
         if ((this.dato >= 100000) || (this.dato < 1000000)) {
             int can = cont + this.dato;
-            num = "0000" + can;
+            num = "0" + can;
         }
         if ((this.dato >= 10000) || (this.dato < 100000)) {
             int can = cont + this.dato;
-            num = "00000" + can;
+            num = "00" + can;
         }
         if ((this.dato >= 1000) || (this.dato < 10000)) {
             int can = cont + this.dato;
-            num = "000000" + can;
+            num = "000" + can;
         }
         if ((this.dato >= 100) || (this.dato < 1000)) {
             int can = cont + this.dato;
-            num = "0000000" + can;
+            num = "0000" + can;
         }
         if ((this.dato >= 9) || (this.dato < 100)) {
             int can = cont + this.dato;
-            num = "00000000" + can;
+            num = "00000" + can;
         }
         if (this.dato < 9) {
             int can = cont + this.dato;
-            num = "000000000" + can;
+            num = "000000" + can;
         }
 
     }
