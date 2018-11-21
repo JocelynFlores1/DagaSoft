@@ -184,6 +184,7 @@ public class ModelClientes {
 
     public void modificarDatos() {
         try {
+            System.out.println("modificar datos variables 1 clientes");
             setId_cliente(rs.getString(1));
             setNombre_cliente(rs.getString(2));
             setApellido_paterno(rs.getString(3));
@@ -207,10 +208,9 @@ public class ModelClientes {
      * Método que realiza las siguietnes acciones: 1.- Conecta con la base 2.-
      * Consulta todo los registros .
      */
-    public void conectarDB() {
-        ModelConexion clienteConexion = new ModelConexion();
-        clienteConexion.getConexion();
+    public void conectarDB(ModelConexion clienteConexion) {
         try {
+            System.out.println("consulta 2 clientes");
             String consultaString = "select * from clientes";
             ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
@@ -231,10 +231,8 @@ public class ModelClientes {
      * obteniendo las variables que se guardaron en el controller
      *
      */
-    public void insertarNuevoCliente() {
-        ModelConexion clienteConexion = new ModelConexion();
-        //Se obtiene la conexion para la clase
-
+    public void insertarNuevoCliente(ModelConexion clienteConexion) {
+        System.out.println("nuevo  3 clientes");
         String sqlInsertarCliente = "insert into clientes (id_cliente, nombre_cliente, apellido_paterno_cliente, apellido_materno_cliente, telefono_cliente, rfc_cliente, calle_cliente, colonia_cliente, numero_exterior_cliente, numero_interior_cliente, codigo_postal_cliente, email_cliente, ciudad_cliente, estado_cliente) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlInsertarCliente); //con este comando se podra hacer la modificacion a la tabla en la base de datos
@@ -264,10 +262,8 @@ public class ModelClientes {
      * Metodo que modifica los datos del cliente usando como referencia el
      * id_cliente para guardar los cambios
      */
-    public void modificarDatosCliente() {
-        ModelConexion clienteConexion = new ModelConexion();
-        //Se obtiene la conexion para la clase
-
+    public void modificarDatosCliente(ModelConexion clienteConexion) {
+        System.out.println("modificar 4 clientes");
         String sqlModificarCliente = "update clientes set "
                 + "nombre_cliente=?, apellido_paterno_cliente=?, apellido_materno_cliente=?, telefono_cliente=?, rfc_cliente=?, "
                 + "calle_cliente=?, colonia_cliente=?, numero_exterior_cliente=?, numero_interior_cliente=?, codigo_postal_cliente=?, email_cliente=?, ciudad_cliente=?, "
@@ -299,10 +295,8 @@ public class ModelClientes {
         }
     }
 
-    public void borrarDatosCliente() {
-        ModelConexion clienteConexion = new ModelConexion();
-        //Se obtiene la conexion para la clase
-
+    public void borrarDatosCliente(ModelConexion clienteConexion) {
+        System.out.println("eliminar 5 clientes");
         String sqlBorrarCliente = "delete from clientes where id_cliente = ?";
         try {
 
@@ -320,32 +314,31 @@ public class ModelClientes {
      * Metodo que permite insertar los datos de la tabla de la base de datos en
      * un jTable en java
      */
-    public void consultajTableClientes() {
-        ModelConexion loginConexion = new ModelConexion();
-        loginConexion.getConexion();
+    public void consultajTableClientes(ModelConexion clienteConexion) {
         try {
+            System.out.println("tabla 6 clientes");
             String consultaString = "select * from clientes";
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
             System.out.println("Error 000000: tabla clientes" + e);
         }
     }
 
-    public void consultaGenerarCodigos() {
+    public void consultaGenerarCodigos(ModelConexion clienteConexion) {
+        System.out.println("codigos 7 clientes");
         // String SQL="select count(*) from factura";
         //String SQL="SELECT MAX(cod_emp) AS cod_emp FROM empleado";
         //String SQL="SELECT @@identity AS ID"; 
-
-        ModelConexion conn = new ModelConexion();
-        Connection con = conn.getConexion();
         String SQL = "select max(id_cliente) from clientes";
 
         try {
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery(SQL);
+            ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(SQL);
+            rs = ps.executeQuery();
+
             if (rs.next()) {
                 c = rs.getString(1);
+                System.out.println("madx" + rs.getString(1));
             }
         } catch (SQLException ex) {
             System.out.println("Error" + ex);

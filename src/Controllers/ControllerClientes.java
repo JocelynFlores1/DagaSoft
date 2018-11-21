@@ -6,15 +6,13 @@
 package Controllers;
 
 import Models.ModelClientes;
+import Models.ModelConexion;
 import Models.ModelGenerarCodigos;
 import Views.ViewClientes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -28,6 +26,7 @@ public class ControllerClientes {
 
     public Models.ModelClientes modelClientes;
     public Views.ViewClientes viewClientes;
+    ModelConexion clienteConexion = new ModelConexion();
 
     /**
      * Objeto de tipo ActionListener para atrapar los eventos actionPerformed y
@@ -60,13 +59,14 @@ public class ControllerClientes {
         this.viewClientes = viewClientes;
         initComponents();
         setActionListener();
-        tablaConsulta();
     }
 
     public void initComponents() {
         viewClientes.setVisible(true);
-        modelClientes.conectarDB();
+        modelClientes.conectarDB(clienteConexion);
         jtfCambiarCampos();
+        tablaConsulta();
+        System.out.println("Solo se inicia si se abre clientes");
     }
 
     /**
@@ -132,7 +132,7 @@ public class ControllerClientes {
             modelClientes.setCiudad(viewClientes.jtf_ciudad.getText());
             modelClientes.setEstado(viewClientes.jtf_estado.getText());
 
-            modelClientes.insertarNuevoCliente();
+            modelClientes.insertarNuevoCliente(clienteConexion);
             tablaConsulta();
             JOptionPane.showMessageDialog(null, "Registro almacenado correctamente");
         } else {
@@ -160,7 +160,7 @@ public class ControllerClientes {
             modelClientes.setCiudad(viewClientes.jtf_ciudad.getText());
             modelClientes.setEstado(viewClientes.jtf_estado.getText());
 
-            modelClientes.modificarDatosCliente();
+            modelClientes.modificarDatosCliente(clienteConexion);
             //Este comando realiza la accion de utlilzar el metodo de modificarDatosCliente usando el objeto construido en de modelClientes
             JOptionPane.showMessageDialog(null, "Datos modificados correctamente");
             tablaConsulta();
@@ -177,7 +177,7 @@ public class ControllerClientes {
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea borrar los datos del cliente?", "Borrar cliente", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (cancelar == 0) {
             modelClientes.setId_cliente(viewClientes.jtf_id_cliente.getText());
-            modelClientes.borrarDatosCliente();
+            modelClientes.borrarDatosCliente(clienteConexion);
             tablaConsulta();
             JOptionPane.showMessageDialog(null, "Los datos del cliente han sido eliminados");
         } else {
@@ -190,7 +190,7 @@ public class ControllerClientes {
         try {
             DefaultTableModel modelo = new DefaultTableModel();
             viewClientes.jtable_clientes.setModel(modelo);
-            modelClientes.consultajTableClientes();
+            modelClientes.consultajTableClientes(clienteConexion);
 
             ResultSetMetaData rsMd = modelClientes.getRs().getMetaData();
             int cantidadColumnas = rsMd.getColumnCount();
@@ -278,25 +278,27 @@ public class ControllerClientes {
         int j;
         int cont = 1;
         String num = "";
-        ModelClientes modelClientes = new ModelClientes();
+        modelClientes.consultaGenerarCodigos(clienteConexion);
 
         if (modelClientes.getC() == null) {
             viewClientes.jtf_id_cliente.setText("ACME-C0000001");
         } else {
-            char r1 = modelClientes.getC().charAt(2);
-            char r2 = modelClientes.getC().charAt(3);
-            char r3 = modelClientes.getC().charAt(4);
-            char r4 = modelClientes.getC().charAt(5);
-            char r5 = modelClientes.getC().charAt(6);
-            char r6 = modelClientes.getC().charAt(7);
-            char r7 = modelClientes.getC().charAt(8);
- 
+            char r1 = modelClientes.getC().charAt(6);
+            char r2 = modelClientes.getC().charAt(7);
+            char r3 = modelClientes.getC().charAt(8);
+            char r4 = modelClientes.getC().charAt(9);
+            char r5 = modelClientes.getC().charAt(10);
+            char r6 = modelClientes.getC().charAt(11);
+            char r7 = modelClientes.getC().charAt(12);
+
             String r = "";
             r = "" + r1 + r2 + r3 + r4 + r5 + r6 + r7;
             j = Integer.parseInt(r);
+            System.out.println(j);
             ModelGenerarCodigos gen = new ModelGenerarCodigos();
             gen.generar(j);
             viewClientes.jtf_id_cliente.setText("ACME-C" + gen.serie());
+            System.out.println("ACME-C" + gen.serie());
 
         }
     }
