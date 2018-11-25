@@ -2,14 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
-            <file>file:/C:/Users/Norberto/Documents/GitHub/DagaSoft/src/Controllers/ControllerClientes.java</file>
-            <file>file:/C:/Users/Norberto/Documents/GitHub/DagaSoft/src/Controllers/ControllerLogin.java</file>
-            <file>file:/C:/Users/Norberto/Documents/GitHub/DagaSoft/src/Models/ModelSucursales.java</file>
-            <file>file:/C:/Users/Norberto/Documents/GitHub/DagaSoft/src/Models/ModelGenerarCodigos.java</file>
-            <file>file:/C:/Users/Norberto/Documents/GitHub/DagaSoft/src/Models/ModelImagen.java</file>
-            <file>file:/C:/Users/Norberto/Documents/GitHub/DagaSoft/src/Models/ModelProductos.java</file>
-            <file>file:/C:/Users/Norberto/Documents/GitHub/DagaSoft/src/Models/ModelClientes.java</file>
+            <file>file:/C:/Users/Norberto/Documents/GitHub/DagaSoft/src/Models/ModelConexion.java</file>
         </group>
+>>>>>>> 468cf878d9f2197232e873eae5a64702ef5c77a8
     </open-files>
 </project-private>

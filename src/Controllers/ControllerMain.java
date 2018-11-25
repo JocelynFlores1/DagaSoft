@@ -47,11 +47,9 @@ public class ControllerMain {
      * @param viewMenu
      * @param controllers arreglo con todos los controladores del proyecto.
      */
-    public ControllerMain(ModelMain modelMain, ViewMenu viewMenu, Object[] controllers) {
+    public ControllerMain(ModelMain modelMain, ViewMenu viewMenu) {
         this.modelMain = modelMain;
         this.viewMenu = viewMenu;
-        this.controllers = controllers;
-        setControllers();
         setActionListener();
         setMouseListener();
         initComponets();
@@ -62,17 +60,6 @@ public class ControllerMain {
      * esta forma se puede acceder a todas las variables y métodos publicos de
      * cada uno.
      */
-    private void setControllers() {
-        controllerInicio = (ControllerInicio) controllers[0];
-        controllerProveedores = (ControllerProveedores) controllers[1];
-        controllerClientes = (ControllerClientes) controllers[2];
-        controllerCompras = (ControllerCompras) controllers[3];
-        controllerEmpleados = (ControllerEmpleados) controllers[4];
-        controllerProductos = (ControllerProductos) controllers[5];
-        controllerSucursales = (ControllerSucursales) controllers[6];
-
-    }
-
     /**
      * Muesta la vista principal ViewMain.
      */
@@ -106,7 +93,7 @@ public class ControllerMain {
         public void mouseClicked(MouseEvent e) {
             if (e.getSource() == viewMenu.jmInicio) {
                 jmi_inicio_actionPerformed();
-            } 
+            }
         }
 
         @Override
@@ -146,7 +133,7 @@ public class ControllerMain {
                 jmi_sucursales_actionPerformed();
             } else if (e.getSource() == viewMenu.jmEmpleados) {
                 jmi_empleados_actionPerformed();
-            }else if (e.getSource() == viewMenu.jmCerrarSesion) {
+            } else if (e.getSource() == viewMenu.jmCerrarSesion) {
                 jmi_cerrarSesion_actionPerformed();
             }
         }
@@ -164,6 +151,11 @@ public class ControllerMain {
      * (incluido todo el funcionamiento programado).
      */
     public void jmi_inicio_actionPerformed() {
+
+        Models.ModelInicio modelInicio = new Models.ModelInicio();
+        Views.ViewInicio viewFondo = new Views.ViewInicio();
+        Controllers.ControllerInicio controllerInicio = new Controllers.ControllerInicio(modelInicio, viewFondo);
+
         viewMenu.setContentPane(controllerInicio.viewInicio);
         viewMenu.revalidate();
         viewMenu.repaint();
@@ -171,6 +163,10 @@ public class ControllerMain {
     }
 
     private void jmi_proveedores_actionPerformed() {
+        Models.ModelProveedores modelProveedores = new Models.ModelProveedores();
+        Views.ViewProveedores viewProveedores = new Views.ViewProveedores();
+        Controllers.ControllerProveedores controllerProveedores = new Controllers.ControllerProveedores(modelProveedores, viewProveedores);
+
         viewMenu.setContentPane(controllerProveedores.viewProveedores);
         viewMenu.revalidate();
         viewMenu.repaint();
@@ -178,6 +174,10 @@ public class ControllerMain {
     }
 
     private void jmi_clientes_actionPerformed() {
+        Models.ModelClientes modelClientes = new Models.ModelClientes();
+        Views.ViewClientes viewClientes = new Views.ViewClientes();
+        Controllers.ControllerClientes controllerClientes = new Controllers.ControllerClientes(modelClientes, viewClientes);
+
         viewMenu.setContentPane(controllerClientes.viewClientes);
         viewMenu.revalidate();
         viewMenu.repaint();
@@ -185,6 +185,10 @@ public class ControllerMain {
     }
 
     private void jmi_compras_actionPerformed() {
+        Models.ModelCompras modelCompras = new Models.ModelCompras();
+        Views.ViewCompras viewCompras = new Views.ViewCompras();
+        Controllers.ControllerCompras controllerCompras = new Controllers.ControllerCompras(modelCompras, viewCompras);
+        
         viewMenu.setContentPane(controllerCompras.viewCompras);
         viewMenu.revalidate();
         viewMenu.repaint();
@@ -192,6 +196,10 @@ public class ControllerMain {
     }
 
     private void jmi_almacen_actionPerformed() {
+        Models.ModelProductos modelProductos = new Models.ModelProductos();
+        Views.ViewProductos viewProductos = new Views.ViewProductos();
+        Controllers.ControllerProductos controllerProductos = new Controllers.ControllerProductos(modelProductos, viewProductos);
+
         viewMenu.setContentPane(controllerProductos.viewProductos);
         viewMenu.revalidate();
         viewMenu.repaint();
@@ -199,6 +207,11 @@ public class ControllerMain {
     }
 
     private void jmi_sucursales_actionPerformed() {
+
+        Models.ModelSucursales modelSucursales = new Models.ModelSucursales();
+        Views.ViewSucursales viewSucursales = new Views.ViewSucursales();
+        Controllers.ControllerSucursales controllerSucursales = new Controllers.ControllerSucursales(modelSucursales, viewSucursales);
+
         viewMenu.setContentPane(controllerSucursales.viewSucursales);
         viewMenu.revalidate();
         viewMenu.repaint();
@@ -206,6 +219,10 @@ public class ControllerMain {
     }
 
     private void jmi_empleados_actionPerformed() {
+        Models.ModelEmpleados modelEmpleados = new Models.ModelEmpleados();
+        Views.ViewEmpleados viewEmpleados = new Views.ViewEmpleados();
+        Controllers.ControllerEmpleados controllerEmpleados = new Controllers.ControllerEmpleados(modelEmpleados, viewEmpleados);
+
         viewMenu.setContentPane(controllerEmpleados.viewEmpleados);
         viewMenu.revalidate();
         viewMenu.repaint();
@@ -214,7 +231,7 @@ public class ControllerMain {
 
     public void jmi_cerrarSesion_actionPerformed() {
         viewMenu.dispose();
-        
+
         ModelLogin modelLogin = new ModelLogin();
         ViewLogin viewLogin = new ViewLogin();
         ControllerLogin controllerLogin = new ControllerLogin(modelLogin, viewLogin);
@@ -227,7 +244,6 @@ public class ControllerMain {
     /**
      * Cierra la aplicacion.
      */
-
     private void jmi_salir_actionPerformed() {
         System.exit(0);
     }
