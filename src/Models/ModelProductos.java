@@ -151,7 +151,7 @@ public class ModelProductos {
         String sqlInsertarCliente = "insert into productos (id_producto, nombre_producto,tipo_producto,descripcion_producto,marca_producto, precio_venta_producto)"
                 + " VALUES(?,?,?,?,?,?)";
         try {
-            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarCliente); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarCliente); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_producto());
             ps.setString(1, getId_producto());
             ps.setString(2, getNombre_producto());
@@ -175,7 +175,7 @@ public class ModelProductos {
                 + "marca_producto=?, precio_venta_producto where id_producto = ?";
         try {
 
-            ps = (com.mysql.jdbc.PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarProducto);
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarProducto);
 
             System.out.println(getId_producto());
 

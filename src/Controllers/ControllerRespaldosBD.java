@@ -6,7 +6,13 @@
 package Controllers;
 
 import Models.ModelRespaldosBD;
+import java.io.File;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -21,10 +27,19 @@ public class ControllerRespaldosBD {
     }
 
     public void respaldo() {
+
+        String BD = "ferreteriasacme";
+        String usuar = "dagasoft";
+        String password = "ferreteriasacme";
+        String host = "192.168.1.97";
+        String puert = "3306";
         try {
-            modelRespaldosBD.respaldosDB();
+            modelRespaldosBD.respaldosDB(host, puert, usuar, password, BD);
+            JOptionPane.showMessageDialog(null, "La base de datos: ferreteriasacme\n ha sido respaldada");
         } catch (IOException ex) {
-            System.out.println("Error 01 Controller respaldos:  " + ex );
+            Logger.getLogger(ControllerRespaldosBD.class.getName()).log(Level.SEVERE, null, ex);
+
         }
     }
+
 }
