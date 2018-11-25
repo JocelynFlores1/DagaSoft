@@ -82,6 +82,8 @@ public class ControllerMain {
         viewMenu.jmSucursales.addActionListener(actionListener);
         viewMenu.jmEmpleados.addActionListener(actionListener);
         viewMenu.jmCerrarSesion.addActionListener(actionListener);
+        viewMenu.jmRespaldarBd.addActionListener(actionListener);
+
     }
 
     private void setMouseListener() {
@@ -135,6 +137,8 @@ public class ControllerMain {
                 jmi_empleados_actionPerformed();
             } else if (e.getSource() == viewMenu.jmCerrarSesion) {
                 jmi_cerrarSesion_actionPerformed();
+            } else if (e.getSource() == viewMenu.jmRespaldarBd) {
+                jmi_respaldarBd_actionPerformed();
             }
         }
     };
@@ -188,7 +192,7 @@ public class ControllerMain {
         Models.ModelCompras modelCompras = new Models.ModelCompras();
         Views.ViewCompras viewCompras = new Views.ViewCompras();
         Controllers.ControllerCompras controllerCompras = new Controllers.ControllerCompras(modelCompras, viewCompras);
-        
+
         viewMenu.setContentPane(controllerCompras.viewCompras);
         viewMenu.revalidate();
         viewMenu.repaint();
@@ -227,6 +231,13 @@ public class ControllerMain {
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Empleados");
+    }
+
+    public void  jmi_respaldarBd_actionPerformed() {
+        Models.ModelRespaldosBD respaldosBD = new Models.ModelRespaldosBD();
+        Controllers.ControllerRespaldosBD controllerRespaldosBD = new Controllers.ControllerRespaldosBD(respaldosBD);
+        controllerRespaldosBD.respaldo();
+        System.out.println("Respaldo de base de datos");
     }
 
     public void jmi_cerrarSesion_actionPerformed() {

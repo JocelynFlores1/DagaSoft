@@ -5,12 +5,26 @@
  */
 package Controllers;
 
+import Models.ModelRespaldosBD;
+import java.io.IOException;
+
 /**
  *
  * @author beto
  */
 public class ControllerRespaldosBD {
-    /**
-     * ESTA CLASE YA NO SE OCUPA
-     */
+
+    ModelRespaldosBD modelRespaldosBD;
+
+    public ControllerRespaldosBD(ModelRespaldosBD modelRespaldosBD) {
+        this.modelRespaldosBD = modelRespaldosBD;
+    }
+
+    public void respaldo() {
+        try {
+            modelRespaldosBD.respaldosDB();
+        } catch (IOException ex) {
+            System.out.println("Error 01 Controller respaldos:  " + ex );
+        }
+    }
 }
