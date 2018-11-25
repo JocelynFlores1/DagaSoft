@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controllers;
+package Models;
 
 /**
  *
- * @author beto
+ * @author Norberto
  */
-public class ControllerConstructoresPrincipal {
-    /**
-     * ESTA CLASE YA NO SE OCUPA
-     */
+public class ModelRespaldosBD {
+    
 }
