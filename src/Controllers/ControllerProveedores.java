@@ -5,6 +5,8 @@
  */
 package Controllers;
 
+import Models.ModelConexion;
+import Models.ModelGenerarCodigos;
 import Models.ModelProveedores;
 import Views.ViewProveedores;
 import java.awt.event.ActionEvent;
@@ -24,7 +26,7 @@ public class ControllerProveedores {
 
     public Models.ModelProveedores modelProveedores;
     public Views.ViewProveedores viewProveedores;
-
+    ModelConexion proveedorConexion = new ModelConexion();
     /**
      * Objeto de tipo ActionListener para atrapar los eventos actionPerformed y
      * llamar a los metodos para ver los registros almacenados en la bd.
@@ -36,6 +38,8 @@ public class ControllerProveedores {
                 jmi_insertarP_actionPerformed();
             } else if (e.getSource() == viewProveedores.jb_modificar_proveedor) {
                 jmi_modificarP_actionPerformed();
+            } else if (e.getSource() == viewProveedores.jb_eliminar_proveedor) {
+                jmi_borrarC_actionListener();
             } else if (e.getSource() == viewProveedores.jb_nuevo) {
                 jmi_nuevoP_actionPerformed();
             }
@@ -60,8 +64,10 @@ public class ControllerProveedores {
 
     public void initComponents() {
         viewProveedores.setVisible(true);
-        modelProveedores.conectarDB();
+        modelProveedores.conectarDB(proveedorConexion);
+        jtfCambiarCampos();
         tablaConsulta();
+        System.out.println("Solo se inicia si se abre proveedores");
     }
 
     /**
@@ -118,13 +124,12 @@ public class ControllerProveedores {
             modelProveedores.setCiudad_proveedor(viewProveedores.jtf_ciudad.getText());
             modelProveedores.setEstado_proveedor(viewProveedores.jtf_estado.getText());
 
-            modelProveedores.insertarNuevoProveedor();
-
+            modelProveedores.insertarNuevoProveedor(proveedorConexion);
             tablaConsulta();
-
+            JOptionPane.showMessageDialog(null, "Registro almacenado correctamente");
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
-            JOptionPane.showMessageDialog(null, "No se guardo ningún registro");
+            JOptionPane.showMessageDialog(null, "No se guardo ningún proveedor");
         }
     }
 
@@ -143,20 +148,35 @@ public class ControllerProveedores {
             modelProveedores.setCiudad_proveedor(viewProveedores.jtf_ciudad.getText());
             modelProveedores.setEstado_proveedor(viewProveedores.jtf_estado.getText());
 
-            modelProveedores.modificarDatosProveedor();
-
+            modelProveedores.modificarDatosProveedor(proveedorConexion);
+            //Este comando realiza la accion de utlilzar el metodo de modificarDatosCliente usando el objeto construido en de modelProveedores
+            JOptionPane.showMessageDialog(null, "Datos modificados correctamente");
             tablaConsulta();
+            //Se usa el metodo tablaConsulta para actualizar los registros en jTableProveedores
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
             JOptionPane.showMessageDialog(null, "No se guardo ningun cambio");
         }
     }
+    public void jmi_borrarC_actionListener() {
+        //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
+        int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea borrar los datos del proveedor?", "Borrar datos", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (cancelar == 0) {
+            modelProveedores.setId_proveedor(viewProveedores.jtf_id_proveedor.getText());
+            modelProveedores.borrarDatosCliente(proveedorConexion);
+            tablaConsulta();
+            JOptionPane.showMessageDialog(null, "Los datos del proveedor han sido eliminados");
+        } else {
+            ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
+            JOptionPane.showMessageDialog(null, "No se borro ningun registro");
+        }
+      }
 
     public void tablaConsulta() {
         try {
             DefaultTableModel modelo = new DefaultTableModel();
             viewProveedores.jtable_proveedores.setModel(modelo);
-            modelProveedores.consultajTableProveedores();
+            modelProveedores.consultajTableProveedores(proveedorConexion);
 
             ResultSetMetaData rsMd = modelProveedores.getRs().getMetaData();
             int cantidadColumnas = rsMd.getColumnCount();
@@ -211,6 +231,7 @@ public class ControllerProveedores {
     }
 
     public void jmi_nuevoP_actionPerformed() {
+        codigos();
         viewProveedores.jtf_id_proveedor.setText("");
         viewProveedores.jtf_nombre_proveedor.setText("");
         viewProveedores.jtf_calle.setText("");
@@ -223,17 +244,37 @@ public class ControllerProveedores {
         viewProveedores.jtf_estado.setText("");
     }
     
-        public void jmi_borrarC_actionListener() {
-        //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
-        int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea borrar los datos del proveedor?", "Borrar datos", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if (cancelar == 0) {
-            modelProveedores.setId_proveedor(viewProveedores.jtf_id_proveedor.getText());
-            modelProveedores.borrarDatosCliente();
-            tablaConsulta();
-            JOptionPane.showMessageDialog(null, "Los datos del proveedor han sido eliminados");
+    /**
+     * Este metodo permite generar codigos automaticamente con una consulta en
+     * la base de datos desde models.ModelProveedores.GenerarCodigos
+     */
+    public void codigos() {
+
+        int j;
+        int cont = 1;
+        String num = "";
+        modelProveedores.consultaGenerarCodigos(proveedorConexion);
+
+        if (modelProveedores.getC() == null) {
+            viewProveedores.jtf_id_proveedor.setText("ACME-P0000001");
         } else {
-            ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
-            JOptionPane.showMessageDialog(null, "No se borro ningun registro");
+            char r1 = modelProveedores.getC().charAt(6);
+            char r2 = modelProveedores.getC().charAt(7);
+            char r3 = modelProveedores.getC().charAt(8);
+            char r4 = modelProveedores.getC().charAt(9);
+            char r5 = modelProveedores.getC().charAt(10);
+            char r6 = modelProveedores.getC().charAt(11);
+            char r7 = modelProveedores.getC().charAt(12);
+
+            String r = "";
+            r = "" + r1 + r2 + r3 + r4 + r5 + r6 + r7;
+            j = Integer.parseInt(r);
+            System.out.println(j);
+            ModelGenerarCodigos gen = new ModelGenerarCodigos();
+            gen.generar(j);
+            viewProveedores.jtf_id_proveedor.setText("ACME-P" + gen.serie());
+            System.out.println("ACME-P" + gen.serie());
+            
         }
     }
 }

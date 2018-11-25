@@ -1,4 +1,4 @@
-/*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -32,6 +32,16 @@ public class ModelProveedores {
     private String email_proveedor;
     private String ciudad_proveedor;
     private String estado_proveedor;
+    private String c = "";
+
+    public String getC() {
+        return c;
+    }
+
+    public void setC(String c) {
+        this.c = c;
+    }
+
 
     public Connection getConexion() {
         return conexion;
@@ -168,12 +178,11 @@ public class ModelProveedores {
      * Método que realiza las siguietnes acciones: 1.- Conecta con la base 2.-
      * Consulta todo los registros .
      */
-    public void conectarDB() {
-        ModelConexion proveevorConexion = new ModelConexion();
-        proveevorConexion.getConexion();
+    public void conectarDB(ModelConexion proveedorConexion) {
         try {
+            System.out.println("consulta 2 proveedores");
             String consultaString = "select * from proveedores";
-            ps = (PreparedStatement) proveevorConexion.getConexion().prepareStatement(consultaString);
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
 
             if (rs.next()) {
@@ -186,13 +195,11 @@ public class ModelProveedores {
         }
     }
 
-    public void insertarNuevoProveedor() {
-        ModelConexion loginConexion = new ModelConexion();
-        //Se obtiene la conexion para la clase
-
+    public void insertarNuevoProveedor(ModelConexion proveedorConexion) {
+       System.out.println(" 3 nuevo proveedor");
         String sqlInsertarProveedor = "insert into proveedores (id_proveedor, nombre_proveedor,calle_proveedor,numero_exterior_proveedor,colonia_proveedor,codigo_postal_proveedor, telefono_proveedor, email_proveedor,ciudad_proveedor,estado_proveedor) VALUES(?,?,?,?,?,?,?,?,?,?)";
         try {
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlInsertarProveedor); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+           ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlInsertarProveedor); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_proveedor());
             ps.setString(1, getId_proveedor());
             ps.setString(2, getNombre_proveedor());
@@ -210,16 +217,14 @@ public class ModelProveedores {
         }
     }
 
-    public void modificarDatosProveedor() {
-        ModelConexion loginConexion = new ModelConexion();
-        //Se obtiene la conexion para la clase
-
+    public void modificarDatosProveedor(ModelConexion proveedorConexion) {
+        System.out.println("modificar 4 proveedores");
         String sqlModificarProveedor = "update proveedores set "
                 + "nombre_proveedor=?, calle_proveedor=?, numero_exterior_proveedor=?, colonia_proveedor=?, codigo_postal_proveedor=?, "
                 + "telefono_proveedor=?, email_proveedor=?, ciudad_proveedor=?," + "estado_proveedor=? where id_cliente = ?";
         try {
 
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sqlModificarProveedor);
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlModificarProveedor);
 
             System.out.println(getId_proveedor());
 
@@ -239,10 +244,8 @@ public class ModelProveedores {
         }
     }
 
-    public void borrarDatosCliente() {
-        ModelConexion proveedorConexion = new ModelConexion();
-        //Se obtiene la conexion para la clase
-
+    public void borrarDatosCliente(ModelConexion proveedorConexion) {
+       System.out.println("eliminar 5 proveedores");
         String sqlBorrarProveedor = "delete from proveedores where id_proveedor = ?";
         try {
 
@@ -256,15 +259,31 @@ public class ModelProveedores {
     }
 
     //Metodo que permite insertar los datos de la tabla de la base de datos en un jTable en java
-    public void consultajTableProveedores() {
-        ModelConexion loginConexion = new ModelConexion();
-        loginConexion.getConexion();
-        try {
+    public void consultajTableProveedores(ModelConexion proveedorConexion) {
+         try {
+            System.out.println("tabla 6 proveedores");
             String consultaString = "select * from proveedores";
-            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(consultaString);
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
-            System.out.println("Error 06: tabla proveedores" + e);
+            System.out.println("Error 000000: tabla proveedores" + e);
         }
+    }
+    public void consultaGenerarCodigos(ModelConexion proveedorConexion) {
+        System.out.println("codigos 7 proveedores");
+        String SQL = "select max(id_proveedor) from proveedores";
+
+        try {
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(SQL);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                c = rs.getString(1);
+                System.out.println("madx" + rs.getString(1));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error" + ex);
+        }
+
     }
 }
