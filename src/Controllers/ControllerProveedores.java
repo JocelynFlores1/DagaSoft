@@ -232,7 +232,6 @@ public class ControllerProveedores {
 
     public void jmi_nuevoP_actionPerformed() {
         codigos();
-        viewProveedores.jtf_id_proveedor.setText("");
         viewProveedores.jtf_nombre_proveedor.setText("");
         viewProveedores.jtf_calle.setText("");
         viewProveedores.jtf_numero_exterior.setText("");
