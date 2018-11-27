@@ -43,6 +43,8 @@ public class ViewMenu extends javax.swing.JFrame {
         jmTipoUsuarioSesion = new javax.swing.JMenuItem();
         jmSucursalSesion = new javax.swing.JMenuItem();
         jmCerrarSesion = new javax.swing.JMenuItem();
+        jmBD = new javax.swing.JMenu();
+        jmRespaldarBd = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,6 +94,13 @@ public class ViewMenu extends javax.swing.JFrame {
         jmSesion.add(jmCerrarSesion);
 
         jMenuBar1.add(jmSesion);
+
+        jmBD.setText("Base de datos");
+
+        jmRespaldarBd.setText("Respaldar");
+        jmBD.add(jmRespaldarBd);
+
+        jMenuBar1.add(jmBD);
 
         setJMenuBar(jMenuBar1);
 
@@ -148,12 +157,14 @@ public class ViewMenu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JMenu jmAcercaDe;
     public javax.swing.JMenuItem jmAlmacen;
+    public javax.swing.JMenu jmBD;
     public javax.swing.JMenuItem jmCerrarSesion;
     public javax.swing.JMenuItem jmClientes;
     public javax.swing.JMenuItem jmCompras;
     public javax.swing.JMenuItem jmEmpleados;
     public javax.swing.JMenu jmInicio;
     public javax.swing.JMenuItem jmProveedores;
+    public javax.swing.JMenuItem jmRespaldarBd;
     private javax.swing.JMenu jmSesion;
     public javax.swing.JMenuItem jmSucursalSesion;
     public javax.swing.JMenuItem jmSucursales;

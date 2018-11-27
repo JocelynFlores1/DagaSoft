@@ -173,7 +173,7 @@ public class ModelSucursales {
         String sqlInsertarSucursal = "insert into sucursal (id_sucursal, nombre_sucursal, calle_sucursal, colonia_sucursal,"
                 + "numero_sucursal, ciudad_sucursal, telefono_sucursal, codigo_postal_sucursal) VALUES(?,?,?,?,?,?,?,?)";
         try {
-            ps = (com.mysql.jdbc.PreparedStatement) sucursalConexion.getConexion().prepareStatement(sqlInsertarSucursal); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            ps = (PreparedStatement) sucursalConexion.getConexion().prepareStatement(sqlInsertarSucursal); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getIdSucursal());
             ps.setString(1, getIdSucursal());
             ps.setString(2, getNombreSucursal());
@@ -199,7 +199,7 @@ public class ModelSucursales {
 
         try {
 
-            ps = (com.mysql.jdbc.PreparedStatement) sucursalConexion.getConexion().prepareStatement(sqlModificarSucursal);
+            ps = (PreparedStatement) sucursalConexion.getConexion().prepareStatement(sqlModificarSucursal);
 
             System.out.println(getIdSucursal());
 
