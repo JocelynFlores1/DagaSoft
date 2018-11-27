@@ -5,6 +5,8 @@
  */
 package Controllers;
 
+import Models.ModelConexion;
+import Models.ModelGenerarCodigos;
 import Models.ModelProductos;
 import Views.ViewProductos;
 import java.awt.event.ActionEvent;
@@ -24,7 +26,7 @@ public class ControllerProductos {
 
     public Models.ModelProductos modelProductos;
     public Views.ViewProductos viewProductos;
-
+    ModelConexion productosConexion = new ModelConexion();
     /**
      * Objeto de tipo ActionListener para atrapar los eventos actionPerformed y
      * llamar a los metodos para ver los registros almacenados en la bd.
@@ -36,6 +38,10 @@ public class ControllerProductos {
                 jmi_insertarP_actionPerformed();
             } else if (e.getSource() == viewProductos.jb_modificar_producto) {
                 jmi_modificarP_actionPerformed();
+            } else if (e.getSource() == viewProductos.jb_eliminar_producto) {
+                jmi_borrarP_actionListener();
+            } else if (e.getSource() == viewProductos.jb_nuevo) {
+                jmi_nuevoP_actionPerformed();
             }
         }
     };
@@ -57,8 +63,10 @@ public class ControllerProductos {
 
     public void initComponents() {
         viewProductos.setVisible(true);
-        modelProductos.conectarDB();
+        modelProductos.conectarDB(productosConexion);
         jtfCambiarCampos();
+        tablaConsulta();
+        System.out.println("Solo se inicia si se abre productos");
     }
 
     /**
@@ -106,7 +114,7 @@ public class ControllerProductos {
             modelProductos.setMarca_producto(viewProductos.jtf_marca.getText());
             modelProductos.setPrecio_venta(Double.parseDouble(viewProductos.jtf_precio_venta.getText()));
 
-            modelProductos.insertarNuevoCliente();
+            modelProductos.insertarNuevoProducto(productosConexion);
             tablaConsulta();
             JOptionPane.showMessageDialog(null, "");
 
@@ -127,8 +135,7 @@ public class ControllerProductos {
             modelProductos.setMarca_producto(viewProductos.jtf_marca.getText());
             modelProductos.setPrecio_venta(Double.parseDouble(viewProductos.jtf_precio_venta.getText()));
 
-            modelProductos.modificarDatosProducto();
-
+            modelProductos.modificarDatosProducto(productosConexion);
             tablaConsulta();
             JOptionPane.showMessageDialog(null, "");
 
@@ -137,12 +144,25 @@ public class ControllerProductos {
             JOptionPane.showMessageDialog(null, "No se guardo ningun cambio");
         }
     }
+    public void jmi_borrarP_actionListener() {
+        //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
+        int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea borrar los datos del producto?", "Borrar producto", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (cancelar == 0) {
+            modelProductos.setId_producto(viewProductos.jtf_id_producto.getText());
+            modelProductos.borrarDatosProducto(productosConexion);
+            tablaConsulta();
+            JOptionPane.showMessageDialog(null, "Los datos del producto han sido eliminados");
+        } else {
+            ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
+            JOptionPane.showMessageDialog(null, "No se borro ningun registro");
+        }
+    }
 
     public void tablaConsulta() {
         try {
             DefaultTableModel modelo = new DefaultTableModel();
             viewProductos.jtable_productos.setModel(modelo);
-            modelProductos.consultajTableProductos();
+            modelProductos.consultajTableProductos(productosConexion);
 
             ResultSetMetaData rsMd = modelProductos.getRs().getMetaData();
             int cantidadColumnas = rsMd.getColumnCount();
@@ -185,6 +205,48 @@ public class ControllerProductos {
             }
         } catch (Exception err) {
             JOptionPane.showMessageDialog(null, "Error:\nSelecciona un registro");
+        }
+    }
+    public void jmi_nuevoP_actionPerformed() {
+        codigos();
+        viewProductos.jtf_nombre_producto.setText("");
+        viewProductos.jtf_tipo_producto.setSelectedItem("");
+        viewProductos.jta_Descripcion.setText("");
+        viewProductos.jtf_marca.setText("");
+        viewProductos.jtf_precio_venta.setText("");
+        
+    }
+    /**
+     * Este metodo permite generar codigos automaticamente con una consulta en
+     * la base de datos desde models.ModelClientes.GenerarCodigos
+     */
+    public void codigos() {
+
+        int j;
+        int cont = 1;
+        String num = "";
+        modelProductos.consultaGenerarCodigos(productosConexion);
+
+        if (modelProductos.getC() == null) {
+            viewProductos.jtf_id_producto.setText("ACME-M0000001");
+        } else {
+            char r1 = modelProductos.getC().charAt(6);
+            char r2 = modelProductos.getC().charAt(7);
+            char r3 = modelProductos.getC().charAt(8);
+            char r4 = modelProductos.getC().charAt(9);
+            char r5 = modelProductos.getC().charAt(10);
+            char r6 = modelProductos.getC().charAt(11);
+            char r7 = modelProductos.getC().charAt(12);
+
+            String r = "";
+            r = "" + r1 + r2 + r3 + r4 + r5 + r6 + r7;
+            j = Integer.parseInt(r);
+            System.out.println(j);
+            ModelGenerarCodigos gen = new ModelGenerarCodigos();
+            gen.generar(j);
+            viewProductos.jtf_id_producto.setText("ACME-M" + gen.serie());
+            System.out.println("ACME-M" + gen.serie());
+
         }
     }
 }
