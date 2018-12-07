@@ -23,7 +23,7 @@ public class ModelConexion {
     private final String base = "ferreteriasacme";
     private final String user = "dagasoft";
     private final String password = "ferreteriasacme";
-    private final String url = "jdbc:mysql://192.168.1.97:3306/" + base;
+    private final String url = "jdbc:mysql://noutectyspdf.ddns.net:3306/" + base;
     public Connection con;
     public Statement st = null;
     public ResultSet rs;

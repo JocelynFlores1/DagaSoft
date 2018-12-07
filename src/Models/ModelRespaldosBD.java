@@ -12,6 +12,10 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -19,21 +23,36 @@ import java.sql.SQLException;
  */
 public class ModelRespaldosBD {
 
-    public void respaldosDB(String host, String puert, String usuar, String password, String BD) throws IOException {
-        Process p = Runtime.getRuntime().exec("C:\\xampp\\mysql\\bin\\mysqldump --host=192.168.1.97 "
-                + "-udagasoft -pferreteriasacme -B ferreteriasacme");
+    public void respaldosDB(String host, String puert, String usuar, String password, String BD) {
+        try {
 
-        InputStream is = p.getInputStream();//Pedimos la entrada
-        FileOutputStream fos = new FileOutputStream("src/bd/backup_ferreteriasacme.sql"); //creamos el archivo para le respaldo
-        byte[] buffer = new byte[1000]; //Creamos una variable de tipo byte para el buffer
+            //Generar fecha y hora para nombre del backup
+            //Fecha actual en formato completo:
+            //Tue Sep 23 01:18:48 CEST 2014
+            Date fechaActual = new Date();
+            //Formateando la fecha:
+            DateFormat formatoHora = new SimpleDateFormat("HH-mm-ss");
+            DateFormat formatoFecha = new SimpleDateFormat("dd-MM-yyyy");
+            String nombreDocumento = "Backup_FerreteriasAcme_" + formatoHora.format(fechaActual) + "__"+ formatoFecha.format(fechaActual) + ".sql";
+            System.out.println(nombreDocumento);
 
-        int leido = is.read(buffer); //Devuelve el número de bytes leídos o -1 si se alcanzó el final del stream.
-        while (leido > 0) {
-            fos.write(buffer, 0, leido);//Buffer de caracteres, Desplazamiento de partida para empezar a escribir caracteres, Número de caracteres para escribir
-            leido = is.read(buffer);
+            Process p = Runtime.getRuntime().exec("C:\\xampp\\mysql\\bin\\mysqldump --host=noutectyspdf.ddns.net -P3306 -udagasoft -pferreteriasacme -B ferreteriasacme");
+            //C:\\xampp\\mysql\\bin\\mysqldump ->(Ruta donde se encuentra mysqldump dependiendo de la ruta de instalacion) 
+            //Se usa para toda la base de datos ---->        --host=noutectyspdf.ddns.net -P3306 -udagasoft -pferreteriasacme -B ferreteriasacme backup desde pc Norberto
+            InputStream is = p.getInputStream();//Pedimos la entrada
+            try (FileOutputStream fos = new FileOutputStream("src/bd/"+ nombreDocumento) //creamos el archivo para le respaldo
+            ) {
+                byte[] buffer = new byte[1000]; //Creamos una variable de tipo byte para el buffer
+                int leido = is.read(buffer); //Devuelve el número de bytes leídos o -1 si se alcanzó el final del stream.
+                while (leido > 0) {
+                    fos.write(buffer, 0, leido);//Buffer de caracteres, Desplazamiento de partida para empezar a escribir caracteres, Número de caracteres para escribir
+                    leido = is.read(buffer);
+                }
+                //Cierra respaldo
+            } //Creamos una variable de tipo byte para el buffer
+        } catch (IOException ex) {
+            System.out.println("error respaldo: " + ex);
         }
-
-        fos.close();//Cierra respaldo
     }
 
     /**
