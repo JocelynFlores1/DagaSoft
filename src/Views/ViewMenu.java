@@ -47,6 +47,10 @@ public class ViewMenu extends javax.swing.JFrame {
         jmRespaldarBd = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(925, 625));
+        setMinimumSize(new java.awt.Dimension(925, 625));
+        setPreferredSize(new java.awt.Dimension(925, 625));
+        setResizable(false);
 
         jmInicio.setText("Inicio");
         jMenuBar1.add(jmInicio);
@@ -108,11 +112,11 @@ public class ViewMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 975, Short.MAX_VALUE)
+            .addGap(0, 915, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 448, Short.MAX_VALUE)
+            .addGap(0, 557, Short.MAX_VALUE)
         );
 
         pack();

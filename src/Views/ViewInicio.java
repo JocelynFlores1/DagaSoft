@@ -27,17 +27,11 @@ public class ViewInicio extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jp_inicio_logo = new javax.swing.JPanel();
         jPanelInicio = new javax.swing.JPanel();
+        jp_inicio_logo = new javax.swing.JPanel();
         jPanelAdminDeUSers1 = new javax.swing.JPanel();
         jPanelAdminDeUSers2 = new javax.swing.JPanel();
         jlNombre1 = new javax.swing.JLabel();
-
-        setMinimumSize(new java.awt.Dimension(1281, 676));
-        setPreferredSize(new java.awt.Dimension(1281, 676));
-
-        jp_inicio_logo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(204, 51, 0))); // NOI18N
-        jp_inicio_logo.setOpaque(false);
 
         jPanelInicio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelInicio.setOpaque(false);
@@ -50,24 +44,25 @@ public class ViewInicio extends javax.swing.JPanel {
         );
         jPanelInicioLayout.setVerticalGroup(
             jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGap(0, 399, Short.MAX_VALUE)
         );
+
+        setMaximumSize(new java.awt.Dimension(900, 500));
+        setMinimumSize(new java.awt.Dimension(900, 500));
+        setPreferredSize(new java.awt.Dimension(900, 500));
+
+        jp_inicio_logo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(204, 51, 0))); // NOI18N
+        jp_inicio_logo.setOpaque(false);
 
         javax.swing.GroupLayout jp_inicio_logoLayout = new javax.swing.GroupLayout(jp_inicio_logo);
         jp_inicio_logo.setLayout(jp_inicio_logoLayout);
         jp_inicio_logoLayout.setHorizontalGroup(
             jp_inicio_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jp_inicio_logoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanelInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 892, Short.MAX_VALUE)
         );
         jp_inicio_logoLayout.setVerticalGroup(
             jp_inicio_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jp_inicio_logoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanelInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 417, Short.MAX_VALUE)
         );
 
         jPanelAdminDeUSers1.setBackground(new java.awt.Color(204, 51, 0));
@@ -78,7 +73,7 @@ public class ViewInicio extends javax.swing.JPanel {
         jPanelAdminDeUSers1.setLayout(jPanelAdminDeUSers1Layout);
         jPanelAdminDeUSers1Layout.setHorizontalGroup(
             jPanelAdminDeUSers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 888, Short.MAX_VALUE)
         );
         jPanelAdminDeUSers1Layout.setVerticalGroup(
             jPanelAdminDeUSers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,9 +93,9 @@ public class ViewInicio extends javax.swing.JPanel {
         jPanelAdminDeUSers2Layout.setHorizontalGroup(
             jPanelAdminDeUSers2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelAdminDeUSers2Layout.createSequentialGroup()
-                .addContainerGap(528, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlNombre1)
-                .addContainerGap(529, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelAdminDeUSers2Layout.setVerticalGroup(
             jPanelAdminDeUSers2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,33 +109,33 @@ public class ViewInicio extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanelAdminDeUSers2, javax.swing.GroupLayout.DEFAULT_SIZE, 1269, Short.MAX_VALUE)
-                    .addComponent(jPanelAdminDeUSers1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1269, Short.MAX_VALUE)
-                    .addComponent(jp_inicio_logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanelAdminDeUSers2, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
+                        .addComponent(jp_inicio_logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanelAdminDeUSers1, javax.swing.GroupLayout.PREFERRED_SIZE, 894, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelAdminDeUSers2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jp_inicio_logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanelAdminDeUSers1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGap(119, 119, 119))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelAdminDeUSers1;
     private javax.swing.JPanel jPanelAdminDeUSers2;
-    private javax.swing.JPanel jPanelInicio;
+    public javax.swing.JPanel jPanelInicio;
     private javax.swing.JLabel jlNombre1;
     private javax.swing.JPanel jp_inicio_logo;
     // End of variables declaration//GEN-END:variables

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[900, 500]"/>
+    </Property>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[900, 500]"/>
+    </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[900, 500]"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -21,7 +32,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" alignment="0" pref="618" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -45,8 +56,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jPanelAdminDeUSers1" pref="1372" max="32767" attributes="0"/>
-                          <Component id="jPanel2" alignment="1" pref="1372" max="32767" attributes="0"/>
+                          <Component id="jPanelAdminDeUSers1" pref="964" max="32767" attributes="0"/>
+                          <Component id="jPanel2" alignment="1" pref="964" max="32767" attributes="0"/>
                           <Component id="jPanelAdminDeUSers2" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -127,7 +138,7 @@
                                   <Component id="jLabelAdmUsuLogo1" min="-2" pref="22" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jLabel6" max="32767" attributes="0"/>
+                              <Component id="jLabel6" pref="42" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -195,38 +206,10 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jl_nombre_empleado" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jl_id_empleado" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jl_apellido_paterno" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jl_apellido_materno" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jl_telefono" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jl_calle" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jl_colonia" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jl_numero_interior" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jl_numero_exterior" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace pref="53" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jtf_id_empleado" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jtf_no_interior_empleado" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_numero_exterior_empleado" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_colonia_empleado" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_calle_empleado" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_telefono_empleado" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_apellido_materno_empleado" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_apellido_paterno_empleado" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jtf_nombre_empleado" alignment="0" pref="270" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="jb_nuevo" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jb_insertar" min="-2" pref="81" max="-2" attributes="0"/>
@@ -236,58 +219,96 @@
                                       <Component id="jb_modificar" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                                       <Component id="jb_eliminar" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace pref="255" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jl_no_cueta" min="-2" pref="103" max="-2" attributes="0"/>
-                                          <EmptySpace pref="54" max="32767" attributes="0"/>
-                                          <Component id="jtf_no_cueta_empleado" min="-2" pref="334" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="jl_no_seguro" max="32767" attributes="0"/>
-                                                  <Component id="jl_tipo_empleado" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="jl_usuario" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jl_contrasena" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="jl_curp" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jl_codigo_postal1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="157" pref="157" max="-2" attributes="0"/>
+                                              <Component id="jtf_sucursal_empleado" min="-2" pref="331" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="1" groupAlignment="1" attributes="0">
-                                                  <Component id="jtf_curp" min="-2" pref="334" max="-2" attributes="0"/>
-                                                  <Component id="jtf_tipo_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
-                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jtf_contrasena" max="32767" attributes="0"/>
-                                                      <Component id="jtf_usuario_empleado" min="-2" pref="331" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="jtf_codigo_postal_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jl_apellido_materno" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jtf_apellido_materno_empleado" min="-2" pref="270" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jl_nombre_empleado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jl_id_empleado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jl_apellido_paterno" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jl_telefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jl_calle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jl_colonia" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jl_numero_interior" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jl_numero_exterior" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jtf_banco_empleado" max="32767" attributes="0"/>
+                                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jtf_id_empleado" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="jtf_no_interior_empleado" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jtf_numero_exterior_empleado" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jtf_colonia_empleado" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jtf_calle_empleado" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jtf_telefono_empleado" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jtf_apellido_paterno_empleado" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jtf_nombre_empleado" alignment="0" pref="270" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="jl_tipo_empleado" alignment="1" max="32767" attributes="0"/>
+                                                      <Component id="jl_usuario" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jl_contrasena" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jl_curp" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" alignment="1" groupAlignment="1" attributes="0">
+                                                      <Component id="jtf_curp" min="-2" pref="334" max="-2" attributes="0"/>
+                                                      <Component id="jtf_tipo_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
+                                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="jtf_contrasena" max="32767" attributes="0"/>
+                                                          <Component id="jtf_usuario_empleado" min="-2" pref="331" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="jtf_codigo_postal_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jtf_banco_empleado" alignment="1" min="-2" pref="334" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="jl_banco" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                          <Component id="jl_codigo_postal" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jl_rfc" min="-2" pref="103" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="jtf_rfc_empleado" min="-2" pref="331" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jl_no_cueta" min="-2" pref="103" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jtf_no_cueta_empleado" min="-2" pref="334" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jl_no_seguro" min="-2" pref="103" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="jtf_no_seguro_empleado" min="-2" pref="334" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <Component id="jl_banco" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jl_rfc" min="-2" pref="121" max="-2" attributes="0"/>
-                                  <Component id="jl_codigo_postal" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jl_codigo_postal1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="157" pref="157" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jtf_rfc_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
-                                          <Component id="jtf_sucursal_empleado" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
-                                      </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -295,109 +316,109 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="jtf_apellido_materno_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jl_apellido_materno" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="jtf_telefono_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jl_telefono" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jtf_calle_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jl_calle" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="jtf_colonia_empleado" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                                      <Component id="jtf_numero_exterior_empleado" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="jl_colonia" min="-2" pref="25" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                                      <Component id="jl_numero_interior" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jtf_no_cueta_empleado" min="-2" pref="25" max="-2" attributes="0"/>
-                                                      <EmptySpace min="45" pref="45" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jl_no_cueta" min="-2" pref="25" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jtf_no_seguro_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                                          <Component id="jl_no_seguro" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jtf_banco_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jl_banco" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jl_curp" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jtf_curp" min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jl_tipo_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jtf_tipo_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jtf_usuario_empleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jl_usuario" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jl_contrasena" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jtf_contrasena" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jtf_no_interior_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="jtf_codigo_postal_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jl_numero_exterior" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jl_codigo_postal" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jtf_id_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jl_rfc" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jtf_rfc_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="jl_id_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jl_id_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="jtf_id_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="jl_rfc" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="jtf_rfc_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jtf_nombre_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="jl_nombre_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jtf_apellido_paterno_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="jl_apellido_paterno" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jtf_no_cueta_empleado" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <EmptySpace min="45" pref="45" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jl_no_cueta" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jtf_no_seguro_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                              <Component id="jl_no_seguro" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jtf_banco_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jl_banco" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jl_curp" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jtf_curp" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jl_tipo_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jtf_tipo_empleado" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jtf_usuario_empleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jl_usuario" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jl_contrasena" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jtf_contrasena" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jtf_apellido_materno_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jl_apellido_materno" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jtf_telefono_empleado" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jl_telefono" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jtf_calle_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jl_calle" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="jtf_colonia_empleado" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="jtf_numero_exterior_empleado" min="-2" pref="25" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="jl_colonia" min="-2" pref="25" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                              <Component id="jl_numero_interior" min="-2" pref="25" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jtf_no_interior_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jtf_codigo_postal_empleado" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jl_numero_exterior" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jl_codigo_postal" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -920,7 +941,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" pref="1336" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" pref="942" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -929,7 +950,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" pref="576" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" pref="545" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
