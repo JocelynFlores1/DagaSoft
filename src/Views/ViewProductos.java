@@ -5,6 +5,9 @@
  */
 package Views;
 
+import java.awt.Component;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Norberto
@@ -92,7 +95,7 @@ public class ViewProductos extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(501, 501, 501)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(491, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,20 +127,43 @@ public class ViewProductos extends javax.swing.JPanel {
         jl_nombre_producto.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_nombre_producto.setText("Nombre");
 
+        jtf_nombre_producto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_nombre_productoKeyTyped(evt);
+            }
+        });
+
         jl_tipo_producto.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_tipo_producto.setText("Tipo");
 
         jl_marca.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_marca.setText("Marca");
 
+        jtf_marca.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_marcaKeyTyped(evt);
+            }
+        });
+
         jl_precio_venta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_precio_venta.setText("Precio venta");
+
+        jtf_precio_venta.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_precio_ventaKeyTyped(evt);
+            }
+        });
 
         jl_descripcion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jl_descripcion.setText("Descripción");
 
         jta_Descripcion.setColumns(20);
         jta_Descripcion.setRows(5);
+        jta_Descripcion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jta_DescripcionKeyTyped(evt);
+            }
+        });
         jScrollPane1.setViewportView(jta_Descripcion);
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("CRUD "));
@@ -167,17 +193,15 @@ public class ViewProductos extends javax.swing.JPanel {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(224, 224, 224)
-                .addComponent(jb_eliminar_producto)
-                .addGap(275, 275, 275)
-                .addComponent(jb_modificar_producto)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jb_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(jb_eliminar_producto)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jb_insertar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(412, 412, 412)
+                .addGap(106, 106, 106)
+                .addComponent(jb_modificar_producto)
+                .addGap(147, 147, 147)
                 .addComponent(jb_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(53, 53, 53))
         );
@@ -188,12 +212,10 @@ public class ViewProductos extends javax.swing.JPanel {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_insertar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_eliminar_producto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_modificar_producto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29))
+                .addGap(87, 87, 87))
         );
 
         jtf_tipo_producto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Herramienta", "Maquinaria", "Material" }));
@@ -348,7 +370,7 @@ public class ViewProductos extends javax.swing.JPanel {
         );
 
         jpBordeTabla.setBackground(new java.awt.Color(204, 51, 0));
-        jpBordeTabla.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jpBordeTabla.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jtable_productos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -404,8 +426,8 @@ public class ViewProductos extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBordeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jpPieDePagina1, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
-                    .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
+                    .addComponent(jpPieDePagina1, javax.swing.GroupLayout.DEFAULT_SIZE, 1149, Short.MAX_VALUE)
+                    .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1149, Short.MAX_VALUE)
                     .addComponent(jpBordeTabla, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -485,7 +507,7 @@ public class ViewProductos extends javax.swing.JPanel {
         );
 
         jpBordeTabla1.setBackground(new java.awt.Color(204, 51, 0));
-        jpBordeTabla1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jpBordeTabla1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jtable_almacen_local.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -541,8 +563,8 @@ public class ViewProductos extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBorde1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpBorde1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jpPieDePagina2, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
-                    .addComponent(jpProductosTitulo2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
+                    .addComponent(jpPieDePagina2, javax.swing.GroupLayout.DEFAULT_SIZE, 1149, Short.MAX_VALUE)
+                    .addComponent(jpProductosTitulo2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1149, Short.MAX_VALUE)
                     .addComponent(jpBordeTabla1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -622,7 +644,7 @@ public class ViewProductos extends javax.swing.JPanel {
         );
 
         jpBordeTabla2.setBackground(new java.awt.Color(204, 51, 0));
-        jpBordeTabla2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jpBordeTabla2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jtable_almacen_sucursales.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -678,8 +700,8 @@ public class ViewProductos extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBorde2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpBorde2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jpPieDePagina3, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
-                    .addComponent(jpProductosTitulo3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1159, Short.MAX_VALUE)
+                    .addComponent(jpPieDePagina3, javax.swing.GroupLayout.DEFAULT_SIZE, 1149, Short.MAX_VALUE)
+                    .addComponent(jpProductosTitulo3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1149, Short.MAX_VALUE)
                     .addComponent(jpBordeTabla2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -731,6 +753,43 @@ public class ViewProductos extends javax.swing.JPanel {
     private void jb_eliminar_productoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_eliminar_productoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jb_eliminar_productoActionPerformed
+
+    private void jtf_nombre_productoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_nombre_productoKeyTyped
+     char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this,"Ingresa solo letras");
+        }
+    }//GEN-LAST:event_jtf_nombre_productoKeyTyped
+
+    private void jtf_marcaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_marcaKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this,"Ingresa solo letras");
+        }
+    }//GEN-LAST:event_jtf_marcaKeyTyped
+
+    private void jtf_precio_ventaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_precio_ventaKeyTyped
+      char validar = evt.getKeyChar();
+        if(!Character.isDigit(validar) && !Character.isAlphabetic(validar)){
+            getToolkit().beep();
+            evt.consume();
+            Component rootPane = null;
+            JOptionPane.showMessageDialog(rootPane,"Ingresa solo letras o numeros");
+        }
+    }//GEN-LAST:event_jtf_precio_ventaKeyTyped
+
+    private void jta_DescripcionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jta_DescripcionKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this,"Ingresa solo letras");
+        }
+    }//GEN-LAST:event_jta_DescripcionKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
