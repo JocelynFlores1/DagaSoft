@@ -65,7 +65,7 @@ public class ControllerLogin implements ActionListener {
                 
                 ModelMain modelMain = new ModelMain();
                 ViewMenu viewMenu = new ViewMenu();
-                ControllerMain controllerMain = new ControllerMain(modelMain, viewMenu);
+                ControllerMain controllerMain = new ControllerMain(modelMain, viewMenu, tipo, usuario, sucursal);
                 
                 viewLogin.dispose();
             } else {

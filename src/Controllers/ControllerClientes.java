@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
@@ -190,6 +191,7 @@ public class ControllerClientes {
         try {
             DefaultTableModel modelo = new DefaultTableModel();
             viewClientes.jtable_clientes.setModel(modelo);
+            viewClientes.jtable_clientes.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
             modelClientes.consultajTableClientes(clienteConexion);
 
             ResultSetMetaData rsMd = modelClientes.getRs().getMetaData();

@@ -7,6 +7,7 @@ package Controllers;
 
 import Models.ModelLogin;
 import Models.ModelMain;
+import Models.ModelObtencionTiempoRespaldo;
 import Views.ViewLogin;
 import Views.ViewMenu;
 import java.awt.event.ActionEvent;
@@ -36,6 +37,9 @@ public class ControllerMain {
     private ControllerProductos controllerProductos;
     private ControllerSucursales controllerSucursales;
     private ControllerInicio controllerInicio;
+    private final String usuario;
+    private final String tipoUsuario;
+    private final String sucursal;
 
     /**
      * Controlador principal del proyecto que un el modelMain y viewMain, ademas
@@ -45,11 +49,16 @@ public class ControllerMain {
      *
      * @param modelMain
      * @param viewMenu
-     * @param controllers arreglo con todos los controladores del proyecto.
+     * @param tipoUsuario
+     * @param usuario
+     * @param sucursal
      */
-    public ControllerMain(ModelMain modelMain, ViewMenu viewMenu) {
+    public ControllerMain(ModelMain modelMain, ViewMenu viewMenu, String tipoUsuario, String usuario, String sucursal) {
         this.modelMain = modelMain;
         this.viewMenu = viewMenu;
+        this.usuario = usuario;
+        this.tipoUsuario = tipoUsuario;
+        this.sucursal = sucursal;
         setActionListener();
         setMouseListener();
         initComponets();
@@ -67,7 +76,11 @@ public class ControllerMain {
         viewMenu.setTitle("Ferreteria   A C M E");
         viewMenu.setLocationRelativeTo(null);
         viewMenu.setVisible(true);
+        viewMenu.jmUsuarioSesion.setText("Usuario: " + usuario);
+        viewMenu.jmTipoUsuarioSesion.setText("Tipo de Usuario: " + tipoUsuario);
+        viewMenu.jmSucursalSesion.setText("Sucursal: " + sucursal);
         jmi_inicio_actionPerformed();
+        respaldosAutomatizados();
     }
 
     /**
@@ -233,7 +246,7 @@ public class ControllerMain {
         System.out.println("Empleados");
     }
 
-    public void  jmi_respaldarBd_actionPerformed() {
+    public void jmi_respaldarBd_actionPerformed() {
         Models.ModelRespaldosBD respaldosBD = new Models.ModelRespaldosBD();
         Controllers.ControllerRespaldosBD controllerRespaldosBD = new Controllers.ControllerRespaldosBD(respaldosBD);
         controllerRespaldosBD.respaldo();
@@ -246,6 +259,11 @@ public class ControllerMain {
         ModelLogin modelLogin = new ModelLogin();
         ViewLogin viewLogin = new ViewLogin();
         ControllerLogin controllerLogin = new ControllerLogin(modelLogin, viewLogin);
+    }
+
+    public void respaldosAutomatizados() {
+        ModelObtencionTiempoRespaldo modelObtencionTiempoRespaldo = new ModelObtencionTiempoRespaldo();
+        modelObtencionTiempoRespaldo.despertar();
     }
 
     /**
